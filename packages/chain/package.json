@@ -1,0 +1,20 @@
+{
+  "name": "@splitsense/chain",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:live": "TATUM_LIVE=1 vitest run test/live.test.ts",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^24"
+  },
+  "dependencies": {
+    "@mysten/sui": "2.38.0"
+  }
+}

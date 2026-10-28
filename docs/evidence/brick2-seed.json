@@ -1,0 +1,690 @@
+{
+  "gate": "brick-2-mainnet-seed",
+  "ranAt": "2026-10-28T16:46:56.826Z",
+  "network": "mainnet",
+  "group": "Flat 3B",
+  "synthetic": true,
+  "namespace": "ss_g_fd36f984879028d5",
+  "relayerMemoryCount": 63,
+  "phases": [
+    "2026-09-01",
+    "2026-09-15",
+    "2026-10-01",
+    "2026-10-15",
+    "2026-11-01"
+  ],
+  "recall": {
+    "ms": 11754,
+    "patterns": 6,
+    "habits": 4,
+    "timeline": 37,
+    "rejected": 0,
+    "degraded": false,
+    "latestAsOf": {
+      "turn.groceries": "2026-11-01",
+      "bill.power": "2026-11-01",
+      "bill.data": "2026-10-15",
+      "bill.utilities": "2026-10-15",
+      "bill.fuel": "2026-11-01",
+      "turn.fuel": "2026-11-01",
+      "emeka": "2026-11-01",
+      "godspower": "2026-11-01",
+      "ada": "2026-11-01",
+      "tolu": "2026-11-01"
+    },
+    "learnedHash": "5b7a8691990a8ee3e8622e4f655216ba75fba077712032398b09c6ac5819d397"
+  },
+  "memories": [
+    {
+      "kind": "group_profile",
+      "subject": "group",
+      "seq": 1,
+      "asOf": null,
+      "status": "stored",
+      "envelopeHash": "06d0a63e11d328176565a0953adb06648f49dcc1acb683702b4a5f1c63f05663",
+      "blobId": "2lcNCvteAEI8s_9bEA6VqR9ljCd5lcXsH2mbGnIXs80",
+      "writtenAt": "2026-10-28T16:00:39.402Z"
+    },
+    {
+      "kind": "ledger_checkpoint",
+      "subject": "ledger.000",
+      "seq": 1,
+      "asOf": null,
+      "status": "stored",
+      "envelopeHash": "7a73fae24722a2040793671dad9af9d9ddffde731eaf29b0e9bb08eae7490944",
+      "blobId": "gADJp6sWYhcska-GMItBrUqdZNU9yqFFBYXjDFmEPxs",
+      "writtenAt": "2026-10-28T16:00:39.681Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "turn.fuel",
+      "seq": 1,
+      "asOf": "2026-09-01",
+      "status": "stored",
+      "envelopeHash": "aebb04622c71bfd97fc25dfc91b9a4de74f1e9a2335130687c4b05cf309ca4ae",
+      "blobId": "I8ZwMqGQ_LmbycPgGRqHYla1hE2iSj3zMqV_2eZGEWM",
+      "writtenAt": "2026-10-28T16:00:39.953Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "bill.fuel",
+      "seq": 2,
+      "asOf": "2026-09-01",
+      "status": "stored",
+      "envelopeHash": "7d0ac22686054cebc6540d5b2e85aab8bd8f6a22581f5d21e4c1b759252ea40e",
+      "blobId": "oBGRyzgOOfJ8TV5MBifTdigu8SHrlxnKkkIyjFxf1kw",
+      "writtenAt": "2026-10-28T16:00:40.243Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "godspower",
+      "seq": 1,
+      "asOf": "2026-09-01",
+      "status": "stored",
+      "envelopeHash": "abc7a9c69bec091ec7980dbbbb902580d3dbc0cf7746254fbc9499fe4c0d46df",
+      "blobId": "KT8Gb8STfM6-4h05wvIJ0GOfXB12u5Cs9U8LC5AoVzc",
+      "writtenAt": "2026-10-28T16:00:40.533Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "tolu",
+      "seq": 2,
+      "asOf": "2026-09-01",
+      "status": "stored",
+      "envelopeHash": "45eee74cc120f2f377d0f941296f5f9f2b2e3c98961360bd565a601dfc86430b",
+      "blobId": "UroVzrBr_8WMcSaDN_vi2PtjRgH1KJlapoZ-lB4JivU",
+      "writtenAt": "2026-10-28T16:01:48.774Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "ada",
+      "seq": 3,
+      "asOf": "2026-09-01",
+      "status": "stored",
+      "envelopeHash": "109cf858b436f9a0662ce156bb3eaedb82ca33e47e623aecdc215bc13a726ea8",
+      "blobId": "4lgWmi2j8t2xu4NbuGN-dCNpdYFMarhdmGiFFE6v2z8",
+      "writtenAt": "2026-10-28T16:01:49.082Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "emeka",
+      "seq": 4,
+      "asOf": "2026-09-01",
+      "status": "stored",
+      "envelopeHash": "18db75461000e2250dc0ab9231ed72c7e2f286a360d545c1d4c5d5d05154d222",
+      "blobId": "YpbqPO9d6fQJipTQQ7OYQ5t7pwWrF0YtYFb2rUI25t0",
+      "writtenAt": "2026-10-28T16:01:49.354Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "turn.fuel",
+      "seq": 3,
+      "asOf": "2026-09-15",
+      "status": "stored",
+      "envelopeHash": "e61683706591cba26284a080cc442e4981b27cf870a79a3597d46948cec72474",
+      "blobId": "sofWTiGmwq_Yv7IdeXwGuuoaTiJUPW2bLFs6g8l8KJ0",
+      "writtenAt": "2026-10-28T16:01:32.195Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "bill.fuel",
+      "seq": 4,
+      "asOf": "2026-09-15",
+      "status": "stored",
+      "envelopeHash": "00ce1a0be93d9aa51abdd583d5a7368c4d9da157cb54904e9bc438391892e3a6",
+      "blobId": "mkctZq1Mm0FlWPryUUIpXE9JftxfcXUA2LikmLu9er0",
+      "writtenAt": "2026-10-28T16:01:49.634Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "godspower",
+      "seq": 5,
+      "asOf": "2026-09-15",
+      "status": "stored",
+      "envelopeHash": "ab73e601e21f4efff96428ec924443ddc17da91a0a51963822c78a1a0f904568",
+      "blobId": "mPii5kvXORMGb22Sdiv6IziPSWlxZt3Ost4sdzlOiIc",
+      "writtenAt": "2026-10-28T16:02:55.024Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "tolu",
+      "seq": 6,
+      "asOf": "2026-09-15",
+      "status": "stored",
+      "envelopeHash": "7690a00680dcfc51e4317b20b69126f6e365e43d10c2e7964b3ff6441b1ce182",
+      "blobId": "4ZYdQujyiaAnSH0LDTDW8oXurmV4j-iDK-eAQZSDros",
+      "writtenAt": "2026-10-28T16:02:38.816Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "ada",
+      "seq": 7,
+      "asOf": "2026-09-15",
+      "status": "stored",
+      "envelopeHash": "6c55d782832dda00c665e398b7c674bced63b06164ce01248f356cd8f63df237",
+      "blobId": "I1WBn9nJSfjJ8lmKODSIwbDfZwI-kz4I-JlfZwpaMNw",
+      "writtenAt": "2026-10-28T16:02:55.283Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "emeka",
+      "seq": 8,
+      "asOf": "2026-09-15",
+      "status": "stored",
+      "envelopeHash": "c5dc5c1b58829e841ce4a54688c1fc427ea343b7db0eabacf2594d62b957906e",
+      "blobId": "e_Bdb8i8p8rIPw8-_1fUTA6RHOUFqFQ79WqlfKnXQ4E",
+      "writtenAt": "2026-10-28T16:02:39.076Z"
+    },
+    {
+      "kind": "ledger_checkpoint",
+      "subject": "ledger.001",
+      "seq": 2,
+      "asOf": null,
+      "status": "stored",
+      "envelopeHash": "bed22da217aee7d13e92718be16470d96bc57819223d27a471ec4bf7ec1423a1",
+      "blobId": "jIrqcupZGxsCk4a91JPI6zZvMKt1OfbgK-cfrIgl60Q",
+      "writtenAt": "2026-10-28T16:02:39.336Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "turn.fuel",
+      "seq": 5,
+      "asOf": "2026-10-01",
+      "status": "stored",
+      "envelopeHash": "cb01017bcc83cde5e294cc4d0533c24aef098a6a5fdefd537de0c07c237d1684",
+      "blobId": "t2XFkAIVsOV8KAvEr5NXe2Pfmcx8RDgiXB_XenBsuLI",
+      "writtenAt": "2026-10-28T16:03:59.800Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "bill.fuel",
+      "seq": 6,
+      "asOf": "2026-10-01",
+      "status": "stored",
+      "envelopeHash": "c2497e55296af62f502ad8ed6b48051228e14c226f98186afc3eaf7916821250",
+      "blobId": "s890ajXSa4aI9upRdoOPKbYpxq5X8_CXrueVc2g8LUo",
+      "writtenAt": "2026-10-28T16:04:00.061Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "bill.power",
+      "seq": 7,
+      "asOf": "2026-10-01",
+      "status": "stored",
+      "envelopeHash": "f240700db23466b65afd5519267753311b91e4f3089f47981cdfc9d4ed413aae",
+      "blobId": "tHRTz6W1BhaH4aFFeUDBIWtOyCIeZDzb67sTtrFZw5Y",
+      "writtenAt": "2026-10-28T16:04:00.310Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "godspower",
+      "seq": 9,
+      "asOf": "2026-10-01",
+      "status": "stored",
+      "envelopeHash": "7e677eb4beecc25bbcade15ae56df568f933b6ee035db31918aa09b81691ed21",
+      "blobId": "QA1t6I9edO7FCkv3sfzCCONDG7uEiVEBnkqPzKOWvp0",
+      "writtenAt": "2026-10-28T16:04:00.552Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "tolu",
+      "seq": 10,
+      "asOf": "2026-10-01",
+      "status": "stored",
+      "envelopeHash": "4b88388055b6d329f6995acfd45cb3a161ba30e8d2c94e9ccffa80b02439cf66",
+      "blobId": "be09k0TKHlrETuRLezF_M-V81JTgpKTl2szFgmKJk2I",
+      "writtenAt": "2026-10-28T16:04:00.793Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "ada",
+      "seq": 11,
+      "asOf": "2026-10-01",
+      "status": "stored",
+      "envelopeHash": "6169644c2cf3a195e5d45f8592cae7a4e2007513b03596f7f2ada1ba31f0e792",
+      "blobId": "uPr6cK1PUNErXFqFpq0_4oE-ABHYevSh6euY1TU7aJM",
+      "writtenAt": "2026-10-28T16:04:50.874Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "emeka",
+      "seq": 12,
+      "asOf": "2026-10-01",
+      "status": "stored",
+      "envelopeHash": "715e27bfa5dc865cabec5c5e9c844ac56dd9ea05a1407fb90499338b608ea2d1",
+      "blobId": "q1WkK0FzvEHg9SdIVCjyzcKS6UPGZ4F7nvYNuvXilGQ",
+      "writtenAt": "2026-10-28T16:04:51.122Z"
+    },
+    {
+      "kind": "ledger_checkpoint",
+      "subject": "ledger.002",
+      "seq": 3,
+      "asOf": null,
+      "status": "stored",
+      "envelopeHash": "5e68a828f69e376d9e2942582322e299a19252fcf82df2a30c60b82f501bdc76",
+      "blobId": "BAY2pSYKW6FxqeWaawSBkKs-QWDeGbgZ_ZBOLOKL44Q",
+      "writtenAt": "2026-10-28T16:04:51.382Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "turn.fuel",
+      "seq": 8,
+      "asOf": "2026-10-15",
+      "status": "stored",
+      "envelopeHash": "ae46ba24aa3d1651431ff69995402f33a8a7c0bd5df6de76290ffdfcb00aad11",
+      "blobId": "qJdYZfI0Ayd1Bzxzbb9B1HXU7eREG6AwXPlYRv8AA1Y",
+      "writtenAt": "2026-10-28T16:04:51.642Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "turn.groceries",
+      "seq": 9,
+      "asOf": "2026-10-15",
+      "status": "stored",
+      "envelopeHash": "74b93f6917e2dc665381246549bb0784596e900ce9d20e636a146dc1b2fe2ce6",
+      "blobId": "76YbmoXGco155eQS8uPcA81ZDiNQ0zlQ8NC2GY9sRBg",
+      "writtenAt": "2026-10-28T16:04:51.883Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "bill.fuel",
+      "seq": 10,
+      "asOf": "2026-10-15",
+      "status": "stored",
+      "envelopeHash": "82c0962afac7d537c0088d934ef39302b8de754e11b3463a8aa1ee48d4b0f2e7",
+      "blobId": "SWoCmURrfpRIJ1LecC1iL0GSlQJZu_TeSDbWZLoqae0",
+      "writtenAt": "2026-10-28T16:06:11.657Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "bill.power",
+      "seq": 11,
+      "asOf": "2026-10-15",
+      "status": "stored",
+      "envelopeHash": "48371e777e339edb2c62f23145fbdb319aa26cd9b2a416a9d2e23d51a096b823",
+      "blobId": "YSSSPtHuX1CL3B2rkCOVu6LqDwKqfd3et5LNuGBRBlc",
+      "writtenAt": "2026-10-28T16:06:11.896Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "bill.utilities",
+      "seq": 12,
+      "asOf": "2026-10-15",
+      "status": "stored",
+      "envelopeHash": "3f8fb11d15f5b68df2ded2018c00dd04de24738eb1ab7952d7b8ac840cd3caf6",
+      "blobId": "TaNCJL0swuBfkHVKjzsga8JtKV1b11fTbf47Mi0cjPg",
+      "writtenAt": "2026-10-28T16:06:12.136Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "bill.data",
+      "seq": 13,
+      "asOf": "2026-10-15",
+      "status": "stored",
+      "envelopeHash": "85568623452328f777fba080153badef30f9c4d27278ddf9ec6e1a8c2d37f1b4",
+      "blobId": "04MHcnCnZHKBoDDD2ExT3IaP2dTwvGk0-4hPyhgJW_8",
+      "writtenAt": "2026-10-28T16:06:12.385Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "godspower",
+      "seq": 13,
+      "asOf": "2026-10-15",
+      "status": "stored",
+      "envelopeHash": "e108b206e62cab19c19c68c80ddb5563da959da501952d6b77accde632943cc1",
+      "blobId": "JAEQ77tus_0fa9gIxUFO0Jm6byPeXnHpcefYeYne2_w",
+      "writtenAt": "2026-10-28T16:06:12.656Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "tolu",
+      "seq": 14,
+      "asOf": "2026-10-15",
+      "status": "stored",
+      "envelopeHash": "3a949ad41e92fa55b1c87dde0fb35895b082929b2a0d916675a30f585c24a78f",
+      "blobId": "8aBGf9Kaby0q07UI_xmL65Iy_xFH1T7z7G3piYg9f3c",
+      "writtenAt": "2026-10-28T16:07:18.272Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "ada",
+      "seq": 15,
+      "asOf": "2026-10-15",
+      "status": "stored",
+      "envelopeHash": "61f31a57675f5a455bff4308b066fc03a6e3e49eef69fde2177b940b8ad297e8",
+      "blobId": "UDlKpgzuQzjXfdGOMYuDO_SQliQ418Al8Kf6Tq8jlZs",
+      "writtenAt": "2026-10-28T16:07:18.535Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "emeka",
+      "seq": 16,
+      "asOf": "2026-10-15",
+      "status": "stored",
+      "envelopeHash": "1360e3412e93eadaf5d65d8db963d4cadf84405a63f0384ce976f25ec9c29b55",
+      "blobId": "cBhglS7f_v4p5qKEJmD9nbYrjHAFU3bKEJo4Clpz-L0",
+      "writtenAt": "2026-10-28T16:07:18.823Z"
+    },
+    {
+      "kind": "ledger_checkpoint",
+      "subject": "ledger.003",
+      "seq": 4,
+      "asOf": null,
+      "status": "stored",
+      "envelopeHash": "e7b55a88d160363fd8108195dfc4408d5220149792c86623a27952203865cd1d",
+      "blobId": "wwrlKHpvtSdd5ny5DcvhWLJvILhZC5wnxUosp6RCfaQ",
+      "writtenAt": "2026-10-28T16:07:19.123Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "turn.fuel",
+      "seq": 14,
+      "asOf": "2026-11-01",
+      "status": "stored",
+      "envelopeHash": "853f5284bb8cfb9b45304eb598b9a9fc38307aa30f1dbd8d13022ff1f9e14672",
+      "blobId": "_x__n1nD3gleY_ZQduTJtcNYmFIhPUg7R0H3A4yOiDY",
+      "writtenAt": "2026-10-28T16:07:19.404Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "bill.fuel",
+      "seq": 15,
+      "asOf": "2026-11-01",
+      "status": "stored",
+      "envelopeHash": "1ee7338d3df825b769a71901c5b68c0ffb7cd952ce131cf7758a89c99a26e369",
+      "blobId": "hSlx27EbqVbSaB9-mnQoOjzwiXN3XTDKe70aQ7rvmow",
+      "writtenAt": "2026-10-28T16:08:27.003Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "bill.power",
+      "seq": 16,
+      "asOf": "2026-11-01",
+      "status": "stored",
+      "envelopeHash": "fc1348fc65fa8289a0423d5e215f7e42576e579531cb185761ff885ddf6d9956",
+      "blobId": "MtbhzUdHuqmkjpTImuHF_gMGD2h0t5T0Mkh72Yinqy4",
+      "writtenAt": "2026-10-28T16:08:27.834Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "godspower",
+      "seq": 17,
+      "asOf": "2026-11-01",
+      "status": "stored",
+      "envelopeHash": "1be52287ef1a909aa78c42a89c70235223905df2999a1f055aef28a0ee2a3415",
+      "blobId": "LKOt2hETQx2GRK1Vibp_Ds5caVk6zmuZ8MbCEB7Ueh4",
+      "writtenAt": "2026-10-28T16:08:29.284Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "tolu",
+      "seq": 18,
+      "asOf": "2026-11-01",
+      "status": "stored",
+      "envelopeHash": "e79cad964d765128a3c80ed33e7f89e690379f33ccc7cdba15670a9f1885d891",
+      "blobId": "xa2nSUp094hiOhRb4Ig49c30oa_Mcm0ctKXL7e1xqH0",
+      "writtenAt": "2026-10-28T16:08:29.633Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "ada",
+      "seq": 19,
+      "asOf": "2026-11-01",
+      "status": "stored",
+      "envelopeHash": "70358bc67b568e6ad8dceae6d2338c9603052112ad2a65fd3b74d20cf57a04ee",
+      "blobId": "qFTS09jpNezRRqUpfU88qDaO2y-aZXI2BNugRT6v71I",
+      "writtenAt": "2026-10-28T16:08:30.225Z"
+    },
+    {
+      "kind": "member_habit",
+      "subject": "emeka",
+      "seq": 20,
+      "asOf": "2026-11-01",
+      "status": "stored",
+      "envelopeHash": "871d3df93aedda23cc825c1358d56432d616425ff71f0ab974e7915a15d271db",
+      "blobId": "bgEM3WeGDn7u-kdv7B33-bf6IonAqxt3F74_5KWGQy0",
+      "writtenAt": "2026-10-28T16:10:28.001Z"
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "turn.fuel",
+      "seq": 17,
+      "asOf": "2026-09-01",
+      "status": "stored",
+      "envelopeHash": "a278375147f6c6087a7f812e5af6f1abe4b44a9e84d08f34fe0702ba6cfe64f0",
+      "blobId": "0UDJ7EViPsph499yZenlxwmmtmguVnJgTDoa99sUES0",
+      "writtenAt": "2026-10-28T16:11:02.623Z",
+      "replayOfSeq": 1
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "bill.fuel",
+      "seq": 18,
+      "asOf": "2026-09-01",
+      "status": "stored",
+      "envelopeHash": "fa284c49faa536481d4ab7996656574ca73ec88a2ca2281bdfdd177e1e3307ae",
+      "blobId": "7vVe3LLLvVbJb7_PuXUYNydgCB0VGecY5DykvJvZkzM",
+      "writtenAt": "2026-10-28T16:11:42.402Z",
+      "replayOfSeq": 2
+    },
+    {
+      "kind": "member_habit",
+      "subject": "godspower",
+      "seq": 21,
+      "asOf": "2026-09-01",
+      "status": "stored",
+      "envelopeHash": "6e18a8f105f8014dae23eaa938128dcf3f5b6233aef73fc76ab264643df2b644",
+      "blobId": "ZiiI08Pn3n-s42fSIg07XXIb9P0MbVv3ZAE5gQY-Mpk",
+      "writtenAt": "2026-10-28T16:11:42.702Z",
+      "replayOfSeq": 1
+    },
+    {
+      "kind": "member_habit",
+      "subject": "tolu",
+      "seq": 22,
+      "asOf": "2026-09-01",
+      "status": "stored",
+      "envelopeHash": "abd2178f27fd2fb9205f9467a45ec9177ad57c9a86d47ea462dcb674eded13c4",
+      "blobId": "uus3q84dwq9QwPX6bSEzKvj-ZwtwrI2gBAFFUskNEbk",
+      "writtenAt": "2026-10-28T16:11:42.984Z",
+      "replayOfSeq": 2
+    },
+    {
+      "kind": "member_habit",
+      "subject": "ada",
+      "seq": 23,
+      "asOf": "2026-09-01",
+      "status": "stored",
+      "envelopeHash": "8266fe27a39cb22bddb0db9910560a1204aee62179a23b42441f1e9e36bf2cc1",
+      "blobId": "gu-U_jH512_x0cVPb8eJAFQB8dgpgzVvKYWcmaeoYZw",
+      "writtenAt": "2026-10-28T16:11:43.293Z",
+      "replayOfSeq": 3
+    },
+    {
+      "kind": "member_habit",
+      "subject": "emeka",
+      "seq": 24,
+      "asOf": "2026-09-01",
+      "status": "stored",
+      "envelopeHash": "21ea85d9f79cf91e95ad920b9b8f108ad28bf84534da2c6b1d61dc34d9c1bb00",
+      "blobId": "dF6geXx-KExhSiM-fLJphbTzh7vCN-PbyCjIAodyvl4",
+      "writtenAt": "2026-10-28T16:12:21.252Z",
+      "replayOfSeq": 4
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "turn.fuel",
+      "seq": 19,
+      "asOf": "2026-09-15",
+      "status": "stored",
+      "envelopeHash": "ecad50042272fe910bfd3ea9b35867bb0444b691eb658482452d9eccc0c3081e",
+      "blobId": "xxFrO8TfKc3kMdjscp3ncrLUdO-yYK6leEN-GqzIKBM",
+      "writtenAt": "2026-10-28T16:12:38.107Z",
+      "replayOfSeq": 3
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "bill.fuel",
+      "seq": 20,
+      "asOf": "2026-09-15",
+      "status": "stored",
+      "envelopeHash": "26ac231da74ea0c2d60a02152f5e846a3d0d1a5b5afdabd724b6a022561a0dea",
+      "blobId": "1GqjEY5HFVe6d5l_jWDmOAoMhLmYcH2fIfE5-hgmlxU",
+      "writtenAt": "2026-10-28T16:12:38.382Z",
+      "replayOfSeq": 4
+    },
+    {
+      "kind": "member_habit",
+      "subject": "godspower",
+      "seq": 25,
+      "asOf": "2026-09-15",
+      "status": "stored",
+      "envelopeHash": "08f0fce6ae7f3810b8457e16c991854d5010fadfe815a7c99b6c0ed7864cb0ba",
+      "blobId": "fmUsPyJeglG8hB5ZUh3zLcY8PBL6NeYh5E6FWr-tHKI",
+      "writtenAt": "2026-10-28T16:12:38.662Z",
+      "replayOfSeq": 5
+    },
+    {
+      "kind": "member_habit",
+      "subject": "tolu",
+      "seq": 26,
+      "asOf": "2026-09-15",
+      "status": "stored",
+      "envelopeHash": "1231b02f629acf1dca446d77ec55882fec0f047b5d1d871c71e36368c56de114",
+      "blobId": "eeBaRfpFDzET-kyEFD5-eZ-ua1uLyxhJ1FxradEIhIE",
+      "writtenAt": "2026-10-28T16:12:38.942Z",
+      "replayOfSeq": 6
+    },
+    {
+      "kind": "member_habit",
+      "subject": "ada",
+      "seq": 27,
+      "asOf": "2026-09-15",
+      "status": "stored",
+      "envelopeHash": "b9ddefb756b6515a6ebe42c2e0fd504a0a764217d09615010c63fe9efaae3f9e",
+      "blobId": "bkgXqc2wFeikvW8zAn8fQZOUdZ0mMTtSD74soWwsvks",
+      "writtenAt": "2026-10-28T16:13:39.074Z",
+      "replayOfSeq": 7
+    },
+    {
+      "kind": "member_habit",
+      "subject": "emeka",
+      "seq": 28,
+      "asOf": "2026-09-15",
+      "status": "stored",
+      "envelopeHash": "d41c298ba386c9c16f9607f6b8522306fbaad4f95470fc83a6be659e60b7c818",
+      "blobId": "f2j1oecRBzls1r8nF1BdLG0472U7xfeWmw75_sbyyoA",
+      "writtenAt": "2026-10-28T16:15:26.379Z",
+      "replayOfSeq": 8
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "turn.fuel",
+      "seq": 21,
+      "asOf": "2026-10-01",
+      "status": "stored",
+      "envelopeHash": "f27cb4f02d89b9a7191636909c8abbdb85f1a05b8645fbff6e9132a62661a6f3",
+      "blobId": "4L_Ay19OVIpmiHtKXxxbeMB-WE0DO__8mi9rdJ2QBP0",
+      "writtenAt": "2026-10-28T16:15:26.620Z",
+      "replayOfSeq": 5
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "bill.fuel",
+      "seq": 22,
+      "asOf": "2026-10-01",
+      "status": "stored",
+      "envelopeHash": "41c43dcbb7e217e05154b0272c3b3c47fd208eef39b0f422f64ff21f5eca687d",
+      "blobId": "72I6GOyCetHwxvdDEl2q3rN6g2oQVabZ6YRUF-v4MKI",
+      "writtenAt": "2026-10-28T16:15:26.862Z",
+      "replayOfSeq": 6
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "bill.power",
+      "seq": 23,
+      "asOf": "2026-10-01",
+      "status": "stored",
+      "envelopeHash": "79efb6a9daa48809ac508a7efa3b7172add212ea3a851ac0e6c586991bdcf6ac",
+      "blobId": "kuFcLm2NS94ZVTEn_dYS1Rqk68bsXfKurO1GSmjeqaU",
+      "writtenAt": "2026-10-28T16:15:27.100Z",
+      "replayOfSeq": 7
+    },
+    {
+      "kind": "member_habit",
+      "subject": "godspower",
+      "seq": 29,
+      "asOf": "2026-10-01",
+      "status": "stored",
+      "envelopeHash": "ec407747107fc932445bb2dcd7e772a5f4d698cbd0d7270e70e9fc00ef2b2cf6",
+      "blobId": "s7QmQBzuafcGS6L6LBtqBGmqOQwcW3tBGdxsGH3DyUc",
+      "writtenAt": "2026-10-28T16:16:05.793Z",
+      "replayOfSeq": 9
+    },
+    {
+      "kind": "member_habit",
+      "subject": "tolu",
+      "seq": 30,
+      "asOf": "2026-10-01",
+      "status": "stored",
+      "envelopeHash": "7fa23cf2c283c984ebc25c8de034ca02f7ff40dadbb0da5517b3c1487c0c7db4",
+      "blobId": "gXohzGfs6SMpPiboriwpOuojLycbZEw6DbVSKNMtltk",
+      "writtenAt": "2026-10-28T16:16:23.491Z",
+      "replayOfSeq": 10
+    },
+    {
+      "kind": "member_habit",
+      "subject": "ada",
+      "seq": 31,
+      "asOf": "2026-10-01",
+      "status": "stored",
+      "envelopeHash": "eb9df58733456074fd628eeb31c53c293a446b2943260fc413945b392e4756c7",
+      "blobId": "Jh2PmY2Gq2tlUVwIouUomdVyUlY3vAXJ8Ljp-klBl7g",
+      "writtenAt": "2026-10-28T16:16:24.518Z",
+      "replayOfSeq": 11
+    },
+    {
+      "kind": "member_habit",
+      "subject": "emeka",
+      "seq": 32,
+      "asOf": "2026-10-01",
+      "status": "stored",
+      "envelopeHash": "06afdad49da5ac46acd367abd004b1e4915f23679dfcf657a61b564c8fcf4c0e",
+      "blobId": "411gPo7mGEXTeY4oDEFQH4THGY5pBnzIJPp0gUNC5R4",
+      "writtenAt": "2026-10-28T16:16:25.754Z",
+      "replayOfSeq": 12
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "turn.fuel",
+      "seq": 24,
+      "asOf": "2026-10-15",
+      "status": "stored",
+      "envelopeHash": "c250c4ee02647a6377c0fd81010b64b641abdab69bdb69a120b4efb5b34c4243",
+      "blobId": "HvkXvOUZx0m16FWqANrT-hxdm2_Ksp1nKo8ZkZyOGrY",
+      "writtenAt": "2026-10-28T16:16:27.585Z",
+      "replayOfSeq": 8
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "bill.fuel",
+      "seq": 25,
+      "asOf": "2026-10-15",
+      "status": "stored",
+      "envelopeHash": "c1e0f1aa0da1e5608945590903dffe048514a79ea79ec0d3cda956526b45cf52",
+      "blobId": "aUIJq1FfaLdyz5Gwuqh3gfw2JwsT1Vs-OIpk3n4DOVQ",
+      "writtenAt": "2026-10-28T16:18:03.223Z",
+      "replayOfSeq": 10
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "turn.groceries",
+      "seq": 26,
+      "asOf": "2026-11-01",
+      "status": "stored",
+      "envelopeHash": "2b4308626640a248d9ab7f0b104fb0429f357bd93791efd1c366738cf0895892",
+      "blobId": "3W2ixPFsMA61sgiCnez8fvTHWhFfyrE_FGElFhiAtqc",
+      "writtenAt": "2026-10-28T16:36:23.494Z"
+    }
+  ]
+}

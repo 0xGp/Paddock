@@ -1,0 +1,77 @@
+---
+description: SplitSense project rule. Goal, hackathon requirements, deterministic engine, stack, conventions, memory schema and the known gotchas (Walrus Memory, Tatum Sui, Enoki, USDC).
+alwaysApply: true
+---
+
+# SplitSense: project rule for Cursor
+
+Full spec: `docs/SPEC.md` (source of truth for behaviour). Decisions: `docs/adr/`. Judge review and re-plan: `docs/REVIEW-2026-10-28.md`. Judging notes: `docs/JUDGING_CALIBRATION.md`. Links: `RESOURCES.md`. Product context for UI work: `PRODUCT.md`; the visual design system is root `DESIGN.md` (owned by the impeccable skill). When this rule and SPEC.md disagree, SPEC.md wins, and an accepted ADR beats both. Point out the conflict.
+
+## 1. Goal
+SplitSense is a shared-spending app for flatmates, trips and friend groups in Lagos (NGN ledger). It **remembers how the group lives**: recurring bills, who usually pays, settle speed, corrections and dismissals. It uses that to pre-fill splits, suggest whose turn it is, and time nudges. Every suggestion is explainable ("Why?") and reproducible. Learned state lives in **Walrus Memory on Mainnet**. Debts settle in **USDC on Sui** through Google sign-in (Enoki zkLogin) and **gasless** stablecoin transfers. **Every on-chain read and transaction goes through Tatum's Sui gateway.**
+One-liner: *the group-money app that remembers how your flat actually lives, and can prove every suggestion.*
+
+## 2. Hackathon: Tatum x Walrus "Total Recall", Consumer Finance track
+- Build window Oct 20 – Nov 10, 2026. **Deadline Nov 10, 17:00 UTC (18:00 WAT).** One submission per person.
+- Hard requirements: Walrus Memory **writing on Mainnet**; **≥ 10 memories** on Mainnet (we target 40–60); Tatum RPC for on-chain data; public repo; working demo; a 2–3 min video; a published blog post (what it does, how it uses Tatum + Walrus, **how it learned over time**).
+- Judging: Walrus+Tatum integration 30%, technical quality 30% ("clean code and successful Tatum Sui RPC integration"), creativity 20%, presentation 20%. Special prize targeted: **Best Walrus Memory**, "memories that visibly change the product".
+- Every learned UI element gets a "🧠 from memory" chip that links to the memory record. Keep `/demo` (judge mode, no sign-in) and `/status` (live Tatum calls) working at all times.
+
+## 3. The engine is deterministic. NO LLM decisions.
+- `packages/engine` exports a pure `runRules(ledger, learned, now, rulesetVersion) -> Insight[]`.
+- Inside `packages/engine`, **never** use: `Date.now()`, `new Date()` without an argument, `Math.random()`, network or DB I/O, env vars, or any LLM/AI SDK. `now` is a parameter.
+- **Never** call MemWal `analyze()` or `withMemWal` (they use an LLM for fact extraction). MemWal embeddings are for *retrieval only*. Never use a vector or a recall `distance` to make a decision. Recall finds candidates, and our code validates (zod + hash) and picks deterministically (latest valid `seq` per `(kind, subject)`).
+- Each `Insight` carries `ruleId`, `rulesetVersion`, `inputsHash = sha256(canonicalJSON(inputs))`, and `explanation { summary, facts[], formula, threshold, evidenceExpenseIds[] }`.
+- Tie-breaks are always (score desc, last-activity asc, memberId asc). Medians are the lower median.
+- **Money is integer minor units**: kobo for NGN, micro-USDC (6 dp) for USDC, as `bigint` or safe integers. Never use floats for money. Ratios and CV may be floats but must be rounded deterministically before display or comparison.
+- Rules v1: R0 quick-entry parser, R1 category, R2 recurrence, R3 usual payer, R4 payday window, R5 settle speed (EWMA), R6 fair split / rotation, R7 net balances + min transfers, R8 anomaly / missed, R9 nudge scheduler, R10 feedback dampener, R11 outcome learning. Exact thresholds are in DESIGN §2.3. Don't change a threshold without bumping `rulesetVersion` and updating the golden fixtures.
+- If you add or change a rule, add a golden test against `fixtures/lagos-flat.csv` and, where it applies, a fast-check property (for example R7: Σnet = 0, ≤ members−1 transfers).
+
+## 4. Stack
+- pnpm workspaces monorepo: `apps/web` (Next.js App Router, TypeScript strict, Tailwind, shadcn/ui), `packages/engine`, `packages/memory`, `packages/chain`, `scripts/`, `fixtures/`, `docs/`.
+- Postgres on Neon + Drizzle ORM (migrations committed). zod for every boundary (API, env, memory envelope).
+- Memory: `@mysten-incubation/memwal` (0.1.8), **server-only**, relayer mode at `https://relayer.memory.walrus.xyz`. Use `MemWalMock` in unit tests.
+- Sui: `@mysten/sui` v2 (`Transaction`, `SuiGraphQLClient`, JSON-RPC client), `@mysten/dapp-kit-react`, `@mysten/enoki` (`registerEnokiWallets`, Google).
+- Tatum: **GraphQL only** at `https://sui-mainnet.gateway.tatum.io/graphql`, with the `x-api-key` header **server-side only**. The browser goes through our proxy `/api/sui/graphql`. Tatum's Sui JSON-RPC returns 404 (verified Oct 28, see ADR-0004); never generate `sui_*`/`suix_*` calls.
+- Tests: Vitest + fast-check. Playwright smoke test for the demo flow. CI on GitHub Actions: typecheck, lint, test, build, plus a `chain-integration` job (Tatum, secret-gated).
+- Jobs: Next.js `after()` drains the outbox after writes, settlement checks run on demand, a daily Vercel cron sweeper, and `pnpm seed:mainnet` runs locally.
+
+## 5. Coding conventions
+- TypeScript `strict`, no `any` (use `unknown` + zod), named exports, and no default exports except Next.js pages/layouts.
+- Validate env once in `apps/web/src/env.ts` (zod). Secrets never get the `NEXT_PUBLIC_` prefix. Only `NEXT_PUBLIC_ENOKI_API_KEY`, `NEXT_PUBLIC_GOOGLE_CLIENT_ID`, `NEXT_PUBLIC_APP_URL`, `NEXT_PUBLIC_SUI_NETWORK` may be public.
+- Anything importing `@mysten-incubation/memwal`, the Tatum key, or the DB must start with `import "server-only"`.
+- External calls (relayer, Tatum, Enoki) return typed results (`{ ok: true, value } | { ok: false, error }`), with timeouts, exponential backoff with jitter, and explicit 429 handling. Don't swallow errors.
+- Files are kebab-case, React components PascalCase, DB columns snake_case. Money columns are `bigint` named `*_minor`.
+- Keep UI copy plain and non-crypto ("Pay Emeka ₦3,000 (2.00 USDC)"). Never show seed phrases, gas or raw addresses unless the user opens details.
+- Small PR-sized commits, and conventional commit messages (`feat(engine): R3 usual payer`).
+- Record notable decisions as ADRs in `docs/adr/` (deterministic engine, hashed namespaces, GraphQL over gRPC-web).
+
+## 6. Memory schema (Walrus Memory)
+- Every memory is **text**: a header line plus canonical JSON.
+```
+SPLITSENSE v1 | kind=<kind> | group=<nsHash> | seq=<n> | at=<ISO8601>
+{ ...payload..., "prev": "<sha256 of previous memory of same kind>", "hash": "<sha256 of this payload>" }
+```
+- Kinds: `group_profile`, `ledger_checkpoint` (every 10 expenses or 24h), `pattern_snapshot` (only on material change), `member_habit`, `preference` (alias, split_template_pin, suggestion_feedback, nudge opt-out), `outcome` (R11 adjustments), `settlement_receipt` (includes the Sui tx digest).
+- Namespaces: per group `ss_g_<first16hex(sha256(groupId + NAMESPACE_SALT))>`, app-level `ss_app`, and optional per member `ss_m_<hash(googleSub + salt)>` (non-financial prefs only). **Never put names, emails, phone numbers or raw IDs in a namespace.**
+- Write path: `outbox` table → `rememberBulk` (≤ 20 items) paced at ≤ 5 remember-equivalents/min, deduplicated by content hash, job_id → blob_id tracked with `getRememberStatus`/`waitForRememberJob`.
+- Read path: the ledger comes from Postgres. The learned layer comes from `loadLearnedState(ns)` (≤ 4 recalls with `sort:"recent"`, zod + hash validated, 1.5 s budget, 5 min cache, falls back to cache with a visible notice). Restore runs `restore(ns)`, replays, re-runs the engine, and checks `inputsHash` against the last `pattern_snapshot`.
+
+## 7. Gotchas (read before touching memory or chain code)
+1. **Memory expiry:** relayer-written Mainnet blobs last only the paid epochs (the default is 2–3 epochs at ~2 weeks each, and the docs disagree). Lapsed blobs can't be recovered. Write the canonical demo memories Nov 2–5, re-write them Nov 9, and show `expires_at`/`end_epoch` in the timeline. `scripts/memory-health.ts` checks this.
+2. **gRPC-web doesn't work against Tatum.** `SuiGrpcClient` against `sui-mainnet-grpc.gateway.tatum.io` fails with "unexpected response content type: application/grpc" (Tatum serves native gRPC). **Use GraphQL for everything**: builds, balances (`address.balance`), execution (`executeTransaction`), confirmation (`transaction(digest).effects { status balanceChanges }`) and incoming-transfer checks (`transactions(filter: { affectedAddress })`). No gRPC in the browser. Free plan is 3 req/s: batch with `multiGet*` queries and cache.
+3. **Namespaces are public plaintext** in on-chain blob metadata (`memwal_namespace`, `memwal_owner`, `memwal_agent_id`). Always hash them with the salt. The managed relayer sees plaintext, so keep PII out of memory text (display names only).
+4. **Rate limits (managed relayer):** 30 points/min per delegate key, 60/min and 500/hour per account; `remember` = 5 points, `recall` = 1. That's about 6 remembers/min per key and about 100/hour per account. Pace the outbox, back off on 429, and never write memory inside a render or a tight loop. Seed Mainnet in phases.
+5. **Tatum API key never ships to the browser.** Proxy GraphQL through `/api/sui/graphql`. Watch Tatum credits (most methods cost ~2 credits).
+6. **Vercel Hobby cron runs at most once per day.** Don't add `*/1 * * * *` schedules. Use `after()` and on-demand checks.
+7. **Gasless USDC:** build `0x2::balance::send_funds<USDC>` with `tx.balance({type: USDC, balance})`, `setSender(zkLoginAddr)`, and `tx.build({ client: <SuiGraphQLClient on Tatum proxy> })` so the SDK detects gasless eligibility (gasPrice/gasBudget = 0). The minimum is 0.01 USDC. USDC type: `0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC`.
+8. **Confirm settlements server-side** with Tatum GraphQL `transaction(digest) { effects { status checkpoint { sequenceNumber } balanceChanges { nodes { owner { address } amount coinType { repr } } } } }` before closing edges or writing a `settlement_receipt`.
+9. Sui **JSON-RPC is gone on Tatum** (404 as of Oct 28). Keep transports behind `packages/chain` interfaces anyway.
+12. **`inputsHash` must not include `now`**, or restore can never match (ADR-0006). Hash the ledger state and the learned state separately.
+10. Recall is semantic and capped at 100 results, and there's no documented plaintext fetch by blob_id. Use the structured header plus `seq` queries.
+11. Form IDs: `MEMWAL_AGENT_ID` = the delegate **public key** (`getPublicKeyHex()`). `Account ID (SUI)` = `MEMWAL_ACCOUNT_ID`. The Tatum ID is under dashboard → My Account → My Account Info.
+
+## 8. When generating code
+- Prefer adding to an existing package over creating new ones. Keep `packages/engine` dependency-free apart from tiny pure utils.
+- Before a memory or chain change, re-check the gotchas above. Before an engine change, re-check §3.
+- Don't invent SDK methods. If an API isn't in the docs listed in `RESOURCES.md`, say so and mark it `// [OPEN]` instead of guessing.

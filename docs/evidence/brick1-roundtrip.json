@@ -1,0 +1,35 @@
+{
+  "gate": "brick-1-mainnet-roundtrip",
+  "ranAt": "2026-10-28T15:51:58.115Z",
+  "network": "mainnet",
+  "relayer": "https://relayer.memory.walrus.xyz",
+  "namespace": "ss_g_37a6c1efd43850de",
+  "memories": [
+    {
+      "kind": "group_profile",
+      "subject": "group",
+      "seq": 1,
+      "envelopeHash": "a1212d05987ea32a1cf28f36350223631a5ec226d7335100e757f35e4ba9fb55",
+      "jobId": "bce84de8-becb-401b-8a68-775672626678",
+      "blobId": "RzEvZDZgMP8HlIigGXlwrLPRxN83zB_2wVYzwoXsjtw",
+      "writeSeconds": 40.06
+    },
+    {
+      "kind": "pattern_snapshot",
+      "subject": "turn.fuel",
+      "seq": 1,
+      "envelopeHash": "696cf87d6cbb9cedef87c7f60a146a5db3247483b6d7b9d2523f128f9f4a16ca",
+      "jobId": "676780ef-bb12-4038-b898-e3ef3942b2f1",
+      "blobId": "vx1FlJDSj76flwajl7SZX9Mje8rZnLxe-43If7yI2NU",
+      "writeSeconds": 40.352
+    }
+  ],
+  "recall": {
+    "verified": true,
+    "rejected": 0,
+    "degraded": false,
+    "learnedHash": "566e929e20490137069e96bd8a21afcca5e81bf17af696360069cab7112f8b2e",
+    "summary": "Tolu has covered diesel 9 of 12 times. Next diesel: Godspower?"
+  },
+  "relayerMemoryCount": 2
+}

@@ -1,0 +1,1128 @@
+{
+  "synthetic": true,
+  "group": {
+    "id": "flat-3b",
+    "name": "Flat 3B",
+    "address": "Admiralty Way, Lekki Phase 1",
+    "rateNgnPerUsdc": 1500
+  },
+  "now": "2026-11-01",
+  "members": [
+    {
+      "id": "godspower",
+      "displayName": "Godspower",
+      "names": [
+        "Godspower",
+        "GP"
+      ]
+    },
+    {
+      "id": "tolu",
+      "displayName": "Tolu",
+      "names": [
+        "Tolu"
+      ]
+    },
+    {
+      "id": "ada",
+      "displayName": "Ada",
+      "names": [
+        "Ada"
+      ]
+    },
+    {
+      "id": "emeka",
+      "displayName": "Emeka",
+      "names": [
+        "Emeka",
+        "Meks"
+      ]
+    }
+  ],
+  "expenses": [
+    {
+      "id": "e001",
+      "date": "2026-08-01",
+      "amountMinor": "5000000",
+      "currency": "NGN",
+      "payerId": "godspower",
+      "category": "housing",
+      "description": "Service charge",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e002",
+      "date": "2026-08-02",
+      "amountMinor": "2500000",
+      "currency": "NGN",
+      "payerId": "tolu",
+      "category": "fuel",
+      "description": "Generator diesel",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e003",
+      "date": "2026-08-03",
+      "amountMinor": "500000",
+      "currency": "NGN",
+      "payerId": "godspower",
+      "category": "utilities",
+      "description": "LAWMA waste",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e004",
+      "date": "2026-08-05",
+      "amountMinor": "4000000",
+      "currency": "NGN",
+      "payerId": "godspower",
+      "category": "power",
+      "description": "IKEDC prepaid token",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e005",
+      "date": "2026-08-05",
+      "amountMinor": "3000000",
+      "currency": "NGN",
+      "payerId": "ada",
+      "category": "data",
+      "description": "Spectranet data",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e006",
+      "date": "2026-08-08",
+      "amountMinor": "3800000",
+      "currency": "NGN",
+      "payerId": "godspower",
+      "category": "groceries",
+      "description": "Shoprite run",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e007",
+      "date": "2026-08-09",
+      "amountMinor": "2400000",
+      "currency": "NGN",
+      "payerId": "tolu",
+      "category": "fuel",
+      "description": "Generator diesel",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e008",
+      "date": "2026-08-16",
+      "amountMinor": "2600000",
+      "currency": "NGN",
+      "payerId": "tolu",
+      "category": "fuel",
+      "description": "Generator diesel",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e009",
+      "date": "2026-08-19",
+      "amountMinor": "3800000",
+      "currency": "NGN",
+      "payerId": "tolu",
+      "category": "power",
+      "description": "IKEDC prepaid token",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e010",
+      "date": "2026-08-21",
+      "amountMinor": "2400000",
+      "currency": "NGN",
+      "payerId": "ada",
+      "category": "groceries",
+      "description": "Lekki market foodstuff",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e011",
+      "date": "2026-08-23",
+      "amountMinor": "2500000",
+      "currency": "NGN",
+      "payerId": "tolu",
+      "category": "fuel",
+      "description": "Generator diesel",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e012",
+      "date": "2026-08-30",
+      "amountMinor": "2700000",
+      "currency": "NGN",
+      "payerId": "tolu",
+      "category": "fuel",
+      "description": "Generator diesel",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e013",
+      "date": "2026-09-01",
+      "amountMinor": "5000000",
+      "currency": "NGN",
+      "payerId": "godspower",
+      "category": "housing",
+      "description": "Service charge",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e014",
+      "date": "2026-09-02",
+      "amountMinor": "4200000",
+      "currency": "NGN",
+      "payerId": "ada",
+      "category": "power",
+      "description": "IKEDC prepaid token",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e015",
+      "date": "2026-09-02",
+      "amountMinor": "500000",
+      "currency": "NGN",
+      "payerId": "godspower",
+      "category": "utilities",
+      "description": "LAWMA waste",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e016",
+      "date": "2026-09-04",
+      "amountMinor": "5200000",
+      "currency": "NGN",
+      "payerId": "tolu",
+      "category": "groceries",
+      "description": "Shoprite run",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e017",
+      "date": "2026-09-05",
+      "amountMinor": "3000000",
+      "currency": "NGN",
+      "payerId": "ada",
+      "category": "data",
+      "description": "Spectranet data",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e018",
+      "date": "2026-09-06",
+      "amountMinor": "2500000",
+      "currency": "NGN",
+      "payerId": "ada",
+      "category": "fuel",
+      "description": "Generator diesel",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e019",
+      "date": "2026-09-13",
+      "amountMinor": "2600000",
+      "currency": "NGN",
+      "payerId": "tolu",
+      "category": "fuel",
+      "description": "Generator diesel",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e020",
+      "date": "2026-09-16",
+      "amountMinor": "3600000",
+      "currency": "NGN",
+      "payerId": "emeka",
+      "category": "power",
+      "description": "IKEDC prepaid token",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e021",
+      "date": "2026-09-18",
+      "amountMinor": "1800000",
+      "currency": "NGN",
+      "payerId": "emeka",
+      "category": "groceries",
+      "description": "Lekki market foodstuff",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e022",
+      "date": "2026-09-20",
+      "amountMinor": "2400000",
+      "currency": "NGN",
+      "payerId": "tolu",
+      "category": "fuel",
+      "description": "Generator diesel",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e023",
+      "date": "2026-09-26",
+      "amountMinor": "9200000",
+      "currency": "NGN",
+      "payerId": "godspower",
+      "category": "groceries",
+      "description": "Party run, Shoprite",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e024",
+      "date": "2026-09-27",
+      "amountMinor": "2500000",
+      "currency": "NGN",
+      "payerId": "tolu",
+      "category": "fuel",
+      "description": "Generator diesel",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e025",
+      "date": "2026-09-30",
+      "amountMinor": "4000000",
+      "currency": "NGN",
+      "payerId": "godspower",
+      "category": "power",
+      "description": "IKEDC prepaid token",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e026",
+      "date": "2026-10-01",
+      "amountMinor": "5000000",
+      "currency": "NGN",
+      "payerId": "godspower",
+      "category": "housing",
+      "description": "Service charge",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e027",
+      "date": "2026-10-02",
+      "amountMinor": "500000",
+      "currency": "NGN",
+      "payerId": "godspower",
+      "category": "utilities",
+      "description": "LAWMA waste",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e028",
+      "date": "2026-10-03",
+      "amountMinor": "4100000",
+      "currency": "NGN",
+      "payerId": "godspower",
+      "category": "groceries",
+      "description": "Shoprite run",
+      "split": {
+        "godspower": 4000,
+        "tolu": 3000,
+        "ada": 3000
+      }
+    },
+    {
+      "id": "e029",
+      "date": "2026-10-04",
+      "amountMinor": "2500000",
+      "currency": "NGN",
+      "payerId": "emeka",
+      "category": "fuel",
+      "description": "Generator diesel",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e030",
+      "date": "2026-10-06",
+      "amountMinor": "3000000",
+      "currency": "NGN",
+      "payerId": "ada",
+      "category": "data",
+      "description": "Spectranet data",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e031",
+      "date": "2026-10-11",
+      "amountMinor": "2600000",
+      "currency": "NGN",
+      "payerId": "emeka",
+      "category": "fuel",
+      "description": "Generator diesel",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e032",
+      "date": "2026-10-14",
+      "amountMinor": "4400000",
+      "currency": "NGN",
+      "payerId": "tolu",
+      "category": "power",
+      "description": "IKEDC prepaid token",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e033",
+      "date": "2026-10-17",
+      "amountMinor": "3300000",
+      "currency": "NGN",
+      "payerId": "ada",
+      "category": "groceries",
+      "description": "Lekki market foodstuff",
+      "split": {
+        "godspower": 4000,
+        "tolu": 3000,
+        "ada": 3000
+      }
+    },
+    {
+      "id": "e034",
+      "date": "2026-10-18",
+      "amountMinor": "2500000",
+      "currency": "NGN",
+      "payerId": "tolu",
+      "category": "fuel",
+      "description": "Generator diesel",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e035",
+      "date": "2026-10-24",
+      "amountMinor": "4500000",
+      "currency": "NGN",
+      "payerId": "tolu",
+      "category": "groceries",
+      "description": "Shoprite run",
+      "split": {
+        "godspower": 4000,
+        "tolu": 3000,
+        "ada": 3000
+      }
+    },
+    {
+      "id": "e036",
+      "date": "2026-10-25",
+      "amountMinor": "2400000",
+      "currency": "NGN",
+      "payerId": "tolu",
+      "category": "fuel",
+      "description": "Generator diesel",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    },
+    {
+      "id": "e037",
+      "date": "2026-10-28",
+      "amountMinor": "3900000",
+      "currency": "NGN",
+      "payerId": "ada",
+      "category": "power",
+      "description": "IKEDC prepaid token",
+      "split": {
+        "ada": 2500,
+        "emeka": 2500,
+        "godspower": 2500,
+        "tolu": 2500
+      }
+    }
+  ],
+  "settlements": [
+    {
+      "expenseId": "e002",
+      "memberId": "godspower",
+      "settledOn": "2026-08-02"
+    },
+    {
+      "expenseId": "e001",
+      "memberId": "tolu",
+      "settledOn": "2026-08-05"
+    },
+    {
+      "expenseId": "e005",
+      "memberId": "godspower",
+      "settledOn": "2026-08-05"
+    },
+    {
+      "expenseId": "e003",
+      "memberId": "tolu",
+      "settledOn": "2026-08-06"
+    },
+    {
+      "expenseId": "e001",
+      "memberId": "ada",
+      "settledOn": "2026-08-07"
+    },
+    {
+      "expenseId": "e002",
+      "memberId": "ada",
+      "settledOn": "2026-08-07"
+    },
+    {
+      "expenseId": "e005",
+      "memberId": "tolu",
+      "settledOn": "2026-08-08"
+    },
+    {
+      "expenseId": "e003",
+      "memberId": "ada",
+      "settledOn": "2026-08-09"
+    },
+    {
+      "expenseId": "e004",
+      "memberId": "tolu",
+      "settledOn": "2026-08-09"
+    },
+    {
+      "expenseId": "e002",
+      "memberId": "emeka",
+      "settledOn": "2026-08-10"
+    },
+    {
+      "expenseId": "e004",
+      "memberId": "ada",
+      "settledOn": "2026-08-10"
+    },
+    {
+      "expenseId": "e007",
+      "memberId": "godspower",
+      "settledOn": "2026-08-11"
+    },
+    {
+      "expenseId": "e001",
+      "memberId": "emeka",
+      "settledOn": "2026-08-12"
+    },
+    {
+      "expenseId": "e006",
+      "memberId": "tolu",
+      "settledOn": "2026-08-12"
+    },
+    {
+      "expenseId": "e006",
+      "memberId": "ada",
+      "settledOn": "2026-08-13"
+    },
+    {
+      "expenseId": "e007",
+      "memberId": "ada",
+      "settledOn": "2026-08-13"
+    },
+    {
+      "expenseId": "e003",
+      "memberId": "emeka",
+      "settledOn": "2026-08-14"
+    },
+    {
+      "expenseId": "e005",
+      "memberId": "emeka",
+      "settledOn": "2026-08-14"
+    },
+    {
+      "expenseId": "e004",
+      "memberId": "emeka",
+      "settledOn": "2026-08-16"
+    },
+    {
+      "expenseId": "e008",
+      "memberId": "godspower",
+      "settledOn": "2026-08-16"
+    },
+    {
+      "expenseId": "e006",
+      "memberId": "emeka",
+      "settledOn": "2026-08-18"
+    },
+    {
+      "expenseId": "e007",
+      "memberId": "emeka",
+      "settledOn": "2026-08-20"
+    },
+    {
+      "expenseId": "e008",
+      "memberId": "ada",
+      "settledOn": "2026-08-20"
+    },
+    {
+      "expenseId": "e009",
+      "memberId": "godspower",
+      "settledOn": "2026-08-21"
+    },
+    {
+      "expenseId": "e010",
+      "memberId": "godspower",
+      "settledOn": "2026-08-23"
+    },
+    {
+      "expenseId": "e011",
+      "memberId": "godspower",
+      "settledOn": "2026-08-23"
+    },
+    {
+      "expenseId": "e009",
+      "memberId": "ada",
+      "settledOn": "2026-08-24"
+    },
+    {
+      "expenseId": "e010",
+      "memberId": "tolu",
+      "settledOn": "2026-08-24"
+    },
+    {
+      "expenseId": "e008",
+      "memberId": "emeka",
+      "settledOn": "2026-08-27"
+    },
+    {
+      "expenseId": "e009",
+      "memberId": "emeka",
+      "settledOn": "2026-08-28"
+    },
+    {
+      "expenseId": "e010",
+      "memberId": "emeka",
+      "settledOn": "2026-08-28"
+    },
+    {
+      "expenseId": "e011",
+      "memberId": "ada",
+      "settledOn": "2026-08-29"
+    },
+    {
+      "expenseId": "e011",
+      "memberId": "emeka",
+      "settledOn": "2026-08-30"
+    },
+    {
+      "expenseId": "e012",
+      "memberId": "godspower",
+      "settledOn": "2026-09-01"
+    },
+    {
+      "expenseId": "e012",
+      "memberId": "ada",
+      "settledOn": "2026-09-03"
+    },
+    {
+      "expenseId": "e014",
+      "memberId": "godspower",
+      "settledOn": "2026-09-04"
+    },
+    {
+      "expenseId": "e013",
+      "memberId": "tolu",
+      "settledOn": "2026-09-05"
+    },
+    {
+      "expenseId": "e016",
+      "memberId": "godspower",
+      "settledOn": "2026-09-05"
+    },
+    {
+      "expenseId": "e014",
+      "memberId": "tolu",
+      "settledOn": "2026-09-06"
+    },
+    {
+      "expenseId": "e015",
+      "memberId": "ada",
+      "settledOn": "2026-09-06"
+    },
+    {
+      "expenseId": "e015",
+      "memberId": "tolu",
+      "settledOn": "2026-09-06"
+    },
+    {
+      "expenseId": "e013",
+      "memberId": "ada",
+      "settledOn": "2026-09-07"
+    },
+    {
+      "expenseId": "e017",
+      "memberId": "godspower",
+      "settledOn": "2026-09-07"
+    },
+    {
+      "expenseId": "e018",
+      "memberId": "godspower",
+      "settledOn": "2026-09-07"
+    },
+    {
+      "expenseId": "e017",
+      "memberId": "tolu",
+      "settledOn": "2026-09-08"
+    },
+    {
+      "expenseId": "e012",
+      "memberId": "emeka",
+      "settledOn": "2026-09-09"
+    },
+    {
+      "expenseId": "e016",
+      "memberId": "ada",
+      "settledOn": "2026-09-10"
+    },
+    {
+      "expenseId": "e018",
+      "memberId": "tolu",
+      "settledOn": "2026-09-10"
+    },
+    {
+      "expenseId": "e013",
+      "memberId": "emeka",
+      "settledOn": "2026-09-11"
+    },
+    {
+      "expenseId": "e017",
+      "memberId": "emeka",
+      "settledOn": "2026-09-11"
+    },
+    {
+      "expenseId": "e016",
+      "memberId": "emeka",
+      "settledOn": "2026-09-12"
+    },
+    {
+      "expenseId": "e014",
+      "memberId": "emeka",
+      "settledOn": "2026-09-13"
+    },
+    {
+      "expenseId": "e015",
+      "memberId": "emeka",
+      "settledOn": "2026-09-13"
+    },
+    {
+      "expenseId": "e019",
+      "memberId": "godspower",
+      "settledOn": "2026-09-13"
+    },
+    {
+      "expenseId": "e018",
+      "memberId": "emeka",
+      "settledOn": "2026-09-14"
+    },
+    {
+      "expenseId": "e019",
+      "memberId": "ada",
+      "settledOn": "2026-09-17"
+    },
+    {
+      "expenseId": "e020",
+      "memberId": "godspower",
+      "settledOn": "2026-09-17"
+    },
+    {
+      "expenseId": "e020",
+      "memberId": "tolu",
+      "settledOn": "2026-09-19"
+    },
+    {
+      "expenseId": "e021",
+      "memberId": "godspower",
+      "settledOn": "2026-09-19"
+    },
+    {
+      "expenseId": "e019",
+      "memberId": "emeka",
+      "settledOn": "2026-09-20"
+    },
+    {
+      "expenseId": "e020",
+      "memberId": "ada",
+      "settledOn": "2026-09-20"
+    },
+    {
+      "expenseId": "e021",
+      "memberId": "ada",
+      "settledOn": "2026-09-22"
+    },
+    {
+      "expenseId": "e021",
+      "memberId": "tolu",
+      "settledOn": "2026-09-22"
+    },
+    {
+      "expenseId": "e022",
+      "memberId": "godspower",
+      "settledOn": "2026-09-22"
+    },
+    {
+      "expenseId": "e022",
+      "memberId": "ada",
+      "settledOn": "2026-09-25"
+    },
+    {
+      "expenseId": "e024",
+      "memberId": "godspower",
+      "settledOn": "2026-09-27"
+    },
+    {
+      "expenseId": "e023",
+      "memberId": "ada",
+      "settledOn": "2026-09-30"
+    },
+    {
+      "expenseId": "e023",
+      "memberId": "tolu",
+      "settledOn": "2026-09-30"
+    },
+    {
+      "expenseId": "e022",
+      "memberId": "emeka",
+      "settledOn": "2026-10-01"
+    },
+    {
+      "expenseId": "e023",
+      "memberId": "emeka",
+      "settledOn": "2026-10-02"
+    },
+    {
+      "expenseId": "e024",
+      "memberId": "ada",
+      "settledOn": "2026-10-03"
+    },
+    {
+      "expenseId": "e024",
+      "memberId": "emeka",
+      "settledOn": "2026-10-03"
+    },
+    {
+      "expenseId": "e025",
+      "memberId": "ada",
+      "settledOn": "2026-10-04"
+    },
+    {
+      "expenseId": "e025",
+      "memberId": "tolu",
+      "settledOn": "2026-10-04"
+    },
+    {
+      "expenseId": "e026",
+      "memberId": "tolu",
+      "settledOn": "2026-10-05"
+    },
+    {
+      "expenseId": "e029",
+      "memberId": "godspower",
+      "settledOn": "2026-10-05"
+    },
+    {
+      "expenseId": "e026",
+      "memberId": "ada",
+      "settledOn": "2026-10-06"
+    },
+    {
+      "expenseId": "e027",
+      "memberId": "tolu",
+      "settledOn": "2026-10-06"
+    },
+    {
+      "expenseId": "e030",
+      "memberId": "godspower",
+      "settledOn": "2026-10-06"
+    },
+    {
+      "expenseId": "e027",
+      "memberId": "ada",
+      "settledOn": "2026-10-07"
+    },
+    {
+      "expenseId": "e028",
+      "memberId": "tolu",
+      "settledOn": "2026-10-07"
+    },
+    {
+      "expenseId": "e028",
+      "memberId": "ada",
+      "settledOn": "2026-10-08"
+    },
+    {
+      "expenseId": "e029",
+      "memberId": "tolu",
+      "settledOn": "2026-10-08"
+    },
+    {
+      "expenseId": "e025",
+      "memberId": "emeka",
+      "settledOn": "2026-10-09"
+    },
+    {
+      "expenseId": "e030",
+      "memberId": "tolu",
+      "settledOn": "2026-10-09"
+    },
+    {
+      "expenseId": "e029",
+      "memberId": "ada",
+      "settledOn": "2026-10-10"
+    },
+    {
+      "expenseId": "e027",
+      "memberId": "emeka",
+      "settledOn": "2026-10-11"
+    },
+    {
+      "expenseId": "e026",
+      "memberId": "emeka",
+      "settledOn": "2026-10-12"
+    },
+    {
+      "expenseId": "e030",
+      "memberId": "emeka",
+      "settledOn": "2026-10-13"
+    },
+    {
+      "expenseId": "e031",
+      "memberId": "godspower",
+      "settledOn": "2026-10-13"
+    },
+    {
+      "expenseId": "e031",
+      "memberId": "tolu",
+      "settledOn": "2026-10-14"
+    },
+    {
+      "expenseId": "e031",
+      "memberId": "ada",
+      "settledOn": "2026-10-15"
+    },
+    {
+      "expenseId": "e032",
+      "memberId": "godspower",
+      "settledOn": "2026-10-16"
+    },
+    {
+      "expenseId": "e033",
+      "memberId": "godspower",
+      "settledOn": "2026-10-17"
+    },
+    {
+      "expenseId": "e034",
+      "memberId": "godspower",
+      "settledOn": "2026-10-18"
+    },
+    {
+      "expenseId": "e032",
+      "memberId": "ada",
+      "settledOn": "2026-10-19"
+    },
+    {
+      "expenseId": "e033",
+      "memberId": "tolu",
+      "settledOn": "2026-10-21"
+    },
+    {
+      "expenseId": "e034",
+      "memberId": "ada",
+      "settledOn": "2026-10-24"
+    },
+    {
+      "expenseId": "e035",
+      "memberId": "godspower",
+      "settledOn": "2026-10-24"
+    },
+    {
+      "expenseId": "e032",
+      "memberId": "emeka",
+      "settledOn": "2026-10-25"
+    },
+    {
+      "expenseId": "e034",
+      "memberId": "emeka",
+      "settledOn": "2026-10-25"
+    },
+    {
+      "expenseId": "e036",
+      "memberId": "godspower",
+      "settledOn": "2026-10-27"
+    },
+    {
+      "expenseId": "e037",
+      "memberId": "godspower",
+      "settledOn": "2026-10-28"
+    },
+    {
+      "expenseId": "e036",
+      "memberId": "ada",
+      "settledOn": "2026-10-29"
+    },
+    {
+      "expenseId": "e035",
+      "memberId": "ada",
+      "settledOn": "2026-10-30"
+    },
+    {
+      "expenseId": "e037",
+      "memberId": "tolu",
+      "settledOn": "2026-10-31"
+    }
+  ]
+}

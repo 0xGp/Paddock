@@ -1,0 +1,63 @@
+{
+  "at": "2026-10-28T17:03:49.792Z",
+  "endpoint": "sui-mainnet.gateway.tatum.io",
+  "plan": "free;ratelimit=3;strategy=shared",
+  "calls": [
+    {
+      "name": "chainHead",
+      "ok": true,
+      "ms": 4367,
+      "attempts": 1,
+      "value": {
+        "chainId": "4btiuiMPvEENsttpZC7CZ53DruC3MAgfznDbASZ7DR6S",
+        "checkpoint": 339122506,
+        "timestamp": "2026-10-28T17:03:45.551Z"
+      }
+    },
+    {
+      "name": "transaction",
+      "ok": true,
+      "ms": 1413,
+      "attempts": 1,
+      "value": {
+        "digest": "9BP3cyBReBTmWxDWzDP7TuTNyzsL9VMV7he9rP4mwAYx",
+        "status": "SUCCESS",
+        "checkpoint": 339121121,
+        "timestamp": "2026-10-28T16:58:10.704Z",
+        "balanceChanges": [
+          {
+            "owner": "0x1b8816421fcd8332757de9fe25483c406c8d955ac1bef4b8adcb476aa71447c8",
+            "amount": "-0.000011 USDC"
+          },
+          {
+            "owner": "0x290c359b3e950fa3e92ad5ca8314dd0d8b935e82c2021ce1078671aa3eee0b6c",
+            "amount": "0.000011 USDC"
+          },
+          {
+            "owner": "0x7c8e2ceb0839680a3b1f7aa1021d45670405d92f3c88e79aa1d3aa8a600bbdbf",
+            "amount": "-0.0001 SUI"
+          }
+        ]
+      }
+    },
+    {
+      "name": "balance",
+      "ok": true,
+      "ms": 1387,
+      "attempts": 1,
+      "value": {
+        "address": "0x290c359b3e950fa3e92ad5ca8314dd0d8b935e82c2021ce1078671aa3eee0b6c",
+        "usdc": "0.018915 USDC"
+      }
+    }
+  ],
+  "queries": {
+    "chainHead": "{ chainIdentifier checkpoint { sequenceNumber timestamp } }",
+    "transaction": "query ($digest: String!) {\n  transaction(digest: $digest) {\n    digest\n    effects {\n      status\n      timestamp\n      checkpoint { sequenceNumber }\n      balanceChanges(first: 20) { nodes { amount owner { address } coinType { repr } } }\n    }\n  }\n}",
+    "balance": "query ($address: SuiAddress!, $coinType: String!) {\n  address(address: $address) { balance(coinType: $coinType) { totalBalance } }\n}"
+  },
+  "cache": {
+    "revalidateSec": 30,
+    "burst": "2 bursts of 40 parallel GET /status 5 s apart after the 30 s window: each burst saw one checkedAt (18:02:41, then 18:03:22), i.e. 80 requests caused 1 re-check = 3 Tatum calls"
+  }
+}
