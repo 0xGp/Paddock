@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { SettleScreen } from "./settle";
 
-export const metadata: Metadata = { title: "Settle up · SplitSense" };
+export const metadata: Metadata = { title: "Settle up · Paddock" };
 
 export default function SettlePage() {
   return (

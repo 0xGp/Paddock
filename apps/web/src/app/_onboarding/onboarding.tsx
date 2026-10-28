@@ -84,7 +84,7 @@ export function Onboarding() {
       <main className="flex flex-1 flex-col items-center justify-center px-5 py-6 sm:px-8">
         <section
           aria-roledescription="carousel"
-          aria-label="Welcome to SplitSense"
+          aria-label="Welcome to Paddock"
           className="w-full max-w-[26rem]"
           onKeyDown={(e) => {
             if (e.key === "ArrowRight") go(index + 1);
@@ -151,7 +151,7 @@ export function Onboarding() {
           <div className={cn("mt-6 space-y-3 transition-all duration-300", index === last ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-2 opacity-0")} inert={index !== last}>
             {status === "connected" ? (
               <Link href="/app" className="flex h-14 w-full items-center justify-center gap-2 rounded-full bg-navy text-base font-semibold text-white">
-                Open SplitSense
+                Open Paddock
                 <ArrowRight aria-hidden className="size-4" />
               </Link>
             ) : (

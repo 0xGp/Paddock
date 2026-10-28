@@ -1,8 +1,10 @@
-# SplitSense
+<img src="apps/web/src/app/icon.svg" alt="Paddock logo: a banknote and a coin" width="72">
+
+# Paddock
 
 **The group-money app that remembers how your flat actually lives, and can prove every suggestion.**
 
-SplitSense helps flatmates and friends in Lagos share bills (diesel, prepaid power, data, groceries, trips) and settle up in USDC on Sui. Over time it learns who usually pays for what, which bills come back, and how quickly each person settles. That learned layer lives in **Walrus Memory on Sui Mainnet**. Every on-chain read and every payment goes through **Tatum**.
+Paddock helps flatmates and friends in Lagos share bills (diesel, prepaid power, data, groceries, trips) and settle up in USDC on Sui. Over time it learns who usually pays for what, which bills come back, and how quickly each person settles. That learned layer lives in **Walrus Memory on Sui Mainnet**. Every on-chain read and every payment goes through **Tatum**.
 
 Built for the Tatum × Walrus **"Total Recall"** hackathon, Consumer Finance track.
 
@@ -38,12 +40,12 @@ Split-bill apps can tell you the balance, but they forget how the flat actually 
 
 ## The solution
 
-SplitSense keeps an honest ledger and adds a memory on top:
+Paddock keeps an honest ledger and adds a memory on top:
 
 1. **It learns the flat's habits.** Fixed, versioned rules (no AI model decides anything) find recurring bills, the usual payer, whose turn is next and how quickly each person settles.
 2. **It remembers them on Walrus.** Each insight is written to Walrus Memory as a signed, hash-chained envelope, and the app reads them back from Walrus to drive what you see. The timeline shows what it learned, what it revised, and what it stopped believing.
 3. **It can prove every suggestion.** Tap any learned row to see the formula, the numbers, and the exact Walrus blob it came from. The ledger itself can be rebuilt from checkpoints on Walrus and checked hash for hash.
-4. **It settles in USDC on Sui, with no gas.** The payment is built, executed and confirmed through Tatum. Only when Tatum confirms the exact amount does SplitSense write the receipt to Walrus.
+4. **It settles in USDC on Sui, with no gas.** The payment is built, executed and confirmed through Tatum. Only when Tatum confirms the exact amount does Paddock write the receipt to Walrus.
 
 ## How Tatum and Walrus make it work
 
@@ -63,7 +65,7 @@ SplitSense keeps an honest ledger and adds a memory on top:
 
 **How it's read back.** Four recalls (one per kind) fetch the group's memories from Walrus. Every envelope is re-checked (hash, header, namespace), and anything that fails is rejected. The demo renders from that verified set, refreshed in the background so a 20-second recall never blocks the page. If Walrus doesn't answer, the page says it's using cached memory and when it last heard from Walrus.
 
-**What it changes.** Memory on (left) and memory off (right). With memory off, SplitSense is a plain bill splitter: same balances, no suggestions.
+**What it changes.** Memory on (left) and memory off (right). With memory off, Paddock is a plain bill splitter: same balances, no suggestions.
 
 <table>
 <tr>
@@ -147,7 +149,7 @@ Every transaction, every memory blob (with Walruscan links), and Suiscan and Wal
 ```mermaid
 flowchart LR
   subgraph Browser
-    UI["SplitSense web app<br/>/app · /demo · /status"]
+    UI["Paddock web app<br/>/app · /demo · /status"]
     W["Sui wallet<br/>Slush or any wallet-standard wallet"]
   end
   subgraph Server["Next.js server"]
@@ -193,8 +195,8 @@ flowchart LR
 sequenceDiagram
   autonumber
   actor U as You
-  participant App as SplitSense app
-  participant S as SplitSense server
+  participant App as Paddock app
+  participant S as Paddock server
   participant T as Tatum (Sui GraphQL)
   participant W as Walrus Memory
   U->>App: Pay ₦11,000 to Godspower
@@ -231,6 +233,8 @@ fixtures               the Flat 3B ledger used by /demo and the golden tests
 scripts                proof, seeding, smoke tests, end-to-end runs, screenshots
 docs                   proof, spec, decision records, evidence, screenshots
 ```
+
+The code keeps the project's codename, SplitSense: packages are `@splitsense/*`, and memories use the `SPLITSENSE v1` envelope that is already stored on Mainnet.
 
 **Stack:** Next.js 16 (App Router), React 19, TypeScript (strict), Tailwind CSS, Drizzle ORM on Postgres (Neon), `@mysten/sui` 2.38, `@mysten-incubation/memwal` 0.1.8, zod, Vitest.
 

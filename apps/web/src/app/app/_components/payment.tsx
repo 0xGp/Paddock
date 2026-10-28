@@ -121,7 +121,7 @@ export function PaymentRow({
                 <ExternalLink aria-hidden className="size-3" />
               </a>
             ) : (
-              <span className="text-ink-muted">{p.receipt ? "Being written to Walrus" : "Kept in SplitSense"}</span>
+              <span className="text-ink-muted">{p.receipt ? "Being written to Walrus" : "Kept in Paddock"}</span>
             )}
           </Detail>
         </dl>

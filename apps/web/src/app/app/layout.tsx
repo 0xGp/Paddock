@@ -3,7 +3,7 @@ import { Suspense, type ReactNode } from "react";
 import { AppShell } from "./_components/shell";
 
 export const metadata: Metadata = {
-  title: "SplitSense",
+  title: "Paddock",
   description: "Split bills with your flatmates or friends at an event, then settle up in USDC on Sui.",
 };
 

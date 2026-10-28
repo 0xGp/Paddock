@@ -129,7 +129,7 @@ function Balance({ g, at }: { g: GroupData; at: (id: string) => number }) {
         <p className={cn("mt-1 text-3xl font-bold tabular-nums", net < 0n ? "text-owes" : net > 0n ? "text-sui" : "text-ink")}>{net === 0n ? "All square" : naira(net)}</p>
         <p className="mt-1 text-xs text-ink-muted">
           {g.billCount === 0
-            ? "Add the first bill and SplitSense works out who owes whom."
+            ? "Add the first bill and Paddock works out who owes whom."
             : `At ₦${g.rate.toLocaleString("en-NG")} per USDC, after payments already made on Sui.`}
         </p>
       </div>
@@ -219,7 +219,7 @@ function Invite({ g, highlight, at }: { g: GroupData; highlight: boolean; at: (i
     setCopied(true);
     setTimeout(() => setCopied(false), 1500);
   };
-  const share = () => navigator.share?.({ title: g.name, text: `Join ${g.name} on SplitSense so we can split bills and settle up.`, url }).catch(() => null);
+  const share = () => navigator.share?.({ title: g.name, text: `Join ${g.name} on Paddock so we can split bills and settle up.`, url }).catch(() => null);
   const rotate = async () => {
     if (!confirm("Make a new link? The current one will stop working.")) return;
     setRotating(true);

@@ -314,7 +314,7 @@ function SettleForm({
             {busy && <LoaderCircle aria-hidden className="size-4 animate-spin" />}
             {busy ? "Settling…" : phase.at === "error" ? "Try again" : `Pay ${micro !== null && !problem ? usdcAmount(micro, true) : ""} USDC`}
           </button>
-          <p className="mt-3 px-2 pb-1 text-center text-xs text-pretty text-ink-muted">You sign in your wallet. SplitSense never holds your funds.</p>
+          <p className="mt-3 px-2 pb-1 text-center text-xs text-pretty text-ink-muted">You sign in your wallet. Paddock never holds your funds.</p>
         </div>
       </Panel>
     </div>
@@ -391,7 +391,7 @@ function Success({ result, onLeave }: { result: Settled; onLeave: (href: string)
             <Database aria-hidden className="size-4" />
             Receipt
           </dt>
-          <dd className="font-medium">{result.receipt ? "Writing to Walrus" : "Saved in SplitSense"}</dd>
+          <dd className="font-medium">{result.receipt ? "Writing to Walrus" : "Saved in Paddock"}</dd>
         </div>
       </dl>
       <div className="grid grid-cols-2 gap-2 p-2">

@@ -40,7 +40,7 @@ The group-money app that remembers how your flat actually lives, and can prove e
 - Terminology: "flat"/"group", "expense", "settle", "group rate", "from memory", "Why?".
 
 ## Brand Commitments
-- Name: **SplitSense**.
+- Name: **Paddock** (codename SplitSense: package names and the `SPLITSENSE v1` memory format keep it).
 - Voice (confirmed): plain, warm English with Lagos money words used naturally (diesel, NEPA, data, service charge, LAWMA, Shoprite). No crypto jargon in primary copy ("Pay Emeka ₦3,000 (2.00 USDC)", not "Send 2 USDC to 0x…").
 - Visual direction (user-pinned Oct 28, from fintech app references): **rounded glassmorphism in Sui blue, navy and teal.** Light ground washed with soft teal and blue light; frosted white glass cards (28px corners); a deep navy-to-Sui-blue balance card with white pill buttons; teal "Today" chips; tinted initial avatars; floating navy pill tab bar on phones; Plus Jakarta Sans. Craft bar stays Monzo, Revolut and Linear.
 - No logo exists yet.

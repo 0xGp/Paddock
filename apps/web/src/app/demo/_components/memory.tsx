@@ -66,7 +66,7 @@ export function MemoryCard({ memory, className }: { memory: DemoMemory; classNam
       <WithMemory
         off={
           <p className="mt-4 text-sm text-pretty text-ink-muted">
-            Memory is off, so this is any bill splitter: balances and payments from the ledger, nothing learned. Turn it back on to see what SplitSense
+            Memory is off, so this is any bill splitter: balances and payments from the ledger, nothing learned. Turn it back on to see what Paddock
             remembered about this flat.
           </p>
         }

@@ -12,7 +12,7 @@ import { ReceiptRow } from "./_components/receipt";
 import { ExplainRow } from "./_components/why";
 
 export const metadata: Metadata = {
-  title: "Flat 3B demo · SplitSense",
+  title: "Flat 3B demo · Paddock",
   description: "A sample Lagos flat: who owes whom, whose turn it is, and what's due, with the working behind every number.",
 };
 

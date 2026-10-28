@@ -1,6 +1,6 @@
 # On-chain proof: every Tatum call and Walrus write
 
-This page lists everything SplitSense has done on Sui Mainnet: each USDC transaction (built, sent and confirmed through **Tatum**) and each memory written to **Walrus Memory**, with explorer links and screenshots. All checks below were re-run on **28 Oct 2026 at about 21:55 WAT** (UTC+1).
+This page lists everything Paddock has done on Sui Mainnet: each USDC transaction (built, sent and confirmed through **Tatum**) and each memory written to **Walrus Memory**, with explorer links and screenshots. All checks below were re-run on **28 Oct 2026 at about 21:55 WAT** (UTC+1).
 
 The demo flat "Flat 3B" and its people (Godspower, Tolu, Ada, Emeka) are synthetic. The wallets and the money are real.
 
@@ -43,7 +43,7 @@ The payer was funded by bridging 0.000544 ETH from Ethereum with Mayan ([`0xda82
 
 Every step runs against Tatum's Sui Mainnet GraphQL gateway (`sui-mainnet.gateway.tatum.io`) from the server. The API key never reaches the browser.
 
-| Step | Tatum GraphQL call | What SplitSense checks |
+| Step | Tatum GraphQL call | What Paddock checks |
 |---|---|---|
 | 1. Build | `SuiGraphQLClient` pointed at Tatum resolves the payer's USDC and builds `0x2::balance::send_funds<USDC>` with gas price 0 and budget 0 | The amount is at least 0.01 USDC and no more than you owe that person |
 | 2. Sign | (in the user's wallet, `sui:signTransaction`) | Nothing leaves the browser except the signature |
@@ -93,7 +93,7 @@ Namespaces are opaque on purpose: `ss_g_` plus the first 16 hex characters of `s
 
 ### What a memory looks like
 
-Each memory is a `SPLITSENSE v1` envelope: a one-line header that recall can match, then canonical JSON with `seq`, `prev` (the hash of the previous memory of the same kind) and `hash = sha256(payload without hash)`. When SplitSense reads a memory back, it rejects it if the hash, header or namespace doesn't match.
+Each memory is a `SPLITSENSE v1` envelope: a one-line header that recall can match, then canonical JSON with `seq`, `prev` (the hash of the previous memory of the same kind) and `hash = sha256(payload without hash)`. When Paddock reads a memory back, it rejects it if the hash, header or namespace doesn't match.
 
 ```text
 SPLITSENSE v1 | kind=settlement_receipt | group=ss_g_fd36f984879028d5 | subject=FHS5aw5nn9X4… | seq=1 | at=2026-10-28T17:56:20.066Z

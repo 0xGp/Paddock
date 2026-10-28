@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { GroupScreen } from "./group";
 
-export const metadata: Metadata = { title: "Group · SplitSense" };
+export const metadata: Metadata = { title: "Group · Paddock" };
 
 export default function GroupPage() {
   return (

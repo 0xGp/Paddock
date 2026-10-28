@@ -1,6 +1,7 @@
 import type { Category } from "@splitsense/engine";
 import { BedDouble, Building2, Car, Fuel, Receipt, ShoppingBasket, Ticket, Trash2, Utensils, Wifi, Zap, type LucideIcon } from "lucide-react";
 import type { ReactNode } from "react";
+import { Logo } from "@/components/logo";
 import { cn } from "@/lib/cn";
 
 const AVATAR_TINT = [
@@ -28,10 +29,8 @@ export function Avatar({ name, index, className }: { name: string; index: number
 export function Brand({ tag }: { tag: string }) {
   return (
     <span className="flex items-center gap-2.5 text-lg font-bold">
-      <span aria-hidden className="grid size-9 place-items-center rounded-xl bg-navy">
-        <span className="size-3 rounded-full bg-sui-bright" />
-      </span>
-      SplitSense
+      <Logo />
+      Paddock
       <span className="glass hidden rounded-full px-3 py-1.5 text-xs font-semibold text-sui sm:inline">{tag}</span>
     </span>
   );

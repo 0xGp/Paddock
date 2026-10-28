@@ -25,7 +25,7 @@ export function JoinScreen() {
       <Panel className="mx-auto mt-6 max-w-md">
         <EmptyState icon={<Link2Off className="size-6" />} title="This invite doesn't work" body={invite.error}>
           <Link href="/app" className="glass inline-flex h-11 items-center rounded-full px-5 text-sm font-semibold">
-            Go to SplitSense
+            Go to Paddock
           </Link>
         </EmptyState>
       </Panel>
@@ -34,7 +34,7 @@ export function JoinScreen() {
 
   const card = <InviteCard invite={invite.data} />;
   return (
-    <AccessGate intro={card} reason={`Connect the wallet you'll pay and get paid with. It's your SplitSense account, so there's no password.`}>
+    <AccessGate intro={card} reason={`Connect the wallet you'll pay and get paid with. It's your Paddock account, so there's no password.`}>
       <div className="mx-auto mt-2 max-w-md space-y-4 sm:mt-10">
         {card}
         <JoinAction code={code} invite={invite.data} />

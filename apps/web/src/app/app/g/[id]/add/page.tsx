@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { AddBillScreen } from "./add-bill";
 
-export const metadata: Metadata = { title: "Add a bill · SplitSense" };
+export const metadata: Metadata = { title: "Add a bill · Paddock" };
 
 export default function AddBillPage() {
   return (

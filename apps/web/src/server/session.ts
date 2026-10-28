@@ -39,7 +39,7 @@ const cookie = (req: Request, maxAge: number) => ({
   maxAge,
 });
 
-const firstLine = (host: string) => `${host} wants you to sign in to SplitSense with your Sui account:`;
+const firstLine = (host: string) => `${host} wants you to sign in to Paddock with your Sui account:`;
 
 /** Starts a sign-in: the wallet signs this text, bound to a nonce kept in an HttpOnly cookie. */
 export async function createChallenge(req: Request, address: string) {

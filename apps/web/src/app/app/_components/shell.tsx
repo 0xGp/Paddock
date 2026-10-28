@@ -73,7 +73,7 @@ export function AppShell({ children }: { children: ReactNode }) {
 
         <header className="sticky top-0 z-20">
           <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 pt-[max(1rem,env(safe-area-inset-top))] pb-3 sm:px-6">
-            <Link href="/" aria-label="SplitSense home">
+            <Link href="/" aria-label="Paddock home">
               <Brand tag="Sui Mainnet" />
             </Link>
             <nav aria-label="App" className={cn("glass hidden rounded-full p-1", ready && "md:block")}>

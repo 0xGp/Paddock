@@ -143,7 +143,7 @@ export function WalletModal() {
             <h2 id="wallet-modal-title" className="text-lg font-bold">
               Connect a wallet
             </h2>
-            <p className="mt-1 text-sm text-pretty text-ink-muted">Your wallet is your SplitSense account. We never see your keys.</p>
+            <p className="mt-1 text-sm text-pretty text-ink-muted">Your wallet is your Paddock account. We never see your keys.</p>
           </div>
           <button type="button" onClick={closeModal} aria-label="Close" className="-mt-1 -mr-1 grid size-9 shrink-0 place-items-center rounded-full hover:bg-ink/[0.06]">
             <X aria-hidden className="size-4" />

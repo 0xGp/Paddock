@@ -7,7 +7,7 @@ import { getStatus, type StatusCheck } from "@/server/status";
 import { Brand, Chip, Section } from "../demo/_components/parts";
 
 export const metadata: Metadata = {
-  title: "Status · SplitSense",
+  title: "Status · Paddock",
   description: "Live calls to Tatum's Sui Mainnet GraphQL gateway and the Walrus memory relayer, with what each returned and how long it took.",
 };
 
@@ -135,7 +135,7 @@ export default async function StatusPage() {
           title="Tatum: Sui Mainnet GraphQL"
           note={
             <>
-              Every on-chain read in SplitSense goes through Tatum.{" "}
+              Every on-chain read in Paddock goes through Tatum.{" "}
               <Chip tone={tatum.every((c) => c.ok) ? "teal" : "muted"}>
                 {tatum.filter((c) => c.ok).length}/{tatum.length} answered
               </Chip>
@@ -152,7 +152,7 @@ export default async function StatusPage() {
           title="Walrus memory"
           note={
             <>
-              Where SplitSense keeps what it learned.{" "}
+              Where Paddock keeps what it learned.{" "}
               <Chip tone={walrus.every((c) => c.ok) ? "teal" : "muted"}>
                 {walrus.filter((c) => c.ok).length}/{walrus.length} answered
               </Chip>
