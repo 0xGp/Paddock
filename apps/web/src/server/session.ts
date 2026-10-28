@@ -39,14 +39,17 @@ const cookie = (req: Request, maxAge: number) => ({
   maxAge,
 });
 
-const firstLine = (host: string) => `${host} wants you to sign in to Paddock with your Sui account:`;
+// Behind a reverse proxy req.url carries the upstream host, so prefer the forwarded Host header.
+const requestHost = (req: Request) => req.headers.get("host") ?? new URL(req.url).host;
+
+const firstLine = (req: Request) => `${requestHost(req)} wants you to sign in to Paddock with your Sui account:`;
 
 /** Starts a sign-in: the wallet signs this text, bound to a nonce kept in an HttpOnly cookie. */
 export async function createChallenge(req: Request, address: string) {
   const nonce = randomBytes(16).toString("hex");
   (await cookies()).set(NONCE_COOKIE, seal(nonce, NONCE_SEC), cookie(req, NONCE_SEC));
   return [
-    firstLine(new URL(req.url).host),
+    firstLine(req),
     normalizeAddress(address),
     "",
     "Signing proves this wallet is yours. It is free and can't move any funds.",
@@ -64,7 +67,7 @@ export async function completeSignIn(req: Request, input: { address: string; byt
   const address = normalizeAddress(input.address);
   const bytes = fromBase64(input.bytes);
   const lines = new TextDecoder().decode(bytes).split("\n");
-  if (lines[0] !== firstLine(new URL(req.url).host) || lines[1] !== address || !lines.includes(`Nonce: ${nonce}`)) {
+  if (lines[0] !== firstLine(req) || lines[1] !== address || !lines.includes(`Nonce: ${nonce}`)) {
     throw new AppError("that isn't the sign-in message we asked for", 401);
   }
   try {
