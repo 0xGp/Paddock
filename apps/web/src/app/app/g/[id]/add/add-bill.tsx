@@ -7,7 +7,7 @@ import { useParams, useRouter } from "next/navigation";
 import { useState, type FormEvent } from "react";
 import { Avatar, CategoryIcon } from "@/app/demo/_components/parts";
 import { cn } from "@/lib/cn";
-import { naira, parseNaira } from "@/lib/format";
+import { usdc, usdcToKobo } from "@/lib/format";
 import { refreshAll, send, useGroup, type GroupData } from "../../../_components/data";
 import { Panel, useAccess } from "../../../_components/shell";
 
@@ -45,7 +45,7 @@ function AddBillForm({ g }: { g: GroupData }) {
   const [error, setError] = useState<string | null>(null);
   const at = (memberId: string) => Math.max(0, g.members.findIndex((m) => m.id === memberId));
 
-  const kobo = parseNaira(amount);
+  const kobo = usdcToKobo(amount, g.rate);
   const each = kobo && sharing.size ? kobo / BigInt(sharing.size) : null;
   const toggle = (memberId: string) =>
     setSharing((s) => {
@@ -82,10 +82,9 @@ function AddBillForm({ g }: { g: GroupData }) {
           <div className="space-y-5 px-3 pb-3">
             <div>
               <label htmlFor="bill-amount" className="sr-only">
-                Amount in naira
+                Amount in USDC
               </label>
               <div className="flex items-baseline gap-2 rounded-2xl bg-white/70 px-4 py-4 ring-1 ring-ink/[0.06] focus-within:ring-sui/50">
-                <span className="text-2xl font-semibold text-ink-muted">₦</span>
                 <input
                   id="bill-amount"
                   inputMode="decimal"
@@ -96,9 +95,10 @@ function AddBillForm({ g }: { g: GroupData }) {
                   onChange={(e) => setAmount(e.target.value)}
                   className="w-full min-w-0 bg-transparent text-4xl font-bold tabular-nums outline-none placeholder:text-ink-muted/40"
                 />
+                <span className="text-lg font-semibold text-ink-muted">USDC</span>
               </div>
               <p className="mt-2 text-sm text-ink-muted tabular-nums">
-                {amount && kobo === null ? <span className="text-owes">Enter an amount like 12,500</span> : each ? `${naira(each)} each for ${sharing.size} ${sharing.size === 1 ? "person" : "people"}` : "\u00a0"}
+                {amount && kobo === null ? <span className="text-owes">Enter an amount like 16.50</span> : each ? `${usdc(each, g.rate)} each for ${sharing.size} ${sharing.size === 1 ? "person" : "people"}` : "\u00a0"}
               </p>
             </div>
 
@@ -204,7 +204,7 @@ function AddBillForm({ g }: { g: GroupData }) {
                   >
                     <Avatar name={m.name} index={at(m.id)} />
                     <span className="min-w-0 flex-1 truncate font-semibold">{m.id === g.me.id ? `${m.name} (you)` : m.name}</span>
-                    {on && each && <span className="text-sm text-ink-muted tabular-nums">{naira(each)}</span>}
+                    {on && each && <span className="text-sm text-ink-muted tabular-nums">{usdc(each, g.rate)}</span>}
                     <span aria-hidden className={cn("grid size-6 place-items-center rounded-lg ring-2", on ? "bg-sui text-white ring-sui" : "ring-ink/20")}>
                       {on && <Check className="size-4" strokeWidth={3} />}
                     </span>
@@ -233,7 +233,7 @@ function AddBillForm({ g }: { g: GroupData }) {
           className="flex h-14 w-full items-center justify-center gap-2 rounded-full bg-navy text-base font-semibold text-white transition-transform active:scale-[0.98] disabled:opacity-50"
         >
           {busy && <LoaderCircle aria-hidden className="size-4 animate-spin" />}
-          Add {kobo ? naira(kobo) : "bill"}
+          Add {kobo ? usdc(kobo, g.rate) : "bill"}
         </button>
       </form>
     </div>

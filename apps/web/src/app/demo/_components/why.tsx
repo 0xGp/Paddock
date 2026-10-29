@@ -1,11 +1,12 @@
 import type { Explanation } from "@splitsense/engine";
 import { ChevronRight } from "lucide-react";
 import type { ReactNode } from "react";
+import { usdcText } from "@/lib/format";
 import type { MemoryRef } from "@/server/memory";
 import { MemoryLink } from "./memory";
 
 /** A list row that opens in place to show the facts, formula and threshold behind it. */
-export function ExplainRow({ explanation, memory, children }: { explanation: Explanation; memory?: MemoryRef; children: ReactNode }) {
+export function ExplainRow({ explanation, rate, memory, children }: { explanation: Explanation; rate: number; memory?: MemoryRef; children: ReactNode }) {
   const entries = explanation.evidenceExpenseIds.length;
   return (
     <li>
@@ -24,15 +25,15 @@ export function ExplainRow({ explanation, memory, children }: { explanation: Exp
               {explanation.facts.map((f) => (
                 <div key={f.label} className="contents">
                   <dt className="text-ink-muted">{f.label}</dt>
-                  <dd className="text-right font-medium tabular-nums">{f.value}</dd>
+                  <dd className="text-right font-medium tabular-nums">{usdcText(f.value, rate)}</dd>
                 </div>
               ))}
             </dl>
             <div className="mt-4 space-y-1.5 border-t border-line pt-4 text-xs text-pretty text-ink-muted">
               <p>
-                Worked out as <code className="font-mono text-ink">{explanation.formula}</code>
+                Worked out as <code className="font-mono text-ink">{usdcText(explanation.formula, rate)}</code>
               </p>
-              <p>Shown when {explanation.threshold}</p>
+              <p>Shown when {usdcText(explanation.threshold, rate)}</p>
               {memory ? (
                 <MemoryLink memory={memory} />
               ) : (

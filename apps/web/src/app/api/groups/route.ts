@@ -6,6 +6,6 @@ import { requireSession } from "@/server/session";
 export async function POST(req: Request) {
   return handle(async () => {
     const address = await requireSession();
-    return createGroup(address, await body(req, newGroup, "{ name, kind, place?, rate }"));
+    return createGroup(address, await body(req, newGroup, "{ name, kind, place?, rate? }"));
   });
 }

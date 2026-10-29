@@ -6,7 +6,7 @@ import { useParams, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { Avatar, CategoryIcon } from "@/app/demo/_components/parts";
 import { cn } from "@/lib/cn";
-import { naira, shortAddress, shortDate } from "@/lib/format";
+import { shortAddress, shortDate, usdc, usdcText } from "@/lib/format";
 import { refreshAll, send, useGroup, type Bill, type GroupData } from "../../_components/data";
 import { DebtList, Faces, KIND, KindIcon, PayButton, payHref } from "../../_components/groups";
 import { PaymentRow } from "../../_components/payment";
@@ -82,7 +82,7 @@ function Header({ g }: { g: GroupData }) {
           {g.members.length} {g.members.length === 1 ? "person" : "people"}
         </span>
         <span className="text-sm text-white/75 tabular-nums">
-          {naira(BigInt(g.spentMinor))} over {g.billCount} {g.billCount === 1 ? "bill" : "bills"}
+          {usdc(BigInt(g.spentMinor), g.rate)} over {g.billCount} {g.billCount === 1 ? "bill" : "bills"}
         </span>
       </div>
       {payable.length > 0 && (
@@ -91,7 +91,7 @@ function Header({ g }: { g: GroupData }) {
           className="mt-5 flex h-14 items-center justify-center gap-2 rounded-full bg-white text-base font-semibold text-navy shadow-[0_10px_30px_-12px_oklch(0.2_0.08_264/0.7)] transition-transform active:scale-[0.97]"
         >
           <HandCoins aria-hidden className="size-5" />
-          Pay {naira(-BigInt(g.net))}
+          Pay {usdc(BigInt(g.net), g.rate)}
           {payable.length === 1 && <span className="font-medium text-ink-muted">to {payable[0]!.name}</span>}
         </Link>
       )}
@@ -126,11 +126,11 @@ function Balance({ g, at }: { g: GroupData; at: (id: string) => number }) {
     <Panel>
       <div className="px-3 pt-4 pb-3">
         <p className="text-sm text-ink-muted">{net < 0n ? "You owe" : net > 0n ? "You're owed" : "Your balance"}</p>
-        <p className={cn("mt-1 text-3xl font-bold tabular-nums", net < 0n ? "text-owes" : net > 0n ? "text-sui" : "text-ink")}>{net === 0n ? "All square" : naira(net)}</p>
+        <p className={cn("mt-1 text-3xl font-bold tabular-nums", net < 0n ? "text-owes" : net > 0n ? "text-sui" : "text-ink")}>{net === 0n ? "All square" : usdc(net, g.rate)}</p>
         <p className="mt-1 text-xs text-ink-muted">
           {g.billCount === 0
             ? "Add the first bill and Paddock works out who owes whom."
-            : `At ₦${g.rate.toLocaleString("en-NG")} per USDC, after payments already made on Sui.`}
+            : "After payments already made on Sui."}
         </p>
       </div>
       {g.owe.length > 0 && <DebtList label="You pay" rows={g.owe} at={at} payHref={(d) => `/app/settle?group=${g.id}&to=${d.memberId}`} />}
@@ -163,7 +163,7 @@ function Bills({ g }: { g: GroupData }) {
       ) : (
         <ul role="list" className="space-y-0.5">
           {g.bills.map((b) => (
-            <BillRow key={b.id} b={b} groupId={g.id} me={g.me.id} />
+            <BillRow key={b.id} b={b} groupId={g.id} me={g.me.id} rate={g.rate} />
           ))}
         </ul>
       )}
@@ -172,7 +172,7 @@ function Bills({ g }: { g: GroupData }) {
   );
 }
 
-function BillRow({ b, groupId, me }: { b: Bill; groupId: string; me: string }) {
+function BillRow({ b, groupId, me, rate }: { b: Bill; groupId: string; me: string; rate: number }) {
   const [busy, setBusy] = useState(false);
   const share = BigInt(b.shareMinor);
   const remove = async () => {
@@ -196,8 +196,8 @@ function BillRow({ b, groupId, me }: { b: Bill; groupId: string; me: string }) {
         </p>
       </div>
       <div className="shrink-0 text-right">
-        <p className="font-bold tabular-nums">{naira(BigInt(b.amountMinor))}</p>
-        <p className="text-xs text-ink-muted tabular-nums">{share > 0n ? `Yours ${naira(share)}` : "Not yours"}</p>
+        <p className="font-bold tabular-nums">{usdc(BigInt(b.amountMinor), rate)}</p>
+        <p className="text-xs text-ink-muted tabular-nums">{share > 0n ? `Yours ${usdc(share, rate)}` : "Not yours"}</p>
       </div>
       {b.mine && (
         <button type="button" onClick={remove} disabled={busy} aria-label={`Remove ${b.description}`} className="grid size-9 shrink-0 place-items-center rounded-full text-ink-muted hover:bg-owes/[0.08] hover:text-owes">
@@ -269,7 +269,7 @@ function Invite({ g, highlight, at }: { g: GroupData; highlight: boolean; at: (i
                 {m.address && <p className="font-mono text-[0.6875rem] text-ink-muted">{shortAddress(m.address)}</p>}
               </div>
               <p className={cn("text-sm font-semibold tabular-nums", net < 0n ? "text-owes" : net > 0n ? "text-sui" : "text-ink-muted")}>
-                {net < 0n ? `owes ${naira(net)}` : net > 0n ? `owed ${naira(net)}` : "square"}
+                {net < 0n ? `owes ${usdc(net, g.rate)}` : net > 0n ? `owed ${usdc(net, g.rate)}` : "square"}
               </p>
               {g.owe.some((d) => d.memberId === m.id && d.address) && <PayButton href={`/app/settle?group=${g.id}&to=${m.id}`} className="ml-1" />}
             </li>
@@ -281,7 +281,7 @@ function Invite({ g, highlight, at }: { g: GroupData; highlight: boolean; at: (i
 }
 
 function Spotted({ g }: { g: GroupData }) {
-  const items = [...g.turns.map((t) => ({ key: `turn-${t.category}`, category: t.category, text: t.summary })), ...g.upcoming.map((u) => ({ key: `bill-${u.category}`, category: u.category, text: u.summary }))];
+  const items = [...g.turns.map((t) => ({ key: `turn-${t.category}`, category: t.category, text: usdcText(t.summary, g.rate) })), ...g.upcoming.map((u) => ({ key: `bill-${u.category}`, category: u.category, text: usdcText(u.summary, g.rate) }))];
   return (
     <Panel title="Spotted in your bills">
       <ul role="list" className="space-y-0.5">

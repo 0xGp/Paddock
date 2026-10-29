@@ -2,7 +2,7 @@ import type { Cadence, Category } from "@splitsense/engine";
 import { ArrowRight, CalendarClock, DatabaseZap, HandCoins, House } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { dueLabel, fullDate, naira, shortDate, usdc } from "@/lib/format";
+import { dueLabel, fullDate, shortDate, usdc } from "@/lib/format";
 import { getDemoFlat } from "@/server/demo";
 import { getDemoMemory } from "@/server/memory";
 import { MemoryCard, MemoryOffRow, Timeline } from "./_components/memory";
@@ -47,6 +47,7 @@ export default async function DemoPage() {
   const index = new Map(members.map((m, i) => [m.id, i]));
   const name = (id: string) => members.find((m) => m.id === id)?.displayName ?? id;
   const at = (id: string) => index.get(id) ?? 0;
+  const rate = group.rateNgnPerUsdc;
   const openTotal = view.balances.reduce((s, b) => (b.netMinor > 0n ? s + b.netMinor : s), 0n);
   const payments = view.transfers.length;
 
@@ -79,7 +80,7 @@ export default async function DemoPage() {
               <h2 id="open-total" className="mt-8 text-sm text-white/75">
                 Still open
               </h2>
-              <p className="mt-1 text-4xl font-bold tabular-nums sm:text-5xl">{naira(openTotal)}</p>
+              <p className="mt-1 text-4xl font-bold tabular-nums sm:text-5xl">{usdc(openTotal, rate)}</p>
               <p className="mt-2 text-sm text-pretty text-white/75">
                 {openTotal > 0n
                   ? `${WORD[payments] ?? payments} ${payments === 1 ? "payment settles" : "payments settle"} everyone.`
@@ -109,10 +110,10 @@ export default async function DemoPage() {
               id="settle"
               className="order-3"
               title="Settle up"
-              note={`Group rate ₦${group.rateNgnPerUsdc.toLocaleString("en-NG")} = 1 USDC. Tap to see why.`}
+              note="Paid in USDC on Sui. Tap to see why."
             >
               {view.transfers.map((t) => (
-                <ExplainRow key={`${t.from}-${t.to}`} explanation={t.explanation}>
+                <ExplainRow rate={rate} key={`${t.from}-${t.to}`} explanation={t.explanation}>
                   <Avatar name={name(t.from)} index={at(t.from)} className="sm:hidden" />
                   <div className="hidden shrink-0 items-center sm:flex">
                     <Avatar name={name(t.from)} index={at(t.from)} />
@@ -124,10 +125,7 @@ export default async function DemoPage() {
                   <p className="min-w-0 flex-1 truncate font-medium">
                     {name(t.from)} <span className="text-ink-muted">pays</span> {name(t.to)}
                   </p>
-                  <div className="text-right">
-                    <p className="font-bold tabular-nums">{naira(t.amountMinor)}</p>
-                    <p className="text-xs text-ink-muted tabular-nums">{usdc(t.amountMinor, group.rateNgnPerUsdc)}</p>
-                  </div>
+                  <p className="font-bold tabular-nums">{usdc(t.amountMinor, rate)}</p>
                 </ExplainRow>
               ))}
             </Section>
@@ -151,7 +149,7 @@ export default async function DemoPage() {
                     <p className="text-right">
                       <span className={b.netMinor > 0n ? "font-bold text-sui tabular-nums" : "font-bold text-owes tabular-nums"}>
                         {b.netMinor > 0n ? "+" : "−"}
-                        {naira(b.netMinor)}
+                        {usdc(b.netMinor, rate)}
                       </span>
                       <span className="block text-xs text-ink-muted">{b.netMinor > 0n ? "gets back" : "owes"}</span>
                     </p>
@@ -170,7 +168,7 @@ export default async function DemoPage() {
                       {name(e.payerId)} paid · {shortDate(e.date)}
                     </p>
                   </div>
-                  <p className="font-bold tabular-nums">{naira(e.amountMinor)}</p>
+                  <p className="font-bold tabular-nums">{usdc(e.amountMinor, rate)}</p>
                 </Row>
               ))}
             </Section>
@@ -186,7 +184,7 @@ export default async function DemoPage() {
               <WithMemory off={<MemoryOffRow title="No suggestions" body="Without memory it can't know Tolu keeps buying the diesel." />}>
                 {memory.turns.length === 0 && <MemoryOffRow title="Nothing learned yet" body="No whose-turn pattern in memory." />}
                 {memory.turns.map((t) => (
-                  <ExplainRow key={t.category} explanation={t.explanation} memory={t.memory}>
+                  <ExplainRow rate={rate} key={t.category} explanation={t.explanation} memory={t.memory}>
                     <CategoryIcon category={t.category} />
                     <div className="min-w-0 flex-1">
                       <p className="font-medium">
@@ -212,7 +210,7 @@ export default async function DemoPage() {
                 {memory.bills.map((u) => {
                   const due = dueLabel(u.nextExpectedDate, view.asOf);
                   return (
-                    <ExplainRow key={u.category} explanation={u.explanation} memory={u.memory}>
+                    <ExplainRow rate={rate} key={u.category} explanation={u.explanation} memory={u.memory}>
                       <CategoryIcon category={u.category} />
                       <div className="min-w-0 flex-1">
                         <p className="truncate font-medium">{u.description}</p>
@@ -221,7 +219,7 @@ export default async function DemoPage() {
                         </p>
                       </div>
                       <div className="flex flex-col items-end gap-1">
-                        <p className="font-bold tabular-nums">{naira(u.expectedAmountMinor)}</p>
+                        <p className="font-bold tabular-nums">{usdc(u.expectedAmountMinor, rate)}</p>
                         <Chip tone={due === "Today" ? "teal" : "muted"}>{due}</Chip>
                       </div>
                     </ExplainRow>
@@ -239,7 +237,7 @@ export default async function DemoPage() {
               <WithMemory off={<MemoryOffRow title="No history" body="Without memory every flatmate looks equally reliable." />}>
                 {memory.habits.length === 0 && <MemoryOffRow title="Nothing learned yet" body="No settle-speed habits in memory." />}
                 {memory.habits.map((r) => (
-                  <ExplainRow key={r.memberId} explanation={r.explanation} memory={r.memory}>
+                  <ExplainRow rate={rate} key={r.memberId} explanation={r.explanation} memory={r.memory}>
                     <Avatar name={name(r.memberId)} index={at(r.memberId)} />
                     <div className="min-w-0 flex-1">
                       <div className="flex items-baseline justify-between gap-3">
@@ -259,7 +257,7 @@ export default async function DemoPage() {
           </div>
         </div>
 
-        <Timeline memory={memory} members={members} />
+        <Timeline memory={memory} members={members} rate={rate} />
 
         <p className="mt-10 text-center text-xs text-pretty text-ink-muted">
           Sample flat with made-up numbers, as of {fullDate(view.asOf)}. Read-only. Balances come from the ledger; suggestions come from memory on

@@ -21,17 +21,15 @@ export default function NewGroupScreen() {
   const [kind, setKind] = useState<GroupKind>("flat");
   const [name, setName] = useState("");
   const [place, setPlace] = useState("");
-  const [rate, setRate] = useState("1500");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const rateNumber = Number(rate.replace(/[,\s]/g, ""));
 
   const create = async (e: FormEvent) => {
     e.preventDefault();
     setBusy(true);
     setError(null);
     try {
-      const { id } = await send<{ id: string }>("/api/groups", "POST", { name, kind, place, rate: rateNumber });
+      const { id } = await send<{ id: string }>("/api/groups", "POST", { name, kind, place });
       refreshAll();
       router.push(`/app/g/${id}?new=1`);
     } catch (err) {
@@ -83,20 +81,6 @@ export default function NewGroupScreen() {
             <input id="group-place" value={place} onChange={(e) => setPlace(e.target.value)} maxLength={80} placeholder={COPY[kind].place} className={cn(field, "mt-2")} />
           </div>
 
-          <div>
-            <label htmlFor="group-rate" className="text-sm font-semibold">
-              Naira per USDC
-            </label>
-            <div className="mt-2 flex items-center gap-2 rounded-2xl bg-white/70 px-4 ring-1 ring-ink/[0.06] focus-within:ring-sui/50">
-              <span className="text-ink-muted">₦</span>
-              <input id="group-rate" inputMode="numeric" value={rate} onChange={(e) => setRate(e.target.value)} aria-describedby="rate-help" className="h-13 w-full bg-transparent font-semibold tabular-nums outline-none" />
-              <span className="shrink-0 text-sm text-ink-muted">= 1 USDC</span>
-            </div>
-            <p id="rate-help" className="mt-1.5 text-xs text-ink-muted">
-              Bills are in naira. When someone settles, this rate turns what they owe into USDC.
-            </p>
-          </div>
-
           {error && (
             <p role="alert" className="rounded-2xl bg-owes/[0.08] px-4 py-3 text-sm text-owes">
               {error}
@@ -105,7 +89,7 @@ export default function NewGroupScreen() {
 
           <button
             type="submit"
-            disabled={busy || !name.trim() || !Number.isInteger(rateNumber) || rateNumber < 100}
+            disabled={busy || !name.trim()}
             className="flex h-14 w-full items-center justify-center gap-2 rounded-full bg-navy text-base font-semibold text-white transition-transform active:scale-[0.98] disabled:opacity-50"
           >
             {busy && <LoaderCircle aria-hidden className="size-4 animate-spin" />}

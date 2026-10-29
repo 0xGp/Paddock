@@ -1,5 +1,5 @@
 import { ArrowUpRight, ChevronRight } from "lucide-react";
-import { naira, shortId, stamp, suiscanAccount, suiscanTx } from "@/lib/format";
+import { shortId, stamp, suiscanAccount, suiscanTx } from "@/lib/format";
 import type { LearnedReceipt } from "@/server/memory";
 import { MemoryLink } from "./memory";
 import { Avatar, Chip } from "./parts";
@@ -28,12 +28,10 @@ export function ReceiptRow({ receipt, name, at }: { receipt: LearnedReceipt; nam
             <p className="truncate font-medium">
               {name(r.from)} <span className="text-ink-muted">paid</span> {name(r.to)}
             </p>
-            <p className="text-sm text-ink-muted tabular-nums">
-              {usdcOf(r.microUsdc)} · {stamp(r.settledAt)}
-            </p>
+            <p className="text-sm text-ink-muted tabular-nums">{stamp(r.settledAt)}</p>
           </div>
           <div className="flex flex-col items-end gap-1">
-            <p className="font-bold tabular-nums">{naira(r.amountMinor)}</p>
+            <p className="font-bold tabular-nums">{usdcOf(r.microUsdc)}</p>
             <Chip tone="teal">On Sui</Chip>
           </div>
           <ChevronRight aria-hidden className="size-4 shrink-0 text-ink-muted transition-transform duration-200 ease-out group-open:rotate-90" strokeWidth={2} />
@@ -65,8 +63,6 @@ export function ReceiptRow({ receipt, name, at }: { receipt: LearnedReceipt; nam
                   {shortId(r.toAddress)}
                 </ChainLink>
               </dd>
-              <dt className="text-ink-muted">Settles</dt>
-              <dd className="text-right font-medium tabular-nums">{naira(r.amountMinor)} at the group rate</dd>
             </dl>
             <div className="mt-4 space-y-1.5 border-t border-line pt-4 text-xs text-pretty text-ink-muted">
               <p>Confirmed through Tatum before it was remembered: exactly {usdcOf(r.microUsdc)} left {name(r.from)} and reached {name(r.to)}.</p>

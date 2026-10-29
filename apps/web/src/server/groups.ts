@@ -4,6 +4,7 @@ import { normalizeAddress } from "@splitsense/chain";
 import { allocate, buildFlatView, koboToMicroUsdc, type Category, type Expense, type Ledger, type LocalDate, type Payment } from "@splitsense/engine";
 import { z } from "zod";
 import { env } from "@/env";
+import { usdc } from "@/lib/format";
 import { pool } from "@/server/db";
 import { demoAsOf, demoGroupId, demoLedger, getPayments, type PaymentRow } from "@/server/demo";
 import { AppError } from "@/server/http";
@@ -295,7 +296,7 @@ export const newGroup = z.object({
   name: z.string().trim().min(1, "give it a name").max(48, "keep the name under 48 characters"),
   kind: z.enum(GROUP_KINDS),
   place: z.string().trim().max(80).optional().transform((p) => p || null),
-  rate: z.number().int().min(100).max(100_000),
+  rate: z.number().int().min(100).max(100_000).default(fixture.group.rateNgnPerUsdc),
 });
 
 export async function createGroup(address: string, input: z.infer<typeof newGroup>) {
@@ -373,7 +374,7 @@ export async function addBill(id: string, address: string, input: z.infer<typeof
   if (!ids.has(input.payerId)) throw new AppError("whoever paid has to be in the group");
   if (!input.participantIds.every((p) => ids.has(p))) throw new AppError("everyone sharing the bill has to be in the group");
   if (!(CATEGORIES[group.kind] as string[]).includes(input.category)) throw new AppError("pick one of the categories");
-  if (input.amountMinor < 100n || input.amountMinor > MAX_BILL_KOBO) throw new AppError("bills go from ₦1 to ₦100,000,000");
+  if (input.amountMinor < BigInt(group.rate) || input.amountMinor > MAX_BILL_KOBO) throw new AppError(`bills go from 0.01 USDC to ${usdc(MAX_BILL_KOBO, group.rate)}`);
   const today = lagosToday();
   if (input.date > today) throw new AppError("a bill can't be dated in the future");
   if (input.date < `${Number(today.slice(0, 4)) - 1}${today.slice(4)}`) throw new AppError("bills older than a year can't be added");

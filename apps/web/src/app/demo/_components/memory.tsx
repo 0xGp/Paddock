@@ -2,7 +2,7 @@ import type { Category } from "@splitsense/engine";
 import type { Change } from "@splitsense/memory";
 import { ArrowUpRight, CircleOff, DatabaseZap, ShieldAlert, ShieldCheck } from "lucide-react";
 import { cn } from "@/lib/cn";
-import { naira, shortDate, shortId, stamp, walruscanBlob } from "@/lib/format";
+import { shortDate, shortId, stamp, usdc, usdcText, walruscanBlob } from "@/lib/format";
 import type { DemoMemory, MemoryRef, TimelineItem } from "@/server/memory";
 import { WithMemory } from "./memory-switch";
 import { Avatar, CategoryIcon, Chip } from "./parts";
@@ -126,7 +126,7 @@ const FIELD: Record<string, string> = {
   score: "Score",
 };
 
-function ChangeChip({ change, name }: { change: Change; name: (id: string) => string }) {
+function ChangeChip({ change, name, rate }: { change: Change; name: (id: string) => string; rate: number }) {
   const fmt = (v: unknown) => {
     if (v === undefined || v === null) return "–";
     switch (change.field) {
@@ -136,7 +136,7 @@ function ChangeChip({ change, name }: { change: Change; name: (id: string) => st
       case "nextExpectedDate":
         return shortDate(String(v));
       case "expectedAmountMinor":
-        return naira(BigInt(String(v)));
+        return usdc(BigInt(String(v)), rate);
       case "label":
         return SPEED[String(v)] ?? String(v);
       case "medianDelay":
@@ -162,7 +162,7 @@ const STATUS: Record<TimelineItem["status"], { label: string; tone: "teal" | "mu
   retired: { label: "Stopped", tone: "muted" },
 };
 
-export function Timeline({ memory, members }: { memory: DemoMemory; members: { id: string; displayName: string }[] }) {
+export function Timeline({ memory, members, rate }: { memory: DemoMemory; members: { id: string; displayName: string }[]; rate: number }) {
   const name = (id: string) => members.find((m) => m.id === id)?.displayName ?? id;
   const at = (id: string) => Math.max(0, members.findIndex((m) => m.id === id));
   const total = memory.timeline.reduce((n, d) => n + d.items.length, 0);
@@ -200,12 +200,12 @@ export function Timeline({ memory, members }: { memory: DemoMemory; members: { i
                             <span className="mr-1.5 align-[1px]">
                               <Chip tone={STATUS[t.status].tone}>{STATUS[t.status].label}</Chip>
                             </span>
-                            {t.status === "retired" ? t.summary.replace(/^No longer holds as of [\d-]+: /, "") : t.summary}
+                            {usdcText(t.status === "retired" ? t.summary.replace(/^No longer holds as of [\d-]+: /, "") : t.summary, rate)}
                           </p>
                           {t.changes.length > 0 && (
                             <div className="mt-1.5 flex flex-wrap gap-1.5">
                               {t.changes.map((c) => (
-                                <ChangeChip key={c.field} change={c} name={name} />
+                                <ChangeChip key={c.field} change={c} name={name} rate={rate} />
                               ))}
                             </div>
                           )}

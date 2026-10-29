@@ -4,7 +4,7 @@ import { ChevronRight, HandCoins, House, PartyPopper } from "lucide-react";
 import Link from "next/link";
 import { Avatar } from "@/app/demo/_components/parts";
 import { cn } from "@/lib/cn";
-import { naira, usdcAmount } from "@/lib/format";
+import { usdc, usdcAmount } from "@/lib/format";
 import type { Debt, GroupKind, GroupSummary } from "./data";
 
 export const KIND = {
@@ -21,11 +21,11 @@ export function KindIcon({ kind, className }: { kind: GroupKind; className?: str
   );
 }
 
-/** "You owe ₦…", "You're owed ₦…" or "All square", coloured to match. */
-export function NetLine({ net, className }: { net: bigint; className?: string }) {
+/** "You owe … USDC", "You're owed … USDC" or "All square", coloured to match. */
+export function NetLine({ net, rate, className }: { net: bigint; rate: number; className?: string }) {
   return (
     <span className={cn("font-semibold tabular-nums", net < 0n ? "text-owes" : net > 0n ? "text-sui" : "text-ink-muted", className)}>
-      {net < 0n ? `You owe ${naira(net)}` : net > 0n ? `You're owed ${naira(net)}` : "All square"}
+      {net < 0n ? `You owe ${usdc(net, rate)}` : net > 0n ? `You're owed ${usdc(net, rate)}` : "All square"}
     </span>
   );
 }
@@ -69,7 +69,7 @@ export function GroupRow({ g }: { g: GroupSummary }) {
           {g.demo && <span className="shrink-0 rounded-full bg-ink/[0.06] px-2 py-0.5 text-[0.625rem] font-semibold text-ink-muted uppercase">Sample</span>}
         </span>
         <span className="mt-0.5 block text-sm">
-          <NetLine net={BigInt(g.net)} />
+          <NetLine net={BigInt(g.net)} rate={g.rate} />
         </span>
         <span className="mt-1.5 flex items-center gap-2 text-xs text-ink-muted">
           <Faces names={g.members.map((m) => m.name)} />
@@ -89,11 +89,8 @@ export function DebtList({ label, rows, at, payHref }: { label: string; rows: De
         {rows.map((d) => (
           <li key={d.memberId} className="flex min-h-16 items-center gap-3 rounded-2xl px-2 py-2">
             <Avatar name={d.name} index={at(d.memberId)} />
-            <div className="min-w-0 flex-1">
-              <p className="truncate font-semibold">{d.name}</p>
-              <p className="text-xs text-ink-muted tabular-nums">{usdcAmount(BigInt(d.microUsdc))} USDC</p>
-            </div>
-            <p className="font-bold tabular-nums">{naira(BigInt(d.amountMinor))}</p>
+            <p className="min-w-0 flex-1 truncate font-semibold">{d.name}</p>
+            <p className="font-bold tabular-nums">{usdcAmount(BigInt(d.microUsdc))} USDC</p>
             {payHref && (
               <Link
                 href={payHref(d)}

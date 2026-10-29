@@ -1,4 +1,4 @@
-import { daysBetween, formatNaira, koboToMicroUsdc, type LocalDate } from "@splitsense/engine";
+import { daysBetween, type LocalDate } from "@splitsense/engine";
 
 const dayMonth = new Intl.DateTimeFormat("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
 const longDate = new Intl.DateTimeFormat("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
@@ -33,8 +33,6 @@ const clockFormat = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: 
 /** Time of day in Lagos with seconds, e.g. "17:58:03". */
 export const clock = (iso: string) => clockFormat.format(new Date(iso));
 
-export const naira = (kobo: bigint) => formatNaira(kobo < 0n ? -kobo : kobo);
-
 /** Base units to a decimal string with at most `max` decimals, trailing zeros trimmed down to `min`. */
 function units(value: bigint, decimals: number, min: number, max: number): string {
   const neg = value < 0n;
@@ -57,16 +55,23 @@ export function parseUsdc(text: string): bigint | null {
   return BigInt(m[1] || "0") * 1_000_000n + BigInt((m[2] ?? "").padEnd(6, "0"));
 }
 
-/** "12,500" or "₦12500.50" → kobo; null when it isn't a naira amount. */
-export function parseNaira(text: string): bigint | null {
-  const m = text.replace(/[,\s₦]/g, "").match(/^(\d{0,11})(?:\.(\d{0,2}))?$/);
-  if (!m || (!m[1] && !m[2])) return null;
-  return BigInt(m[1] || "0") * 100n + BigInt((m[2] ?? "").padEnd(2, "0"));
-}
-
 export const shortAddress = (a: string) => `${a.slice(0, 6)}…${a.slice(-4)}`;
 
+/** A ledger amount (NGN kobo) shown in USDC at the group rate, to the nearest cent, e.g. "16.67 USDC". Callers word the sign. */
 export function usdc(kobo: bigint, rateNgnPerUsdc: number): string {
-  const micro = koboToMicroUsdc(kobo, BigInt(rateNgnPerUsdc));
-  return `${(Number(micro / 10_000n) / 100).toFixed(2)} USDC`;
+  const abs = kobo < 0n ? -kobo : kobo;
+  const rate = BigInt(rateNgnPerUsdc);
+  return `${units((abs * 2n + rate) / (2n * rate), 2, 2, 2)} USDC`;
+}
+
+/** Engine and memory text keep the ledger's naira ("usually ₦25,000"); this shows those amounts in USDC. */
+export const usdcText = (text: string, rateNgnPerUsdc: number) =>
+  text.replace(/₦(\d[\d,]*)(?:\.(\d{1,2}))?/g, (_, whole: string, frac: string | undefined) =>
+    usdc(BigInt(whole.replace(/,/g, "")) * 100n + BigInt((frac ?? "").padEnd(2, "0")), rateNgnPerUsdc),
+  );
+
+/** "16.67" USDC typed into a bill → NGN kobo for the ledger at the group rate; null when it isn't an amount. */
+export function usdcToKobo(text: string, rateNgnPerUsdc: number): bigint | null {
+  const micro = parseUsdc(text.replace(/[,\s]/g, ""));
+  return micro === null ? null : (micro * BigInt(rateNgnPerUsdc)) / 10_000n;
 }

@@ -2,7 +2,7 @@
 
 import { ArrowDownLeft, ArrowUpRight, ChevronDown, Database, ExternalLink, LoaderCircle } from "lucide-react";
 import { cn } from "@/lib/cn";
-import { naira, shortAddress, shortId, stamp, suiscanAccount, suiscanCheckpoint, suiscanTx, usdcAmount, walruscanBlob } from "@/lib/format";
+import { shortAddress, shortId, stamp, suiscanAccount, suiscanCheckpoint, suiscanTx, usdcAmount, walruscanBlob } from "@/lib/format";
 import type { PaymentItem } from "./data";
 
 export function ReceiptChip({ receipt }: { receipt: PaymentItem["receipt"] }) {
@@ -75,7 +75,7 @@ export function PaymentRow({
           {outgoing ? "−" : incoming ? "+" : ""}
           {usdcAmount(BigInt(p.microUsdc))}
         </span>
-        <span className="block text-xs text-ink-muted tabular-nums">USDC · {naira(BigInt(p.amountMinor))}</span>
+        <span className="block text-xs text-ink-muted">USDC</span>
       </span>
     </>
   );

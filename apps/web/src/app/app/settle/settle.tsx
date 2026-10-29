@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Avatar } from "@/app/demo/_components/parts";
 import { useWallet } from "@/components/wallet/provider";
 import { cn } from "@/lib/cn";
-import { naira, parseUsdc, shortId, suiscanTx, usdcAmount } from "@/lib/format";
+import { parseUsdc, shortId, suiscanTx, usdcAmount } from "@/lib/format";
 import { refreshAll, useBalances, useGroup, type GroupData } from "../_components/data";
 import { DebtList, NetLine } from "../_components/groups";
 import { EmptyState, Panel, useAccess } from "../_components/shell";
@@ -66,7 +66,7 @@ function Picker() {
   return (
     <div className="mx-auto max-w-xl space-y-5">
       {groups.map((g) => (
-        <Panel key={g.id} title={g.name} action={<NetLine net={BigInt(g.net)} className="text-sm" />}>
+        <Panel key={g.id} title={g.name} action={<NetLine net={BigInt(g.net)} rate={g.rate} className="text-sm" />}>
           <DebtList label="You pay" rows={g.owe} at={(id) => Math.max(0, g.members.findIndex((m) => m.id === id))} payHref={(d) => `/app/settle?group=${g.id}&to=${d.memberId}`} />
         </Panel>
       ))}
@@ -148,8 +148,6 @@ function SettleForm({
           : balanceMicro !== null && micro > balanceMicro
             ? `Your wallet has ${usdcAmount(balanceMicro, true)} USDC.`
             : null;
-  const kobo = micro === null ? 0n : (micro * BigInt(flat.rate) * 100n) / 1_000_000n;
-
   const pay = async () => {
     if (micro === null || problem) return;
     const body = { address, group: flat.id, to, microUsdc: micro.toString() };
@@ -208,7 +206,7 @@ function SettleForm({
                 <span className="min-w-0 flex-1">
                   <span className="block font-semibold">{o.name}</span>
                   <span className="block text-xs text-ink-muted">
-                    You owe {naira(BigInt(o.amountMinor))} · {usdcAmount(BigInt(o.microUsdc))} USDC
+                    You owe {usdcAmount(BigInt(o.microUsdc))} USDC
                   </span>
                 </span>
                 <span aria-hidden className={cn("grid size-5 place-items-center rounded-full ring-2", o.memberId === to ? "bg-sui ring-sui" : "ring-ink/20")}>
@@ -239,7 +237,7 @@ function SettleForm({
               <span className="text-lg font-semibold text-ink-muted">USDC</span>
             </div>
             <p id="amount-help" className={cn("mt-2 text-sm", problem ? "text-owes" : "text-ink-muted")}>
-              {problem ?? `≈ ${naira(kobo)} of the ${naira(BigInt(debt.amountMinor))} you owe ${debt.name}`}
+              {problem ?? `Of the ${usdcAmount(debtMicro, true)} USDC you owe ${debt.name}`}
             </p>
             <div className="mt-3 flex flex-wrap gap-2">
               {[
@@ -361,7 +359,7 @@ function Success({ result, onLeave }: { result: Settled; onLeave: (href: string)
         </span>
         <p className="mt-5 text-sm text-white/75">Paid {result.toName}</p>
         <p className="mt-1 text-4xl font-bold tabular-nums">{usdcAmount(result.microUsdc)} USDC</p>
-        <p className="mt-1 text-sm text-white/75 tabular-nums">{naira(BigInt(result.amountMinor))} off what you owe</p>
+        <p className="mt-1 text-sm text-white/75">Taken off what you owe</p>
       </div>
       <dl className="divide-y divide-line px-4 py-2">
         <div className="flex items-center justify-between gap-4 py-3 text-sm">

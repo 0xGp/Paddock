@@ -4,7 +4,7 @@ import { HandCoins, Link2, Plus, RefreshCw, Users } from "lucide-react";
 import Link from "next/link";
 import { AddressMark } from "@/components/wallet/connect";
 import { cn } from "@/lib/cn";
-import { naira, shortAddress, suiAmount, usdcAmount } from "@/lib/format";
+import { shortAddress, suiAmount, usdcAmount } from "@/lib/format";
 import { useActivity, useBalances, type Balances } from "./_components/data";
 import { GroupRow } from "./_components/groups";
 import { PaymentRow } from "./_components/payment";
@@ -15,7 +15,7 @@ export default function HomeScreen() {
   const balances = useBalances(address);
   const activity = useActivity(address);
   const groups = me.data?.groups ?? [];
-  const owing = groups.reduce((s, g) => s + g.owe.reduce((t, d) => t + BigInt(d.amountMinor), 0n), 0n);
+  const owing = groups.reduce((s, g) => s + g.owe.reduce((t, d) => t + BigInt(d.microUsdc), 0n), 0n);
 
   return (
     <div className="grid gap-5 lg:grid-cols-2 lg:items-start lg:gap-6">
@@ -156,7 +156,7 @@ function WalletCard({
           aria-disabled={owing === 0n}
         >
           <HandCoins aria-hidden className="size-4" />
-          {owing > 0n ? `Settle ${naira(owing)}` : "Settle up"}
+          {owing > 0n ? `Settle ${usdcAmount(owing)} USDC` : "Settle up"}
         </Link>
         <Link
           href="/app/new"
