@@ -132,7 +132,7 @@ The browser-wallet payment above is the one the video shows (scene 7, re-read th
 - [x] Production deploy: [usepaddock.online](https://usepaddock.online) on a VPS (systemd + nginx + Let's Encrypt, local Postgres, daily memory cron).
 - [x] Public GitHub repo: [0xGp/Paddock](https://github.com/0xGp/Paddock).
 - [x] README organised by criterion, with `pnpm proof` to verify it yourself.
-- [ ] CI green (typecheck + tests) on GitHub Actions.
+- [x] CI green on GitHub Actions ([`ci.yml`](../.github/workflows/ci.yml)): typecheck (packages, video, web), lint, 88 unit tests.
 
 ## Brick 7: story
 - [x] 2–3 min video: [youtu.be/kbsOv2sbv6k](https://youtu.be/kbsOv2sbv6k). A Remotion project in `video/`; every chart reads `video/data/mainnet.json`, built by `pnpm video:data` from Walrus Memory recall (65/65 verified), the Walrus Mainnet aggregator (66/66 blobs) and Tatum (3/3 payments, 0 gas).

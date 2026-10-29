@@ -28,7 +28,7 @@ The group-money app that remembers how your flat actually lives, and can prove e
 ## Operating Context
 - People log costs right after paying, often one-handed, on mid-range Android phones and sometimes slow or metered mobile data.
 - Money conversations happen in WhatsApp; entries are typed like a chat line ("25k diesel tolu paid").
-- Amounts are in Naira with k/m shorthand. Settlement uses a group-set rate (demo: ₦1,500 = 1 USDC), always labelled "group rate", never presented as live FX.
+- Amounts are shown in USDC. The ledger records naira, converted at a group-set rate (demo: ₦1,500 = 1 USDC), always labelled "group rate", never presented as live FX.
 - Judges evaluate on desktop through `/demo` (read-only seeded group), `/status` (live Tatum calls) and the memory timeline, alongside a 2–3 minute video.
 
 ## Capabilities and Constraints
@@ -41,7 +41,7 @@ The group-money app that remembers how your flat actually lives, and can prove e
 
 ## Brand Commitments
 - Name: **Paddock** (codename SplitSense: package names and the `SPLITSENSE v1` memory format keep it).
-- Voice (confirmed): plain, warm English with Lagos money words used naturally (diesel, NEPA, data, service charge, LAWMA, Shoprite). No crypto jargon in primary copy ("Pay Emeka ₦3,000 (2.00 USDC)", not "Send 2 USDC to 0x…").
+- Voice (confirmed): plain, warm English with Lagos money words used naturally (diesel, NEPA, data, service charge, LAWMA, Shoprite). No crypto jargon in primary copy ("Pay Emeka 2.00 USDC", not "Send 2 USDC to 0x…").
 - Visual direction (user-pinned Oct 28, from fintech app references): **rounded glassmorphism in Sui blue, navy and teal.** Light ground washed with soft teal and blue light; frosted white glass cards (28px corners); a deep navy-to-Sui-blue balance card with white pill buttons; teal "Today" chips; tinted initial avatars; floating navy pill tab bar on phones; Plus Jakarta Sans. Craft bar stays Monzo, Revolut and Linear.
 - No logo exists yet.
 
@@ -58,4 +58,4 @@ The group-money app that remembers how your flat actually lives, and can prove e
 5. **Crypto stays backstage.** Settlement feels like a bank transfer; chain details live behind "details".
 
 ## Accessibility & Inclusion
-WCAG 2.2 AA. Large touch targets for one-handed phone use, readable on low-end screens in bright light, works on slow connections, and all amounts readable by screen readers (₦ and USDC announced properly).
+WCAG 2.2 AA. Large touch targets for one-handed phone use, readable on low-end screens in bright light, works on slow connections, and all amounts readable by screen readers (USDC announced properly).

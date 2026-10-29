@@ -2,6 +2,8 @@
 
 # Paddock
 
+[![CI](https://github.com/0xGp/Paddock/actions/workflows/ci.yml/badge.svg)](https://github.com/0xGp/Paddock/actions/workflows/ci.yml)
+
 **The group-money app that remembers how your flat actually lives, and can prove every suggestion.**
 
 Paddock helps flatmates and friends in Lagos share bills (diesel, prepaid power, data, groceries, trips) and settle up in USDC on Sui. Over time it learns who usually pays for what, which bills come back, and how quickly each person settles. That learned layer lives in **Walrus Memory on Sui Mainnet**. Every on-chain read and every payment goes through **Tatum**.

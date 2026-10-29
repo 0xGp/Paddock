@@ -19,7 +19,7 @@ jobs:
       - name: Typecheck packages and video
         run: pnpm typecheck
       - name: Typecheck web
-        run: pnpm --filter web exec tsc --noEmit
+        run: pnpm --filter web exec next typegen && pnpm --filter web exec tsc --noEmit
       - name: Lint web
         run: pnpm --filter web lint
       - name: Unit tests (live Mainnet tests skip without keys)
