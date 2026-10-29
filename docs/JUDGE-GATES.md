@@ -9,8 +9,8 @@ A brick is done only when every row in its gate passes, with evidence recorded h
 | Walrus Memory writes on **Mainnet** | Blob IDs from `rememberAndWait` / outbox rows with `blob_id` | 1 | **pass**: app pipeline wrote 2 verified blobs (see Brick 1) |
 | **≥ 10 memories** on Mainnet | `listNamespaces()` `memory_count` per namespace, in README | 2 | **pass**: 65 in `ss_g_fd36f984879028d5` |
 | Tatum RPC for on-chain data | `/status` live calls + settlement confirmation through Tatum GraphQL | 4, 5 | **pass**: `/status`, wallet balances, and two settlements built, executed and confirmed through Tatum |
-| Working demo | Public URL, `/demo` usable without sign-in | 6 | local only |
-| Public repo | GitHub URL | 6 | pending |
+| Working demo | Public URL, `/demo` usable without sign-in | 6 | **pass**: [usepaddock.online](https://usepaddock.online) (`/demo`, `/status`, `/app` all 200 over HTTPS) |
+| Public repo | GitHub URL | 6 | **pass**: [github.com/0xGp/Paddock](https://github.com/0xGp/Paddock) |
 | 2–3 min video | Uploaded link | 7 | pending |
 | Blog post (what it does, Tatum + Walrus, **how it learned over time**) | Published URL | 7 | pending |
 
@@ -66,7 +66,7 @@ Constraint from brick 2: a full recall from Mainnet takes about 13 s, far over A
 - [x] Memory timeline shows what was learned over time, with diffs.
 - [x] Restore-from-Walrus shows "Ledger verified up to entry N".
 
-How it works: a background refresh (`refreshSnapshot`, 3 sequential relevance recalls) stores the raw texts recalled from Walrus in `memory_snapshots` (migration 0003). `/demo` is a static page (revalidate 5 min, tag `memory`) whose "Whose turn", "Coming up" and "Settle speed" render **from those envelopes**, not from the engine; every envelope is re-verified (`open` → hash, header, namespace) on each render. Refresh triggers: first visit per browser session (`POST /api/memory/refresh`, throttled to once per 10 min in Postgres), the daily Vercel cron (`/api/cron/memory`, `CRON_SECRET`), or `pnpm memory:refresh`. Balances and transfers stay ledger math.
+How it works: a background refresh (`refreshSnapshot`, 3 sequential relevance recalls) stores the raw texts recalled from Walrus in `memory_snapshots` (migration 0003). `/demo` is a static page (revalidate 5 min, tag `memory`) whose "Whose turn", "Coming up" and "Settle speed" render **from those envelopes**, not from the engine; every envelope is re-verified (`open` → hash, header, namespace) on each render. Refresh triggers: first visit per browser session (`POST /api/memory/refresh`, throttled to once per 10 min in Postgres), the daily cron on the server (`/api/cron/memory`, `CRON_SECRET`), or `pnpm memory:refresh`. Balances and transfers stay ledger math.
 
 Evidence (Oct 28, 17:42–17:50 WAT, local production build; screenshots in `docs/screens/`):
 - Recall finding: `sort: "recent"` makes the relayer ignore the query (a "checkpoint" query returned 0 checkpoints); 4 parallel limit-100 recalls hit the relayer's 13 s SEAL-decrypt timeout (504). Fix: content-shaped relevance queries per kind, sequential, per-kind limits. Result: **63/63 distinct memories, 0 rejected, 14.7 s**.
@@ -129,7 +129,10 @@ Groundwork (Oct 28):
 Still open for this brick: record a browser-wallet payment for the video.
 
 ## Brick 6: ship
-- [ ] Vercel production deploy, public GitHub repo, CI green (typecheck + tests), README organised by criterion with "Verify it yourself".
+- [x] Production deploy: [usepaddock.online](https://usepaddock.online) on a VPS (systemd + nginx + Let's Encrypt, local Postgres, daily memory cron).
+- [x] Public GitHub repo: [0xGp/Paddock](https://github.com/0xGp/Paddock).
+- [x] README organised by criterion, with `pnpm proof` to verify it yourself.
+- [ ] CI green (typecheck + tests) on GitHub Actions.
 
 ## Brick 7: story
 - [ ] Blog published (covers how it learned over time), 2–3 min video, X posts tagging @tatum_io and @WalrusProtocol, form drafted. Submit by Nov 10 12:00 WAT.

@@ -10,7 +10,7 @@ Built for the Tatum × Walrus **"Total Recall"** hackathon, Consumer Finance tra
 
 | | |
 |---|---|
-| Live app | _link added at submission_ (open `/demo` without signing in, `/status` for live checks) |
+| Live app | **[usepaddock.online](https://usepaddock.online)**: open [`/demo`](https://usepaddock.online/demo) without signing in, [`/status`](https://usepaddock.online/status) for live Tatum and Walrus checks, [`/app`](https://usepaddock.online/app) to sign in with a Sui wallet |
 | Video (2–3 min) | _link added at submission_ |
 | Blog post | _link added at submission_ |
 | Proof of every transaction and memory | [`docs/PROOF.md`](docs/PROOF.md) |
@@ -236,7 +236,9 @@ docs                   proof, spec, decision records, evidence, screenshots
 
 The code keeps the project's codename, SplitSense: packages are `@splitsense/*`, and memories use the `SPLITSENSE v1` envelope that is already stored on Mainnet.
 
-**Stack:** Next.js 16 (App Router), React 19, TypeScript (strict), Tailwind CSS, Drizzle ORM on Postgres (Neon), `@mysten/sui` 2.38, `@mysten-incubation/memwal` 0.1.8, zod, Vitest.
+**Stack:** Next.js 16 (App Router), React 19, TypeScript (strict), Tailwind CSS, Drizzle ORM on Postgres, `@mysten/sui` 2.38, `@mysten-incubation/memwal` 0.1.8, zod, Vitest.
+
+**Hosting:** [usepaddock.online](https://usepaddock.online) runs on a Linux VPS. `next start` runs under systemd behind nginx with a Let's Encrypt certificate, next to a local Postgres. A daily cron calls `/api/cron/memory` to take one paced outbox step and re-read Flat 3B from Walrus.
 
 ## The app, step by step
 
