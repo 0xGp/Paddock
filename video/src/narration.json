@@ -1,0 +1,47 @@
+{
+  "say": {
+    "Tatum's": "Tay-tum's",
+    "Tatum": "Tay-tum",
+    "Sui": "Swee",
+    "SEAL-encrypted": "seal encrypted",
+    "usepaddock.online": "use paddock dot online"
+  },
+  "scenes": [
+    {
+      "id": "problem",
+      "text": "In a shared flat in Lagos, the money never stops. Over eight hundred USDC in bills in three months. Diesel every week. Prepaid power. Data. Someone pays, someone forgets, and the argument starts in the group chat."
+    },
+    {
+      "id": "paddock",
+      "text": "This is Paddock: shared bills that remember. It learns how your flat actually lives, keeps what it learned in Walrus Memory on Sui Mainnet, and settles up in USDC through Tatum, with zero gas."
+    },
+    {
+      "id": "memory",
+      "text": "This is judge mode. No sign-in. Flat 3B has thirty-seven bills, all checkpointed on Walrus Mainnet. Paddock just recalled sixty-five memories from Walrus and re-checked each one against its hash. Whose turn, Coming up, and Settle speed are all drawn from those memories. Switch memory off, and it's a plain bill splitter. Same balances. No idea Tolu keeps buying the diesel."
+    },
+    {
+      "id": "proof",
+      "text": "Every suggestion shows its working. Diesel: Godspower, because Tolu paid nine of the last twelve. Tap it, and you get the formula, the numbers, and the exact Walrus blob it came from. No AI model guessing. Fixed, versioned rules anyone can check."
+    },
+    {
+      "id": "learning",
+      "text": "And it learns over time. Each round, Paddock re-runs its rules and writes only what changed. Six things in the first round. Thirty-five by the fifth. Tolu's diesel run went from five of five to nine of twelve, so the next turn moved to Godspower. Emeka got quicker, from ten days to nine. And when the groceries rotation stopped holding, Paddock wrote that down too. Forgetting is a memory."
+    },
+    {
+      "id": "verified",
+      "text": "The ledger is checkpointed to Walrus too. Paddock rebuilds it from four checkpoints and matches all thirty-seven entries, hash for hash. Namespaces are hashed and memories are SEAL-encrypted, so no names leak on-chain."
+    },
+    {
+      "id": "settle",
+      "text": "Settling up runs through Tatum's Sui Mainnet gateway at every step. Paddock builds a gasless USDC transfer, simulates it, and checks the payer loses, and the payee gains, exactly the agreed amount. The wallet signs. Tatum executes. Tatum confirms the balance change. Only then does the receipt go to Walrus. Three real payments. Zero gas."
+    },
+    {
+      "id": "check",
+      "text": "You can check it live. The status page calls Tatum in real time: chain, latest checkpoint, a known transaction, a USDC balance. Behind it: strict TypeScript, eighty-eight unit tests, live Tatum tests, and twelve decision records."
+    },
+    {
+      "id": "close",
+      "text": "Sixty-nine memories on Mainnet. Three gasless payments. One flat that remembers. Paddock. Try it at usepaddock.online. The proof for every number is in the repo."
+    }
+  ]
+}

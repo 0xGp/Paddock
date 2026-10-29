@@ -1,0 +1,1290 @@
+{
+  "generatedAt": "2026-10-29T12:02:07.078Z",
+  "sources": {
+    "walrusMemory": "https://relayer.memory.walrus.xyz",
+    "walrusAggregator": "https://aggregator.walrus-mainnet.walrus.space",
+    "tatum": "Sui Mainnet GraphQL (sui-mainnet.gateway.tatum.io)"
+  },
+  "namespace": "ss_g_fd36f984879028d5",
+  "currency": {
+    "unit": "USDC",
+    "groupRate": 1500,
+    "groupProfileBlobId": "2lcNCvteAEI8s_9bEA6VqR9ljCd5lcXsH2mbGnIXs80"
+  },
+  "recall": {
+    "recalled": 65,
+    "verified": 65,
+    "rejected": 0,
+    "recallMs": 19476
+  },
+  "blobs": {
+    "checked": 66,
+    "available": 66,
+    "missing": []
+  },
+  "ledger": {
+    "checkpoints": [
+      {
+        "subject": "ledger.000",
+        "entryCount": 10,
+        "ledgerHash": "c2191a461b767e81a0f13fdd92e60262f51e3fb32ac5a319bbb68d58db3a0636",
+        "blobId": "gADJp6sWYhcska-GMItBrUqdZNU9yqFFBYXjDFmEPxs"
+      },
+      {
+        "subject": "ledger.001",
+        "entryCount": 20,
+        "ledgerHash": "8ca478617f3ac5e78a94424947180cd8b8ffce9ec0a97d33d7fe4c87b9076cc8",
+        "blobId": "jIrqcupZGxsCk4a91JPI6zZvMKt1OfbgK-cfrIgl60Q"
+      },
+      {
+        "subject": "ledger.002",
+        "entryCount": 30,
+        "ledgerHash": "34dd87c45b246ccbbf7a5445ad3ed961132fe164fb5ba8b4a5d5a5b416cc804e",
+        "blobId": "BAY2pSYKW6FxqeWaawSBkKs-QWDeGbgZ_ZBOLOKL44Q"
+      },
+      {
+        "subject": "ledger.003",
+        "entryCount": 37,
+        "ledgerHash": "e7334572914f9d842b49c63a553ca1af7f0b2fad3b116ff703cd472714f4bdf3",
+        "blobId": "wwrlKHpvtSdd5ny5DcvhWLJvILhZC5wnxUosp6RCfaQ"
+      }
+    ],
+    "verifiedEntries": 37,
+    "totalEntries": 37,
+    "ok": true
+  },
+  "spend": [
+    {
+      "date": "2026-08-01",
+      "description": "Service charge",
+      "category": "housing",
+      "payer": "godspower",
+      "usdc": 33.33,
+      "cumulativeUsdc": 33.33,
+      "blobId": "gADJp6sWYhcska-GMItBrUqdZNU9yqFFBYXjDFmEPxs"
+    },
+    {
+      "date": "2026-08-02",
+      "description": "Generator diesel",
+      "category": "fuel",
+      "payer": "tolu",
+      "usdc": 16.67,
+      "cumulativeUsdc": 50,
+      "blobId": "gADJp6sWYhcska-GMItBrUqdZNU9yqFFBYXjDFmEPxs"
+    },
+    {
+      "date": "2026-08-03",
+      "description": "LAWMA waste",
+      "category": "utilities",
+      "payer": "godspower",
+      "usdc": 3.33,
+      "cumulativeUsdc": 53.33,
+      "blobId": "gADJp6sWYhcska-GMItBrUqdZNU9yqFFBYXjDFmEPxs"
+    },
+    {
+      "date": "2026-08-05",
+      "description": "IKEDC prepaid token",
+      "category": "power",
+      "payer": "godspower",
+      "usdc": 26.67,
+      "cumulativeUsdc": 80,
+      "blobId": "gADJp6sWYhcska-GMItBrUqdZNU9yqFFBYXjDFmEPxs"
+    },
+    {
+      "date": "2026-08-05",
+      "description": "Spectranet data",
+      "category": "data",
+      "payer": "ada",
+      "usdc": 20,
+      "cumulativeUsdc": 100,
+      "blobId": "gADJp6sWYhcska-GMItBrUqdZNU9yqFFBYXjDFmEPxs"
+    },
+    {
+      "date": "2026-08-08",
+      "description": "Shoprite run",
+      "category": "groceries",
+      "payer": "godspower",
+      "usdc": 25.33,
+      "cumulativeUsdc": 125.33,
+      "blobId": "gADJp6sWYhcska-GMItBrUqdZNU9yqFFBYXjDFmEPxs"
+    },
+    {
+      "date": "2026-08-09",
+      "description": "Generator diesel",
+      "category": "fuel",
+      "payer": "tolu",
+      "usdc": 16,
+      "cumulativeUsdc": 141.33,
+      "blobId": "gADJp6sWYhcska-GMItBrUqdZNU9yqFFBYXjDFmEPxs"
+    },
+    {
+      "date": "2026-08-16",
+      "description": "Generator diesel",
+      "category": "fuel",
+      "payer": "tolu",
+      "usdc": 17.33,
+      "cumulativeUsdc": 158.67,
+      "blobId": "gADJp6sWYhcska-GMItBrUqdZNU9yqFFBYXjDFmEPxs"
+    },
+    {
+      "date": "2026-08-19",
+      "description": "IKEDC prepaid token",
+      "category": "power",
+      "payer": "tolu",
+      "usdc": 25.33,
+      "cumulativeUsdc": 184,
+      "blobId": "gADJp6sWYhcska-GMItBrUqdZNU9yqFFBYXjDFmEPxs"
+    },
+    {
+      "date": "2026-08-21",
+      "description": "Lekki market foodstuff",
+      "category": "groceries",
+      "payer": "ada",
+      "usdc": 16,
+      "cumulativeUsdc": 200,
+      "blobId": "gADJp6sWYhcska-GMItBrUqdZNU9yqFFBYXjDFmEPxs"
+    },
+    {
+      "date": "2026-08-23",
+      "description": "Generator diesel",
+      "category": "fuel",
+      "payer": "tolu",
+      "usdc": 16.67,
+      "cumulativeUsdc": 216.67,
+      "blobId": "jIrqcupZGxsCk4a91JPI6zZvMKt1OfbgK-cfrIgl60Q"
+    },
+    {
+      "date": "2026-08-30",
+      "description": "Generator diesel",
+      "category": "fuel",
+      "payer": "tolu",
+      "usdc": 18,
+      "cumulativeUsdc": 234.67,
+      "blobId": "jIrqcupZGxsCk4a91JPI6zZvMKt1OfbgK-cfrIgl60Q"
+    },
+    {
+      "date": "2026-09-01",
+      "description": "Service charge",
+      "category": "housing",
+      "payer": "godspower",
+      "usdc": 33.33,
+      "cumulativeUsdc": 268,
+      "blobId": "jIrqcupZGxsCk4a91JPI6zZvMKt1OfbgK-cfrIgl60Q"
+    },
+    {
+      "date": "2026-09-02",
+      "description": "IKEDC prepaid token",
+      "category": "power",
+      "payer": "ada",
+      "usdc": 28,
+      "cumulativeUsdc": 296,
+      "blobId": "jIrqcupZGxsCk4a91JPI6zZvMKt1OfbgK-cfrIgl60Q"
+    },
+    {
+      "date": "2026-09-02",
+      "description": "LAWMA waste",
+      "category": "utilities",
+      "payer": "godspower",
+      "usdc": 3.33,
+      "cumulativeUsdc": 299.33,
+      "blobId": "jIrqcupZGxsCk4a91JPI6zZvMKt1OfbgK-cfrIgl60Q"
+    },
+    {
+      "date": "2026-09-04",
+      "description": "Shoprite run",
+      "category": "groceries",
+      "payer": "tolu",
+      "usdc": 34.67,
+      "cumulativeUsdc": 334,
+      "blobId": "jIrqcupZGxsCk4a91JPI6zZvMKt1OfbgK-cfrIgl60Q"
+    },
+    {
+      "date": "2026-09-05",
+      "description": "Spectranet data",
+      "category": "data",
+      "payer": "ada",
+      "usdc": 20,
+      "cumulativeUsdc": 354,
+      "blobId": "jIrqcupZGxsCk4a91JPI6zZvMKt1OfbgK-cfrIgl60Q"
+    },
+    {
+      "date": "2026-09-06",
+      "description": "Generator diesel",
+      "category": "fuel",
+      "payer": "ada",
+      "usdc": 16.67,
+      "cumulativeUsdc": 370.67,
+      "blobId": "jIrqcupZGxsCk4a91JPI6zZvMKt1OfbgK-cfrIgl60Q"
+    },
+    {
+      "date": "2026-09-13",
+      "description": "Generator diesel",
+      "category": "fuel",
+      "payer": "tolu",
+      "usdc": 17.33,
+      "cumulativeUsdc": 388,
+      "blobId": "jIrqcupZGxsCk4a91JPI6zZvMKt1OfbgK-cfrIgl60Q"
+    },
+    {
+      "date": "2026-09-16",
+      "description": "IKEDC prepaid token",
+      "category": "power",
+      "payer": "emeka",
+      "usdc": 24,
+      "cumulativeUsdc": 412,
+      "blobId": "jIrqcupZGxsCk4a91JPI6zZvMKt1OfbgK-cfrIgl60Q"
+    },
+    {
+      "date": "2026-09-18",
+      "description": "Lekki market foodstuff",
+      "category": "groceries",
+      "payer": "emeka",
+      "usdc": 12,
+      "cumulativeUsdc": 424,
+      "blobId": "BAY2pSYKW6FxqeWaawSBkKs-QWDeGbgZ_ZBOLOKL44Q"
+    },
+    {
+      "date": "2026-09-20",
+      "description": "Generator diesel",
+      "category": "fuel",
+      "payer": "tolu",
+      "usdc": 16,
+      "cumulativeUsdc": 440,
+      "blobId": "BAY2pSYKW6FxqeWaawSBkKs-QWDeGbgZ_ZBOLOKL44Q"
+    },
+    {
+      "date": "2026-09-26",
+      "description": "Party run, Shoprite",
+      "category": "groceries",
+      "payer": "godspower",
+      "usdc": 61.33,
+      "cumulativeUsdc": 501.33,
+      "blobId": "BAY2pSYKW6FxqeWaawSBkKs-QWDeGbgZ_ZBOLOKL44Q"
+    },
+    {
+      "date": "2026-09-27",
+      "description": "Generator diesel",
+      "category": "fuel",
+      "payer": "tolu",
+      "usdc": 16.67,
+      "cumulativeUsdc": 518,
+      "blobId": "BAY2pSYKW6FxqeWaawSBkKs-QWDeGbgZ_ZBOLOKL44Q"
+    },
+    {
+      "date": "2026-09-30",
+      "description": "IKEDC prepaid token",
+      "category": "power",
+      "payer": "godspower",
+      "usdc": 26.67,
+      "cumulativeUsdc": 544.67,
+      "blobId": "BAY2pSYKW6FxqeWaawSBkKs-QWDeGbgZ_ZBOLOKL44Q"
+    },
+    {
+      "date": "2026-10-01",
+      "description": "Service charge",
+      "category": "housing",
+      "payer": "godspower",
+      "usdc": 33.33,
+      "cumulativeUsdc": 578,
+      "blobId": "BAY2pSYKW6FxqeWaawSBkKs-QWDeGbgZ_ZBOLOKL44Q"
+    },
+    {
+      "date": "2026-10-02",
+      "description": "LAWMA waste",
+      "category": "utilities",
+      "payer": "godspower",
+      "usdc": 3.33,
+      "cumulativeUsdc": 581.33,
+      "blobId": "BAY2pSYKW6FxqeWaawSBkKs-QWDeGbgZ_ZBOLOKL44Q"
+    },
+    {
+      "date": "2026-10-03",
+      "description": "Shoprite run",
+      "category": "groceries",
+      "payer": "godspower",
+      "usdc": 27.33,
+      "cumulativeUsdc": 608.67,
+      "blobId": "BAY2pSYKW6FxqeWaawSBkKs-QWDeGbgZ_ZBOLOKL44Q"
+    },
+    {
+      "date": "2026-10-04",
+      "description": "Generator diesel",
+      "category": "fuel",
+      "payer": "emeka",
+      "usdc": 16.67,
+      "cumulativeUsdc": 625.33,
+      "blobId": "BAY2pSYKW6FxqeWaawSBkKs-QWDeGbgZ_ZBOLOKL44Q"
+    },
+    {
+      "date": "2026-10-06",
+      "description": "Spectranet data",
+      "category": "data",
+      "payer": "ada",
+      "usdc": 20,
+      "cumulativeUsdc": 645.33,
+      "blobId": "BAY2pSYKW6FxqeWaawSBkKs-QWDeGbgZ_ZBOLOKL44Q"
+    },
+    {
+      "date": "2026-10-11",
+      "description": "Generator diesel",
+      "category": "fuel",
+      "payer": "emeka",
+      "usdc": 17.33,
+      "cumulativeUsdc": 662.67,
+      "blobId": "wwrlKHpvtSdd5ny5DcvhWLJvILhZC5wnxUosp6RCfaQ"
+    },
+    {
+      "date": "2026-10-14",
+      "description": "IKEDC prepaid token",
+      "category": "power",
+      "payer": "tolu",
+      "usdc": 29.33,
+      "cumulativeUsdc": 692,
+      "blobId": "wwrlKHpvtSdd5ny5DcvhWLJvILhZC5wnxUosp6RCfaQ"
+    },
+    {
+      "date": "2026-10-17",
+      "description": "Lekki market foodstuff",
+      "category": "groceries",
+      "payer": "ada",
+      "usdc": 22,
+      "cumulativeUsdc": 714,
+      "blobId": "wwrlKHpvtSdd5ny5DcvhWLJvILhZC5wnxUosp6RCfaQ"
+    },
+    {
+      "date": "2026-10-18",
+      "description": "Generator diesel",
+      "category": "fuel",
+      "payer": "tolu",
+      "usdc": 16.67,
+      "cumulativeUsdc": 730.67,
+      "blobId": "wwrlKHpvtSdd5ny5DcvhWLJvILhZC5wnxUosp6RCfaQ"
+    },
+    {
+      "date": "2026-10-24",
+      "description": "Shoprite run",
+      "category": "groceries",
+      "payer": "tolu",
+      "usdc": 30,
+      "cumulativeUsdc": 760.67,
+      "blobId": "wwrlKHpvtSdd5ny5DcvhWLJvILhZC5wnxUosp6RCfaQ"
+    },
+    {
+      "date": "2026-10-25",
+      "description": "Generator diesel",
+      "category": "fuel",
+      "payer": "tolu",
+      "usdc": 16,
+      "cumulativeUsdc": 776.67,
+      "blobId": "wwrlKHpvtSdd5ny5DcvhWLJvILhZC5wnxUosp6RCfaQ"
+    },
+    {
+      "date": "2026-10-28",
+      "description": "IKEDC prepaid token",
+      "category": "power",
+      "payer": "ada",
+      "usdc": 26,
+      "cumulativeUsdc": 802.67,
+      "blobId": "wwrlKHpvtSdd5ny5DcvhWLJvILhZC5wnxUosp6RCfaQ"
+    }
+  ],
+  "learning": [
+    {
+      "asOf": "2026-09-01",
+      "new": 6,
+      "changed": 0,
+      "retired": 0,
+      "cumulative": 6,
+      "entries": [
+        {
+          "subject": "godspower",
+          "status": "new",
+          "summary": "Godspower usually settles in about 0 days (fast)",
+          "changes": [],
+          "blobId": "KT8Gb8STfM6-4h05wvIJ0GOfXB12u5Cs9U8LC5AoVzc"
+        },
+        {
+          "subject": "tolu",
+          "status": "new",
+          "summary": "Tolu usually settles in about 3 days (steady)",
+          "changes": [],
+          "blobId": "UroVzrBr_8WMcSaDN_vi2PtjRgH1KJlapoZ-lB4JivU"
+        },
+        {
+          "subject": "ada",
+          "status": "new",
+          "summary": "Ada usually settles in about 5 days (steady)",
+          "changes": [],
+          "blobId": "4lgWmi2j8t2xu4NbuGN-dCNpdYFMarhdmGiFFE6v2z8"
+        },
+        {
+          "subject": "emeka",
+          "status": "new",
+          "summary": "Emeka usually settles in about 10 days (slow)",
+          "changes": [],
+          "blobId": "YpbqPO9d6fQJipTQQ7OYQ5t7pwWrF0YtYFb2rUI25t0"
+        },
+        {
+          "subject": "turn.fuel",
+          "status": "new",
+          "summary": "Tolu has covered diesel 5 of 5 times. Next diesel: Ada?",
+          "changes": [],
+          "blobId": "I8ZwMqGQ_LmbycPgGRqHYla1hE2iSj3zMqV_2eZGEWM"
+        },
+        {
+          "subject": "bill.fuel",
+          "status": "new",
+          "summary": "Generator diesel comes weekly, next around 2026-09-06, usually ₦25,000",
+          "changes": [],
+          "blobId": "oBGRyzgOOfJ8TV5MBifTdigu8SHrlxnKkkIyjFxf1kw"
+        }
+      ]
+    },
+    {
+      "asOf": "2026-09-15",
+      "new": 0,
+      "changed": 6,
+      "retired": 0,
+      "cumulative": 12,
+      "entries": [
+        {
+          "subject": "godspower",
+          "status": "changed",
+          "summary": "Godspower usually settles in about 1 days (fast)",
+          "changes": [
+            {
+              "field": "medianDelay",
+              "from": 0,
+              "to": 1
+            },
+            {
+              "field": "score",
+              "from": 90,
+              "to": 92
+            }
+          ],
+          "blobId": "mPii5kvXORMGb22Sdiv6IziPSWlxZt3Ost4sdzlOiIc"
+        },
+        {
+          "subject": "tolu",
+          "status": "changed",
+          "summary": "Tolu usually settles in about 4 days (steady)",
+          "changes": [
+            {
+              "field": "medianDelay",
+              "from": 3,
+              "to": 4
+            },
+            {
+              "field": "score",
+              "from": 72,
+              "to": 70
+            }
+          ],
+          "blobId": "4ZYdQujyiaAnSH0LDTDW8oXurmV4j-iDK-eAQZSDros"
+        },
+        {
+          "subject": "ada",
+          "status": "changed",
+          "summary": "Ada usually settles in about 5 days (steady)",
+          "changes": [
+            {
+              "field": "score",
+              "from": 59,
+              "to": 58
+            }
+          ],
+          "blobId": "I1WBn9nJSfjJ8lmKODSIwbDfZwI-kz4I-JlfZwpaMNw"
+        },
+        {
+          "subject": "emeka",
+          "status": "changed",
+          "summary": "Emeka usually settles in about 10 days (slow)",
+          "changes": [
+            {
+              "field": "score",
+              "from": 32,
+              "to": 27
+            }
+          ],
+          "blobId": "e_Bdb8i8p8rIPw8-_1fUTA6RHOUFqFQ79WqlfKnXQ4E"
+        },
+        {
+          "subject": "turn.fuel",
+          "status": "changed",
+          "summary": "Tolu has covered diesel 6 of 7 times. Next diesel: Emeka?",
+          "changes": [
+            {
+              "field": "nextPayerId",
+              "from": "ada",
+              "to": "emeka"
+            },
+            {
+              "field": "usualCount",
+              "from": 5,
+              "to": 6
+            },
+            {
+              "field": "totalCount",
+              "from": 5,
+              "to": 7
+            }
+          ],
+          "blobId": "sofWTiGmwq_Yv7IdeXwGuuoaTiJUPW2bLFs6g8l8KJ0"
+        },
+        {
+          "subject": "bill.fuel",
+          "status": "changed",
+          "summary": "Generator diesel comes weekly, next around 2026-09-20, usually ₦25,000",
+          "changes": [
+            {
+              "field": "nextExpectedDate",
+              "from": "2026-09-06",
+              "to": "2026-09-20"
+            }
+          ],
+          "blobId": "mkctZq1Mm0FlWPryUUIpXE9JftxfcXUA2LikmLu9er0"
+        }
+      ]
+    },
+    {
+      "asOf": "2026-10-01",
+      "new": 1,
+      "changed": 5,
+      "retired": 0,
+      "cumulative": 18,
+      "entries": [
+        {
+          "subject": "godspower",
+          "status": "changed",
+          "summary": "Godspower usually settles in about 1 days (fast)",
+          "changes": [
+            {
+              "field": "score",
+              "from": 92,
+              "to": 93
+            }
+          ],
+          "blobId": "QA1t6I9edO7FCkv3sfzCCONDG7uEiVEBnkqPzKOWvp0"
+        },
+        {
+          "subject": "ada",
+          "status": "changed",
+          "summary": "Ada usually settles in about 5 days (steady)",
+          "changes": [
+            {
+              "field": "score",
+              "from": 58,
+              "to": 65
+            }
+          ],
+          "blobId": "uPr6cK1PUNErXFqFpq0_4oE-ABHYevSh6euY1TU7aJM"
+        },
+        {
+          "subject": "emeka",
+          "status": "changed",
+          "summary": "Emeka usually settles in about 10 days (slow)",
+          "changes": [
+            {
+              "field": "score",
+              "from": 27,
+              "to": 26
+            }
+          ],
+          "blobId": "q1WkK0FzvEHg9SdIVCjyzcKS6UPGZ4F7nvYNuvXilGQ"
+        },
+        {
+          "subject": "turn.fuel",
+          "status": "changed",
+          "summary": "Tolu has covered diesel 8 of 9 times. Next diesel: Emeka?",
+          "changes": [
+            {
+              "field": "usualCount",
+              "from": 6,
+              "to": 8
+            },
+            {
+              "field": "totalCount",
+              "from": 7,
+              "to": 9
+            }
+          ],
+          "blobId": "t2XFkAIVsOV8KAvEr5NXe2Pfmcx8RDgiXB_XenBsuLI"
+        },
+        {
+          "subject": "bill.fuel",
+          "status": "changed",
+          "summary": "Generator diesel comes weekly, next around 2026-10-04, usually ₦25,000",
+          "changes": [
+            {
+              "field": "nextExpectedDate",
+              "from": "2026-09-20",
+              "to": "2026-10-04"
+            }
+          ],
+          "blobId": "s890ajXSa4aI9upRdoOPKbYpxq5X8_CXrueVc2g8LUo"
+        },
+        {
+          "subject": "bill.power",
+          "status": "new",
+          "summary": "IKEDC prepaid token comes biweekly, next around 2026-10-14, usually ₦40,000",
+          "changes": [],
+          "blobId": "tHRTz6W1BhaH4aFFeUDBIWtOyCIeZDzb67sTtrFZw5Y"
+        }
+      ]
+    },
+    {
+      "asOf": "2026-10-15",
+      "new": 3,
+      "changed": 7,
+      "retired": 0,
+      "cumulative": 28,
+      "entries": [
+        {
+          "subject": "godspower",
+          "status": "changed",
+          "summary": "Godspower usually settles in about 1 days (fast)",
+          "changes": [
+            {
+              "field": "score",
+              "from": 93,
+              "to": 92
+            }
+          ],
+          "blobId": "JAEQ77tus_0fa9gIxUFO0Jm6byPeXnHpcefYeYne2_w"
+        },
+        {
+          "subject": "tolu",
+          "status": "changed",
+          "summary": "Tolu usually settles in about 4 days (steady)",
+          "changes": [
+            {
+              "field": "score",
+              "from": 70,
+              "to": 72
+            }
+          ],
+          "blobId": "8aBGf9Kaby0q07UI_xmL65Iy_xFH1T7z7G3piYg9f3c"
+        },
+        {
+          "subject": "ada",
+          "status": "changed",
+          "summary": "Ada usually settles in about 5 days (steady)",
+          "changes": [
+            {
+              "field": "score",
+              "from": 65,
+              "to": 61
+            }
+          ],
+          "blobId": "UDlKpgzuQzjXfdGOMYuDO_SQliQ418Al8Kf6Tq8jlZs"
+        },
+        {
+          "subject": "emeka",
+          "status": "changed",
+          "summary": "Emeka usually settles in about 9 days (slow)",
+          "changes": [
+            {
+              "field": "medianDelay",
+              "from": 10,
+              "to": 9
+            },
+            {
+              "field": "score",
+              "from": 26,
+              "to": 32
+            }
+          ],
+          "blobId": "cBhglS7f_v4p5qKEJmD9nbYrjHAFU3bKEJo4Clpz-L0"
+        },
+        {
+          "subject": "turn.fuel",
+          "status": "changed",
+          "summary": "Tolu has covered diesel 8 of 11 times. Next diesel: Godspower?",
+          "changes": [
+            {
+              "field": "nextPayerId",
+              "from": "emeka",
+              "to": "godspower"
+            },
+            {
+              "field": "totalCount",
+              "from": 9,
+              "to": 11
+            }
+          ],
+          "blobId": "qJdYZfI0Ayd1Bzxzbb9B1HXU7eREG6AwXPlYRv8AA1Y"
+        },
+        {
+          "subject": "turn.groceries",
+          "status": "new",
+          "summary": "Godspower has covered groceries 3 of 6 times. Next groceries: Emeka?",
+          "changes": [],
+          "blobId": "76YbmoXGco155eQS8uPcA81ZDiNQ0zlQ8NC2GY9sRBg"
+        },
+        {
+          "subject": "bill.fuel",
+          "status": "changed",
+          "summary": "Generator diesel comes weekly, next around 2026-10-18, usually ₦25,000",
+          "changes": [
+            {
+              "field": "nextExpectedDate",
+              "from": "2026-10-04",
+              "to": "2026-10-18"
+            }
+          ],
+          "blobId": "SWoCmURrfpRIJ1LecC1iL0GSlQJZu_TeSDbWZLoqae0"
+        },
+        {
+          "subject": "bill.power",
+          "status": "changed",
+          "summary": "IKEDC prepaid token comes biweekly, next around 2026-10-28, usually ₦40,000",
+          "changes": [
+            {
+              "field": "nextExpectedDate",
+              "from": "2026-10-14",
+              "to": "2026-10-28"
+            }
+          ],
+          "blobId": "YSSSPtHuX1CL3B2rkCOVu6LqDwKqfd3et5LNuGBRBlc"
+        },
+        {
+          "subject": "bill.utilities",
+          "status": "new",
+          "summary": "LAWMA waste comes monthly, next around 2026-11-01, usually ₦5,000",
+          "changes": [],
+          "blobId": "TaNCJL0swuBfkHVKjzsga8JtKV1b11fTbf47Mi0cjPg"
+        },
+        {
+          "subject": "bill.data",
+          "status": "new",
+          "summary": "Spectranet data comes monthly, next around 2026-11-06, usually ₦30,000",
+          "changes": [],
+          "blobId": "04MHcnCnZHKBoDDD2ExT3IaP2dTwvGk0-4hPyhgJW_8"
+        }
+      ]
+    },
+    {
+      "asOf": "2026-11-01",
+      "new": 0,
+      "changed": 6,
+      "retired": 1,
+      "cumulative": 35,
+      "entries": [
+        {
+          "subject": "godspower",
+          "status": "changed",
+          "summary": "Godspower usually settles in about 1 days (fast)",
+          "changes": [
+            {
+              "field": "score",
+              "from": 92,
+              "to": 95
+            }
+          ],
+          "blobId": "LKOt2hETQx2GRK1Vibp_Ds5caVk6zmuZ8MbCEB7Ueh4"
+        },
+        {
+          "subject": "ada",
+          "status": "changed",
+          "summary": "Ada usually settles in about 5 days (steady)",
+          "changes": [
+            {
+              "field": "score",
+              "from": 61,
+              "to": 58
+            }
+          ],
+          "blobId": "qFTS09jpNezRRqUpfU88qDaO2y-aZXI2BNugRT6v71I"
+        },
+        {
+          "subject": "emeka",
+          "status": "changed",
+          "summary": "Emeka usually settles in about 9 days (slow)",
+          "changes": [
+            {
+              "field": "score",
+              "from": 32,
+              "to": 31
+            }
+          ],
+          "blobId": "bgEM3WeGDn7u-kdv7B33-bf6IonAqxt3F74_5KWGQy0"
+        },
+        {
+          "subject": "turn.fuel",
+          "status": "changed",
+          "summary": "Tolu has covered diesel 9 of 12 times. Next diesel: Godspower?",
+          "changes": [
+            {
+              "field": "usualCount",
+              "from": 8,
+              "to": 9
+            },
+            {
+              "field": "totalCount",
+              "from": 11,
+              "to": 12
+            }
+          ],
+          "blobId": "_x__n1nD3gleY_ZQduTJtcNYmFIhPUg7R0H3A4yOiDY"
+        },
+        {
+          "subject": "bill.fuel",
+          "status": "changed",
+          "summary": "Generator diesel comes weekly, next around 2026-11-01, usually ₦25,000",
+          "changes": [
+            {
+              "field": "nextExpectedDate",
+              "from": "2026-10-18",
+              "to": "2026-11-01"
+            }
+          ],
+          "blobId": "hSlx27EbqVbSaB9-mnQoOjzwiXN3XTDKe70aQ7rvmow"
+        },
+        {
+          "subject": "bill.power",
+          "status": "changed",
+          "summary": "IKEDC prepaid token comes biweekly, next around 2026-11-11, usually ₦40,000",
+          "changes": [
+            {
+              "field": "nextExpectedDate",
+              "from": "2026-10-28",
+              "to": "2026-11-11"
+            }
+          ],
+          "blobId": "MtbhzUdHuqmkjpTImuHF_gMGD2h0t5T0Mkh72Yinqy4"
+        },
+        {
+          "subject": "turn.groceries",
+          "status": "retired",
+          "summary": "No longer holds as of 2026-11-01: Godspower has covered groceries 3 of 6 times. Next groceries: Emeka?",
+          "changes": [],
+          "blobId": "3W2ixPFsMA61sgiCnez8fvTHWhFfyrE_FGElFhiAtqc"
+        }
+      ]
+    }
+  ],
+  "dieselTurn": [
+    {
+      "asOf": "2026-09-01",
+      "usualPayer": "tolu",
+      "usualCount": 5,
+      "totalCount": 5,
+      "share": 1,
+      "nextPayer": "ada",
+      "summary": "Tolu has covered diesel 5 of 5 times. Next diesel: Ada?",
+      "blobId": "I8ZwMqGQ_LmbycPgGRqHYla1hE2iSj3zMqV_2eZGEWM"
+    },
+    {
+      "asOf": "2026-09-15",
+      "usualPayer": "tolu",
+      "usualCount": 6,
+      "totalCount": 7,
+      "share": 0.8571428571428571,
+      "nextPayer": "emeka",
+      "summary": "Tolu has covered diesel 6 of 7 times. Next diesel: Emeka?",
+      "blobId": "sofWTiGmwq_Yv7IdeXwGuuoaTiJUPW2bLFs6g8l8KJ0"
+    },
+    {
+      "asOf": "2026-10-01",
+      "usualPayer": "tolu",
+      "usualCount": 8,
+      "totalCount": 9,
+      "share": 0.8888888888888888,
+      "nextPayer": "emeka",
+      "summary": "Tolu has covered diesel 8 of 9 times. Next diesel: Emeka?",
+      "blobId": "t2XFkAIVsOV8KAvEr5NXe2Pfmcx8RDgiXB_XenBsuLI"
+    },
+    {
+      "asOf": "2026-10-15",
+      "usualPayer": "tolu",
+      "usualCount": 8,
+      "totalCount": 11,
+      "share": 0.7272727272727273,
+      "nextPayer": "godspower",
+      "summary": "Tolu has covered diesel 8 of 11 times. Next diesel: Godspower?",
+      "blobId": "qJdYZfI0Ayd1Bzxzbb9B1HXU7eREG6AwXPlYRv8AA1Y"
+    },
+    {
+      "asOf": "2026-11-01",
+      "usualPayer": "tolu",
+      "usualCount": 9,
+      "totalCount": 12,
+      "share": 0.75,
+      "nextPayer": "godspower",
+      "summary": "Tolu has covered diesel 9 of 12 times. Next diesel: Godspower?",
+      "blobId": "_x__n1nD3gleY_ZQduTJtcNYmFIhPUg7R0H3A4yOiDY"
+    }
+  ],
+  "groceriesTurn": [
+    {
+      "asOf": "2026-10-15",
+      "usualPayer": "godspower",
+      "usualCount": 3,
+      "totalCount": 6,
+      "nextPayer": "emeka",
+      "retired": false,
+      "summary": "Godspower has covered groceries 3 of 6 times. Next groceries: Emeka?",
+      "blobId": "76YbmoXGco155eQS8uPcA81ZDiNQ0zlQ8NC2GY9sRBg"
+    },
+    {
+      "asOf": "2026-11-01",
+      "usualPayer": "godspower",
+      "usualCount": 3,
+      "totalCount": 6,
+      "nextPayer": "emeka",
+      "retired": true,
+      "summary": "No longer holds as of 2026-11-01: Godspower has covered groceries 3 of 6 times. Next groceries: Emeka?",
+      "blobId": "3W2ixPFsMA61sgiCnez8fvTHWhFfyrE_FGElFhiAtqc"
+    }
+  ],
+  "settleSpeed": {
+    "godspower": [
+      {
+        "asOf": "2026-09-01",
+        "score": 90,
+        "medianDelayDays": 0,
+        "label": "fast",
+        "summary": "Godspower usually settles in about 0 days (fast)",
+        "blobId": "KT8Gb8STfM6-4h05wvIJ0GOfXB12u5Cs9U8LC5AoVzc"
+      },
+      {
+        "asOf": "2026-09-15",
+        "score": 92,
+        "medianDelayDays": 1,
+        "label": "fast",
+        "summary": "Godspower usually settles in about 1 days (fast)",
+        "blobId": "mPii5kvXORMGb22Sdiv6IziPSWlxZt3Ost4sdzlOiIc"
+      },
+      {
+        "asOf": "2026-10-01",
+        "score": 93,
+        "medianDelayDays": 1,
+        "label": "fast",
+        "summary": "Godspower usually settles in about 1 days (fast)",
+        "blobId": "QA1t6I9edO7FCkv3sfzCCONDG7uEiVEBnkqPzKOWvp0"
+      },
+      {
+        "asOf": "2026-10-15",
+        "score": 92,
+        "medianDelayDays": 1,
+        "label": "fast",
+        "summary": "Godspower usually settles in about 1 days (fast)",
+        "blobId": "JAEQ77tus_0fa9gIxUFO0Jm6byPeXnHpcefYeYne2_w"
+      },
+      {
+        "asOf": "2026-11-01",
+        "score": 95,
+        "medianDelayDays": 1,
+        "label": "fast",
+        "summary": "Godspower usually settles in about 1 days (fast)",
+        "blobId": "LKOt2hETQx2GRK1Vibp_Ds5caVk6zmuZ8MbCEB7Ueh4"
+      }
+    ],
+    "tolu": [
+      {
+        "asOf": "2026-09-01",
+        "score": 72,
+        "medianDelayDays": 3,
+        "label": "steady",
+        "summary": "Tolu usually settles in about 3 days (steady)",
+        "blobId": "UroVzrBr_8WMcSaDN_vi2PtjRgH1KJlapoZ-lB4JivU"
+      },
+      {
+        "asOf": "2026-09-15",
+        "score": 70,
+        "medianDelayDays": 4,
+        "label": "steady",
+        "summary": "Tolu usually settles in about 4 days (steady)",
+        "blobId": "4ZYdQujyiaAnSH0LDTDW8oXurmV4j-iDK-eAQZSDros"
+      },
+      {
+        "asOf": "2026-10-01",
+        "score": 70,
+        "medianDelayDays": 4,
+        "label": "steady",
+        "summary": "Tolu usually settles in about 4 days (steady)",
+        "blobId": "be09k0TKHlrETuRLezF_M-V81JTgpKTl2szFgmKJk2I"
+      },
+      {
+        "asOf": "2026-10-15",
+        "score": 72,
+        "medianDelayDays": 4,
+        "label": "steady",
+        "summary": "Tolu usually settles in about 4 days (steady)",
+        "blobId": "8aBGf9Kaby0q07UI_xmL65Iy_xFH1T7z7G3piYg9f3c"
+      },
+      {
+        "asOf": "2026-11-01",
+        "score": 72,
+        "medianDelayDays": 4,
+        "label": "steady",
+        "summary": "Tolu usually settles in about 4 days (steady)",
+        "blobId": "xa2nSUp094hiOhRb4Ig49c30oa_Mcm0ctKXL7e1xqH0"
+      }
+    ],
+    "ada": [
+      {
+        "asOf": "2026-09-01",
+        "score": 59,
+        "medianDelayDays": 5,
+        "label": "steady",
+        "summary": "Ada usually settles in about 5 days (steady)",
+        "blobId": "4lgWmi2j8t2xu4NbuGN-dCNpdYFMarhdmGiFFE6v2z8"
+      },
+      {
+        "asOf": "2026-09-15",
+        "score": 58,
+        "medianDelayDays": 5,
+        "label": "steady",
+        "summary": "Ada usually settles in about 5 days (steady)",
+        "blobId": "I1WBn9nJSfjJ8lmKODSIwbDfZwI-kz4I-JlfZwpaMNw"
+      },
+      {
+        "asOf": "2026-10-01",
+        "score": 65,
+        "medianDelayDays": 5,
+        "label": "steady",
+        "summary": "Ada usually settles in about 5 days (steady)",
+        "blobId": "uPr6cK1PUNErXFqFpq0_4oE-ABHYevSh6euY1TU7aJM"
+      },
+      {
+        "asOf": "2026-10-15",
+        "score": 61,
+        "medianDelayDays": 5,
+        "label": "steady",
+        "summary": "Ada usually settles in about 5 days (steady)",
+        "blobId": "UDlKpgzuQzjXfdGOMYuDO_SQliQ418Al8Kf6Tq8jlZs"
+      },
+      {
+        "asOf": "2026-11-01",
+        "score": 58,
+        "medianDelayDays": 5,
+        "label": "steady",
+        "summary": "Ada usually settles in about 5 days (steady)",
+        "blobId": "qFTS09jpNezRRqUpfU88qDaO2y-aZXI2BNugRT6v71I"
+      }
+    ],
+    "emeka": [
+      {
+        "asOf": "2026-09-01",
+        "score": 32,
+        "medianDelayDays": 10,
+        "label": "slow",
+        "summary": "Emeka usually settles in about 10 days (slow)",
+        "blobId": "YpbqPO9d6fQJipTQQ7OYQ5t7pwWrF0YtYFb2rUI25t0"
+      },
+      {
+        "asOf": "2026-09-15",
+        "score": 27,
+        "medianDelayDays": 10,
+        "label": "slow",
+        "summary": "Emeka usually settles in about 10 days (slow)",
+        "blobId": "e_Bdb8i8p8rIPw8-_1fUTA6RHOUFqFQ79WqlfKnXQ4E"
+      },
+      {
+        "asOf": "2026-10-01",
+        "score": 26,
+        "medianDelayDays": 10,
+        "label": "slow",
+        "summary": "Emeka usually settles in about 10 days (slow)",
+        "blobId": "q1WkK0FzvEHg9SdIVCjyzcKS6UPGZ4F7nvYNuvXilGQ"
+      },
+      {
+        "asOf": "2026-10-15",
+        "score": 32,
+        "medianDelayDays": 9,
+        "label": "slow",
+        "summary": "Emeka usually settles in about 9 days (slow)",
+        "blobId": "cBhglS7f_v4p5qKEJmD9nbYrjHAFU3bKEJo4Clpz-L0"
+      },
+      {
+        "asOf": "2026-11-01",
+        "score": 31,
+        "medianDelayDays": 9,
+        "label": "slow",
+        "summary": "Emeka usually settles in about 9 days (slow)",
+        "blobId": "bgEM3WeGDn7u-kdv7B33-bf6IonAqxt3F74_5KWGQy0"
+      }
+    ]
+  },
+  "recurringBills": {
+    "bill.fuel": [
+      {
+        "asOf": "2026-09-01",
+        "description": "Generator diesel",
+        "cadence": "weekly",
+        "confidence": 0.8,
+        "usdc": 16.67,
+        "next": "2026-09-06",
+        "summary": "Generator diesel comes weekly, next around 2026-09-06, usually ₦25,000",
+        "blobId": "oBGRyzgOOfJ8TV5MBifTdigu8SHrlxnKkkIyjFxf1kw"
+      },
+      {
+        "asOf": "2026-09-15",
+        "description": "Generator diesel",
+        "cadence": "weekly",
+        "confidence": 0.96,
+        "usdc": 16.67,
+        "next": "2026-09-20",
+        "summary": "Generator diesel comes weekly, next around 2026-09-20, usually ₦25,000",
+        "blobId": "mkctZq1Mm0FlWPryUUIpXE9JftxfcXUA2LikmLu9er0"
+      },
+      {
+        "asOf": "2026-10-01",
+        "description": "Generator diesel",
+        "cadence": "weekly",
+        "confidence": 0.96,
+        "usdc": 16.67,
+        "next": "2026-10-04",
+        "summary": "Generator diesel comes weekly, next around 2026-10-04, usually ₦25,000",
+        "blobId": "s890ajXSa4aI9upRdoOPKbYpxq5X8_CXrueVc2g8LUo"
+      },
+      {
+        "asOf": "2026-10-15",
+        "description": "Generator diesel",
+        "cadence": "weekly",
+        "confidence": 0.97,
+        "usdc": 16.67,
+        "next": "2026-10-18",
+        "summary": "Generator diesel comes weekly, next around 2026-10-18, usually ₦25,000",
+        "blobId": "SWoCmURrfpRIJ1LecC1iL0GSlQJZu_TeSDbWZLoqae0"
+      },
+      {
+        "asOf": "2026-11-01",
+        "description": "Generator diesel",
+        "cadence": "weekly",
+        "confidence": 0.97,
+        "usdc": 16.67,
+        "next": "2026-11-01",
+        "summary": "Generator diesel comes weekly, next around 2026-11-01, usually ₦25,000",
+        "blobId": "hSlx27EbqVbSaB9-mnQoOjzwiXN3XTDKe70aQ7rvmow"
+      }
+    ],
+    "bill.power": [
+      {
+        "asOf": "2026-10-01",
+        "description": "IKEDC prepaid token",
+        "cadence": "biweekly",
+        "confidence": 0.79,
+        "usdc": 26.67,
+        "next": "2026-10-14",
+        "summary": "IKEDC prepaid token comes biweekly, next around 2026-10-14, usually ₦40,000",
+        "blobId": "tHRTz6W1BhaH4aFFeUDBIWtOyCIeZDzb67sTtrFZw5Y"
+      },
+      {
+        "asOf": "2026-10-15",
+        "description": "IKEDC prepaid token",
+        "cadence": "biweekly",
+        "confidence": 0.94,
+        "usdc": 26.67,
+        "next": "2026-10-28",
+        "summary": "IKEDC prepaid token comes biweekly, next around 2026-10-28, usually ₦40,000",
+        "blobId": "YSSSPtHuX1CL3B2rkCOVu6LqDwKqfd3et5LNuGBRBlc"
+      },
+      {
+        "asOf": "2026-11-01",
+        "description": "IKEDC prepaid token",
+        "cadence": "biweekly",
+        "confidence": 0.94,
+        "usdc": 26.67,
+        "next": "2026-11-11",
+        "summary": "IKEDC prepaid token comes biweekly, next around 2026-11-11, usually ₦40,000",
+        "blobId": "MtbhzUdHuqmkjpTImuHF_gMGD2h0t5T0Mkh72Yinqy4"
+      }
+    ],
+    "bill.utilities": [
+      {
+        "asOf": "2026-10-15",
+        "description": "LAWMA waste",
+        "cadence": "monthly",
+        "confidence": 0.5,
+        "usdc": 3.33,
+        "next": "2026-11-01",
+        "summary": "LAWMA waste comes monthly, next around 2026-11-01, usually ₦5,000",
+        "blobId": "TaNCJL0swuBfkHVKjzsga8JtKV1b11fTbf47Mi0cjPg"
+      }
+    ],
+    "bill.data": [
+      {
+        "asOf": "2026-10-15",
+        "description": "Spectranet data",
+        "cadence": "monthly",
+        "confidence": 0.5,
+        "usdc": 20,
+        "next": "2026-11-06",
+        "summary": "Spectranet data comes monthly, next around 2026-11-06, usually ₦30,000",
+        "blobId": "04MHcnCnZHKBoDDD2ExT3IaP2dTwvGk0-4hPyhgJW_8"
+      }
+    ]
+  },
+  "settlements": [
+    {
+      "digest": "FHS5aw5nn9X4DKRevpoTKs4yMGhUnHEsgT725THiuAU2",
+      "label": "Emeka → Godspower, first gasless test",
+      "status": "SUCCESS",
+      "checkpoint": 339135513,
+      "timestamp": "2026-10-28T17:55:00.256Z",
+      "payer": "0xbc2b335934bb904f0cdce60564844bae509ac81b581fa8330298762d56edaa0a",
+      "payee": "0xac250d52d9dc6456d0c444f1b0a2e20347127f8ad6a18a7a8dbcb8904e4d5bf3",
+      "usdc": 0.01,
+      "payerChange": -0.01,
+      "payeeChange": 0.01,
+      "gasSui": 0,
+      "receiptBlobId": "2mnwqBb4M-kSmnUU8qhrV9mqi7cRLaO_-fmfxsapY0U",
+      "suiscan": "https://suiscan.xyz/mainnet/tx/FHS5aw5nn9X4DKRevpoTKs4yMGhUnHEsgT725THiuAU2"
+    },
+    {
+      "digest": "Eu7yRGabs6aHsM7pERoULg3HnfM9zZuYRnUNmaNSiXwc",
+      "label": "Godspower → Tolu, through the app's settle API",
+      "status": "SUCCESS",
+      "checkpoint": 339143353,
+      "timestamp": "2026-10-28T18:25:19.609Z",
+      "payer": "0xac250d52d9dc6456d0c444f1b0a2e20347127f8ad6a18a7a8dbcb8904e4d5bf3",
+      "payee": "0x2f4c5924de9bfd2b0f4a8cf607c7cb3363ade46f5bc2bc50a4965481ede3c94a",
+      "usdc": 0.01,
+      "payerChange": -0.01,
+      "payeeChange": 0.01,
+      "gasSui": 0,
+      "receiptBlobId": "AhdHmgZ9mqssiPHcqBoiSgfZNIfP7XmSmHokRU8lJoI",
+      "suiscan": "https://suiscan.xyz/mainnet/tx/Eu7yRGabs6aHsM7pERoULg3HnfM9zZuYRnUNmaNSiXwc"
+    },
+    {
+      "digest": "9V57Dbu95yuikVhYysxreSg7vFL3PxFqzNJMgQkV5QUV",
+      "label": "Emeka → Godspower, signed in a browser wallet at /app/settle",
+      "status": "SUCCESS",
+      "checkpoint": 339178369,
+      "timestamp": "2026-10-28T20:41:17.701Z",
+      "payer": "0xbc2b335934bb904f0cdce60564844bae509ac81b581fa8330298762d56edaa0a",
+      "payee": "0xac250d52d9dc6456d0c444f1b0a2e20347127f8ad6a18a7a8dbcb8904e4d5bf3",
+      "usdc": 0.05,
+      "payerChange": -0.05,
+      "payeeChange": 0.05,
+      "gasSui": 0,
+      "receiptBlobId": "TBoGRTytpSzQcizzvMydeIY3IB4q1WzvGW3XSlGG87w",
+      "suiscan": "https://suiscan.xyz/mainnet/tx/9V57Dbu95yuikVhYysxreSg7vFL3PxFqzNJMgQkV5QUV"
+    }
+  ],
+  "mainnet": {
+    "memories": 69,
+    "namespaces": [
+      {
+        "name": "ss_app",
+        "memories": 1
+      },
+      {
+        "name": "ss_g_37a6c1efd43850de",
+        "memories": 2
+      },
+      {
+        "name": "ss_g_fd36f984879028d5",
+        "memories": 65
+      },
+      {
+        "name": "ss_g_890a18bd94e3e136",
+        "memories": 1
+      }
+    ],
+    "gate": 10
+  }
+}

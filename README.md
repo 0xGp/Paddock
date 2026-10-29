@@ -11,11 +11,13 @@ Built for the Tatum × Walrus **"Total Recall"** hackathon, Consumer Finance tra
 | | |
 |---|---|
 | Live app | **[usepaddock.online](https://usepaddock.online)**: open [`/demo`](https://usepaddock.online/demo) without signing in, [`/status`](https://usepaddock.online/status) for live Tatum and Walrus checks, [`/app`](https://usepaddock.online/app) to sign in with a Sui wallet |
-| Video (2–3 min) | _link added at submission_ |
-| Blog post | _link added at submission_ |
+| Demo video (3 min) | **[youtu.be/kbsOv2sbv6k](https://youtu.be/kbsOv2sbv6k)**: every number and chart in it is read from Mainnet ([script](docs/VIDEO-SCRIPT.md), [source](video/)) |
+| Blog post | [`docs/BLOG.md`](docs/BLOG.md): what it does, how it uses Tatum and Walrus, and how it learned over time (also published on LinkedIn) |
 | Proof of every transaction and memory | [`docs/PROOF.md`](docs/PROOF.md) |
 
-![Settle up: see who owes whom, pay with no gas, get a receipt on Walrus](docs/screens/flow-3-settle.png)
+[![Watch the 3-minute demo on YouTube](docs/blog/0-cover.png)](https://youtu.be/kbsOv2sbv6k)
+
+<p align="center"><a href="https://youtu.be/kbsOv2sbv6k"><b>▶ Watch the demo (3 min)</b></a></p>
 
 ## At a glance
 
@@ -58,7 +60,7 @@ Paddock keeps an honest ledger and adds a memory on top:
 | `pattern_snapshot` | "Tolu has covered diesel 9 of 12 times. Next diesel: Godspower?" | A rule's output changes |
 | `member_habit` | "Emeka usually settles in about 9 days (slow)" | Someone's settle speed changes |
 | `ledger_checkpoint` | Entries 31–37 with a cumulative ledger hash | Every 10 ledger entries |
-| `group_profile` | Members and the group's naira-per-USDC rate | The group is set up |
+| `group_profile` | Members and the group's rate (1,500 per USDC for Flat 3B) | The group is set up |
 | `settlement_receipt` | 0.01 USDC Emeka → Godspower, confirmed by Tatum at checkpoint 339,135,513 | Tatum confirms a payment |
 
 **How it's written.** Drafts go into a Postgres outbox that dedupes by content hash. The outbox is drained in batches of at most 5 to stay under the relayer's rate limit, and the job and blob IDs are recorded. Older knowledge is never written after newer knowledge.
@@ -85,6 +87,19 @@ Paddock keeps an honest ledger and adds a memory on top:
 **How it learned over time.** The timeline is read back from Walrus in order: 35 changes between 1 Sep and 1 Nov, with before and after values. On 1 Nov the groceries rotation stopped holding, and that **forgetting** was written to Walrus as a memory too.
 
 ![How it learned: changes per date with before and after values](docs/screens/proof/demo-timeline.png)
+
+The same memories, plotted round by round (`pnpm video:data` reads them back from Walrus Mainnet; every dot is a memory with its own blob ID):
+
+<table>
+<tr>
+<td><img src="docs/blog/2-learning-curve.png" alt="Things Paddock noticed or revised per round: 6, 12, 18, 28, 35"></td>
+<td><img src="docs/blog/3-diesel-turn.png" alt="Tolu's share of the diesel bills per round, and the next-turn suggestion moving to Godspower"></td>
+</tr>
+<tr>
+<td><b>Learning curve.</b> 6 things in the first round, 35 by the fifth, including one thing forgotten.</td>
+<td><b>Whose turn for diesel.</b> Tolu's run went from 5 of 5 to 9 of 12, and the suggestion moved to Godspower on 15 Oct.</td>
+</tr>
+</table>
 
 **Privacy.** Namespaces are `ss_g_` plus 16 hex characters of `sha256(groupId + salt)`, so no names appear in public metadata. The relayer encrypts each memory with SEAL before it becomes a Walrus blob.
 
@@ -199,7 +214,7 @@ sequenceDiagram
   participant S as Paddock server
   participant T as Tatum (Sui GraphQL)
   participant W as Walrus Memory
-  U->>App: Pay ₦11,000 to Godspower
+  U->>App: Pay 7.33 USDC to Godspower
   App->>S: POST /api/settle/prepare
   S->>T: Resolve USDC, build send_funds (gas 0)
   S-->>App: Transaction bytes (capped at what you owe)
@@ -230,7 +245,8 @@ packages/engine        pure rules and money math (integer kobo, largest-remainde
 packages/memory        envelopes, hash chain, outbox, recall, verification, ledger rebuild
 packages/chain         the only Tatum client: queue, retries, reads, transfer build, confirmTransfer
 fixtures               the Flat 3B ledger used by /demo and the golden tests
-scripts                proof, seeding, smoke tests, end-to-end runs, screenshots
+scripts                proof, seeding, smoke tests, end-to-end runs, screenshots, video data
+video                  the demo video as a Remotion project: every chart reads video/data/mainnet.json
 docs                   proof, spec, decision records, evidence, screenshots
 ```
 
@@ -241,6 +257,8 @@ The code keeps the project's codename, SplitSense: packages are `@splitsense/*`,
 **Hosting:** [usepaddock.online](https://usepaddock.online) runs on a Linux VPS. `next start` runs under systemd behind nginx with a Let's Encrypt certificate, next to a local Postgres. A daily cron calls `/api/cron/memory` to take one paced outbox step and re-read Flat 3B from Walrus.
 
 ## The app, step by step
+
+_These flows were captured on 28 Oct, before the app switched to showing every amount in USDC. The ledger still records naira at each group's rate; the screens now show the USDC equivalent._
 
 ![Get in: welcome, connect a Sui wallet, sign a free message, choose your name](docs/screens/flow-1-get-in.png)
 
@@ -261,6 +279,7 @@ pnpm dev                        # http://localhost:3000
 pnpm test                       # engine, memory and chain unit tests (offline)
 pnpm test:live                  # the Tatum reads /status makes, against Mainnet
 pnpm proof                      # re-confirm every settlement through Tatum; count memories on Walrus
+pnpm video:data                 # recall Flat 3B, check every blob on the Walrus aggregator, re-read payments through Tatum
 pnpm memory:health              # relayer health, delegate key check, memories per namespace
 pnpm memory:refresh             # recall Flat 3B from Walrus, verify every envelope and the ledger
 pnpm seed:mainnet --dry-run     # what the seed would write, phase by phase (idempotent when run)

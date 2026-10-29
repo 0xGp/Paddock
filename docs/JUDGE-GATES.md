@@ -11,8 +11,8 @@ A brick is done only when every row in its gate passes, with evidence recorded h
 | Tatum RPC for on-chain data | `/status` live calls + settlement confirmation through Tatum GraphQL | 4, 5 | **pass**: `/status`, wallet balances, and two settlements built, executed and confirmed through Tatum |
 | Working demo | Public URL, `/demo` usable without sign-in | 6 | **pass**: [usepaddock.online](https://usepaddock.online) (`/demo`, `/status`, `/app` all 200 over HTTPS) |
 | Public repo | GitHub URL | 6 | **pass**: [github.com/0xGp/Paddock](https://github.com/0xGp/Paddock) |
-| 2–3 min video | Uploaded link | 7 | pending |
-| Blog post (what it does, Tatum + Walrus, **how it learned over time**) | Published URL | 7 | pending |
+| 2–3 min video | Uploaded link | 7 | **pass**: [youtu.be/kbsOv2sbv6k](https://youtu.be/kbsOv2sbv6k) (2:59, all data from Mainnet) |
+| Blog post (what it does, Tatum + Walrus, **how it learned over time**) | Published URL | 7 | written ([`BLOG.md`](BLOG.md)); LinkedIn URL pending |
 
 ## Scored criteria → bricks
 
@@ -126,7 +126,7 @@ Groundwork (Oct 28):
 
 **Third settlement, signed in a browser wallet at `/app/settle` (Oct 28, 21:41 WAT)**: 0.05 USDC in a group created in the app ("beach day", ₦100 per USDC), tx [`9V57Dbu95yuikVhYysxreSg7vFL3PxFqzNJMgQkV5QUV`](https://suiscan.xyz/mainnet/tx/9V57Dbu95yuikVhYysxreSg7vFL3PxFqzNJMgQkV5QUV), checkpoint 339,178,369, 0 SUI gas. Confirmed through Tatum in 1.4 s. With `MEMORY_USER_GROUPS=on` its receipt went to the group's own namespace `ss_g_890a18bd94e3e136`, blob [`TBoGRTyt…`](https://walruscan.com/mainnet/blob/TBoGRTytpSzQcizzvMydeIY3IB4q1WzvGW3XSlGG87w). `pnpm proof` re-confirms all three payments ([`PROOF.md`](PROOF.md)).
 
-Still open for this brick: record a browser-wallet payment for the video.
+The browser-wallet payment above is the one the video shows (scene 7, re-read through Tatum by `pnpm video:data`).
 
 ## Brick 6: ship
 - [x] Production deploy: [usepaddock.online](https://usepaddock.online) on a VPS (systemd + nginx + Let's Encrypt, local Postgres, daily memory cron).
@@ -135,4 +135,8 @@ Still open for this brick: record a browser-wallet payment for the video.
 - [ ] CI green (typecheck + tests) on GitHub Actions.
 
 ## Brick 7: story
-- [ ] Blog published (covers how it learned over time), 2–3 min video, X posts tagging @tatum_io and @WalrusProtocol, form drafted. Submit by Nov 10 12:00 WAT.
+- [x] 2–3 min video: [youtu.be/kbsOv2sbv6k](https://youtu.be/kbsOv2sbv6k). A Remotion project in `video/`; every chart reads `video/data/mainnet.json`, built by `pnpm video:data` from Walrus Memory recall (65/65 verified), the Walrus Mainnet aggregator (66/66 blobs) and Tatum (3/3 payments, 0 gas).
+- [x] Blog written: [`BLOG.md`](BLOG.md), covering what it does, Tatum + Walrus, and how it learned over time, with charts from Mainnet data.
+- [ ] Blog published on LinkedIn, URL in the README and the form's "Additional documentation".
+- [ ] X and LinkedIn posts tagging @tatum_io and @WalrusProtocol / the Tatum and Walrus Foundation pages.
+- [ ] Form drafted, then submitted by Nov 10 12:00 WAT.

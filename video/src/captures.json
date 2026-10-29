@@ -1,0 +1,271 @@
+{
+  "site": "https://usepaddock.online",
+  "capturedAt": "2026-10-29T11:58:29.099Z",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "scale": 2,
+  "shots": {
+    "demo-on": {
+      "file": "captures/demo-on.png",
+      "width": 1440,
+      "height": 3149,
+      "rects": {
+        "balance": {
+          "x": 168,
+          "y": 84,
+          "width": 696,
+          "height": 288
+        },
+        "memory": {
+          "x": 168,
+          "y": 396,
+          "width": 696,
+          "height": 248.5
+        },
+        "turns": {
+          "x": 888,
+          "y": 84,
+          "width": 384,
+          "height": 148
+        },
+        "upcoming": {
+          "x": 888,
+          "y": 256,
+          "width": 384,
+          "height": 374
+        },
+        "speed": {
+          "x": 888,
+          "y": 654,
+          "width": 384,
+          "height": 342
+        },
+        "settle": {
+          "x": 168,
+          "y": 668.5,
+          "width": 696,
+          "height": 210
+        },
+        "timeline": {
+          "x": 168,
+          "y": 2200.5,
+          "width": 1104,
+          "height": 828
+        },
+        "switch": {
+          "x": 1135.140625,
+          "y": 20,
+          "width": 136.859375,
+          "height": 40
+        }
+      }
+    },
+    "demo-off": {
+      "file": "captures/demo-off.png",
+      "width": 1440,
+      "height": 2282,
+      "rects": {
+        "balance": {
+          "x": 168,
+          "y": 84,
+          "width": 696,
+          "height": 288
+        },
+        "memory": {
+          "x": 168,
+          "y": 396,
+          "width": 696,
+          "height": 130
+        },
+        "turns": {
+          "x": 888,
+          "y": 84,
+          "width": 384,
+          "height": 168
+        },
+        "upcoming": {
+          "x": 888,
+          "y": 276,
+          "width": 384,
+          "height": 168
+        },
+        "speed": {
+          "x": 888,
+          "y": 468,
+          "width": 384,
+          "height": 168
+        },
+        "settle": {
+          "x": 168,
+          "y": 550,
+          "width": 696,
+          "height": 210
+        },
+        "timeline": {
+          "x": 168,
+          "y": 2082,
+          "width": 1104,
+          "height": 80
+        },
+        "switch": {
+          "x": 1132.828125,
+          "y": 20,
+          "width": 139.171875,
+          "height": 40
+        }
+      }
+    },
+    "demo-why": {
+      "file": "captures/demo-why.png",
+      "width": 1440,
+      "height": 3149,
+      "rects": {
+        "balance": {
+          "x": 168,
+          "y": 84,
+          "width": 696,
+          "height": 288
+        },
+        "memory": {
+          "x": 168,
+          "y": 396,
+          "width": 696,
+          "height": 248.5
+        },
+        "turns": {
+          "x": 888,
+          "y": 84,
+          "width": 384,
+          "height": 629
+        },
+        "upcoming": {
+          "x": 888,
+          "y": 737,
+          "width": 384,
+          "height": 374
+        },
+        "speed": {
+          "x": 888,
+          "y": 1135,
+          "width": 384,
+          "height": 342
+        },
+        "settle": {
+          "x": 168,
+          "y": 668.5,
+          "width": 696,
+          "height": 210
+        },
+        "timeline": {
+          "x": 168,
+          "y": 2200.5,
+          "width": 1104,
+          "height": 828
+        },
+        "switch": {
+          "x": 1135.140625,
+          "y": 20,
+          "width": 136.859375,
+          "height": 40
+        },
+        "why": {
+          "x": 897,
+          "y": 155,
+          "width": 366,
+          "height": 549
+        }
+      }
+    },
+    "demo-timeline": {
+      "file": "captures/demo-timeline.png",
+      "width": 1440,
+      "height": 3327,
+      "rects": {
+        "balance": {
+          "x": 168,
+          "y": 84,
+          "width": 696,
+          "height": 288
+        },
+        "memory": {
+          "x": 168,
+          "y": 396,
+          "width": 696,
+          "height": 232.5
+        },
+        "turns": {
+          "x": 888,
+          "y": 84,
+          "width": 384,
+          "height": 148
+        },
+        "upcoming": {
+          "x": 888,
+          "y": 256,
+          "width": 384,
+          "height": 374
+        },
+        "speed": {
+          "x": 888,
+          "y": 654,
+          "width": 384,
+          "height": 342
+        },
+        "settle": {
+          "x": 168,
+          "y": 652.5,
+          "width": 696,
+          "height": 210
+        },
+        "timeline": {
+          "x": 168,
+          "y": 2184.5,
+          "width": 1104,
+          "height": 1022
+        },
+        "switch": {
+          "x": 1135.140625,
+          "y": 20,
+          "width": 136.859375,
+          "height": 40
+        },
+        "day": {
+          "x": 181,
+          "y": 2411.5,
+          "width": 1078,
+          "height": 730
+        }
+      }
+    },
+    "status": {
+      "file": "captures/status.png",
+      "width": 1440,
+      "height": 1446,
+      "rects": {},
+      "latenciesMs": [
+        775,
+        330,
+        79,
+        366,
+        498,
+        890
+      ]
+    },
+    "walruscan-blob": {
+      "file": "captures/walruscan-blob.png",
+      "width": 1440,
+      "height": 900,
+      "rects": {},
+      "url": "https://walruscan.com/mainnet/blob/_x__n1nD3gleY_ZQduTJtcNYmFIhPUg7R0H3A4yOiDY"
+    },
+    "suiscan-tx": {
+      "file": "captures/suiscan-tx.png",
+      "width": 1440,
+      "height": 900,
+      "rects": {},
+      "url": "https://suiscan.xyz/mainnet/tx/9V57Dbu95yuikVhYysxreSg7vFL3PxFqzNJMgQkV5QUV"
+    }
+  }
+}

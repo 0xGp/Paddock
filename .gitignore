@@ -3,6 +3,7 @@ node_modules/
 dist/
 coverage/
 .turbo/
+video/out/
 .vercel/
 .DS_Store
 
@@ -11,3 +12,4 @@ coverage/
 .env*.local
 .impeccable/config.local.json
 .neon
+video/public/voice/

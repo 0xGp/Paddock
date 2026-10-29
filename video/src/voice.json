@@ -1,0 +1,2038 @@
+{
+ "provider": "say",
+ "voice": "macOS say · Samantha · rate 150 · 300 ms between sentences (stand-in)",
+ "scenes": [
+  {
+   "id": "problem",
+   "key": "bb1b619b945d6bb6",
+   "file": "voice/01-problem.wav",
+   "seconds": 17.016,
+   "words": [
+    {
+     "text": "In",
+     "start": 0.15,
+     "end": 0.311
+    },
+    {
+     "text": "a",
+     "start": 0.311,
+     "end": 0.418
+    },
+    {
+     "text": "shared",
+     "start": 0.418,
+     "end": 0.793
+    },
+    {
+     "text": "flat",
+     "start": 0.793,
+     "end": 1.061
+    },
+    {
+     "text": "in",
+     "start": 1.061,
+     "end": 1.222
+    },
+    {
+     "text": "Lagos,",
+     "start": 1.222,
+     "end": 1.597
+    },
+    {
+     "text": "the",
+     "start": 1.865,
+     "end": 2.079
+    },
+    {
+     "text": "money",
+     "start": 2.079,
+     "end": 2.401
+    },
+    {
+     "text": "never",
+     "start": 2.401,
+     "end": 2.722
+    },
+    {
+     "text": "stops.",
+     "start": 2.722,
+     "end": 3.097
+    },
+    {
+     "text": "Over",
+     "start": 3.88,
+     "end": 4.148
+    },
+    {
+     "text": "eight",
+     "start": 4.148,
+     "end": 4.469
+    },
+    {
+     "text": "hundred",
+     "start": 4.469,
+     "end": 4.898
+    },
+    {
+     "text": "USDC",
+     "start": 4.898,
+     "end": 5.166
+    },
+    {
+     "text": "in",
+     "start": 5.166,
+     "end": 5.327
+    },
+    {
+     "text": "bills",
+     "start": 5.327,
+     "end": 5.648
+    },
+    {
+     "text": "in",
+     "start": 5.648,
+     "end": 5.809
+    },
+    {
+     "text": "three",
+     "start": 5.809,
+     "end": 6.131
+    },
+    {
+     "text": "months.",
+     "start": 6.131,
+     "end": 6.559
+    },
+    {
+     "text": "Diesel",
+     "start": 7.342,
+     "end": 7.717
+    },
+    {
+     "text": "every",
+     "start": 7.717,
+     "end": 8.038
+    },
+    {
+     "text": "week.",
+     "start": 8.038,
+     "end": 8.36
+    },
+    {
+     "text": "Prepaid",
+     "start": 9.142,
+     "end": 9.571
+    },
+    {
+     "text": "power.",
+     "start": 9.571,
+     "end": 9.946
+    },
+    {
+     "text": "Data.",
+     "start": 10.728,
+     "end": 11.05
+    },
+    {
+     "text": "Someone",
+     "start": 11.832,
+     "end": 12.261
+    },
+    {
+     "text": "pays,",
+     "start": 12.261,
+     "end": 12.582
+    },
+    {
+     "text": "someone",
+     "start": 12.85,
+     "end": 13.279
+    },
+    {
+     "text": "forgets,",
+     "start": 13.279,
+     "end": 13.761
+    },
+    {
+     "text": "and",
+     "start": 14.029,
+     "end": 14.244
+    },
+    {
+     "text": "the",
+     "start": 14.244,
+     "end": 14.458
+    },
+    {
+     "text": "argument",
+     "start": 14.458,
+     "end": 14.94
+    },
+    {
+     "text": "starts",
+     "start": 14.94,
+     "end": 15.316
+    },
+    {
+     "text": "in",
+     "start": 15.316,
+     "end": 15.476
+    },
+    {
+     "text": "the",
+     "start": 15.476,
+     "end": 15.691
+    },
+    {
+     "text": "group",
+     "start": 15.691,
+     "end": 16.012
+    },
+    {
+     "text": "chat.",
+     "start": 16.012,
+     "end": 16.334
+    }
+   ]
+  },
+  {
+   "id": "paddock",
+   "key": "805336a4a7ce0936",
+   "file": "voice/02-paddock.wav",
+   "seconds": 13.196,
+   "words": [
+    {
+     "text": "This",
+     "start": 0.15,
+     "end": 0.418
+    },
+    {
+     "text": "is",
+     "start": 0.418,
+     "end": 0.579
+    },
+    {
+     "text": "Paddock:",
+     "start": 0.579,
+     "end": 1.061
+    },
+    {
+     "text": "shared",
+     "start": 1.33,
+     "end": 1.705
+    },
+    {
+     "text": "bills",
+     "start": 1.705,
+     "end": 2.027
+    },
+    {
+     "text": "that",
+     "start": 2.027,
+     "end": 2.295
+    },
+    {
+     "text": "remember.",
+     "start": 2.295,
+     "end": 2.831
+    },
+    {
+     "text": "It",
+     "start": 3.613,
+     "end": 3.774
+    },
+    {
+     "text": "learns",
+     "start": 3.774,
+     "end": 4.15
+    },
+    {
+     "text": "how",
+     "start": 4.15,
+     "end": 4.364
+    },
+    {
+     "text": "your",
+     "start": 4.364,
+     "end": 4.632
+    },
+    {
+     "text": "flat",
+     "start": 4.632,
+     "end": 4.9
+    },
+    {
+     "text": "actually",
+     "start": 4.9,
+     "end": 5.383
+    },
+    {
+     "text": "lives,",
+     "start": 5.383,
+     "end": 5.758
+    },
+    {
+     "text": "keeps",
+     "start": 6.026,
+     "end": 6.348
+    },
+    {
+     "text": "what",
+     "start": 6.348,
+     "end": 6.616
+    },
+    {
+     "text": "it",
+     "start": 6.616,
+     "end": 6.777
+    },
+    {
+     "text": "learned",
+     "start": 6.777,
+     "end": 7.206
+    },
+    {
+     "text": "in",
+     "start": 7.206,
+     "end": 7.367
+    },
+    {
+     "text": "Walrus",
+     "start": 7.367,
+     "end": 7.742
+    },
+    {
+     "text": "Memory",
+     "start": 7.742,
+     "end": 8.117
+    },
+    {
+     "text": "on",
+     "start": 8.117,
+     "end": 8.278
+    },
+    {
+     "text": "Sui",
+     "start": 8.278,
+     "end": 8.546
+    },
+    {
+     "text": "Mainnet,",
+     "start": 8.546,
+     "end": 9.029
+    },
+    {
+     "text": "and",
+     "start": 9.297,
+     "end": 9.511
+    },
+    {
+     "text": "settles",
+     "start": 9.511,
+     "end": 9.94
+    },
+    {
+     "text": "up",
+     "start": 9.94,
+     "end": 10.101
+    },
+    {
+     "text": "in",
+     "start": 10.101,
+     "end": 10.262
+    },
+    {
+     "text": "USDC",
+     "start": 10.262,
+     "end": 10.53
+    },
+    {
+     "text": "through",
+     "start": 10.53,
+     "end": 10.959
+    },
+    {
+     "text": "Tatum,",
+     "start": 10.959,
+     "end": 11.441
+    },
+    {
+     "text": "with",
+     "start": 11.71,
+     "end": 11.978
+    },
+    {
+     "text": "zero",
+     "start": 11.978,
+     "end": 12.246
+    },
+    {
+     "text": "gas.",
+     "start": 12.246,
+     "end": 12.514
+    }
+   ]
+  },
+  {
+   "id": "memory",
+   "key": "7fccecd5316b7922",
+   "file": "voice/03-memory.wav",
+   "seconds": 27.187,
+   "words": [
+    {
+     "text": "This",
+     "start": 0.15,
+     "end": 0.415
+    },
+    {
+     "text": "is",
+     "start": 0.415,
+     "end": 0.574
+    },
+    {
+     "text": "judge",
+     "start": 0.574,
+     "end": 0.892
+    },
+    {
+     "text": "mode.",
+     "start": 0.892,
+     "end": 1.209
+    },
+    {
+     "text": "No",
+     "start": 1.986,
+     "end": 2.145
+    },
+    {
+     "text": "sign-in.",
+     "start": 2.145,
+     "end": 2.622
+    },
+    {
+     "text": "Flat",
+     "start": 3.398,
+     "end": 3.663
+    },
+    {
+     "text": "3B",
+     "start": 3.663,
+     "end": 3.822
+    },
+    {
+     "text": "has",
+     "start": 3.822,
+     "end": 4.034
+    },
+    {
+     "text": "thirty-seven",
+     "start": 4.034,
+     "end": 4.723
+    },
+    {
+     "text": "bills,",
+     "start": 4.723,
+     "end": 5.093
+    },
+    {
+     "text": "all",
+     "start": 5.358,
+     "end": 5.57
+    },
+    {
+     "text": "checkpointed",
+     "start": 5.57,
+     "end": 6.259
+    },
+    {
+     "text": "on",
+     "start": 6.259,
+     "end": 6.418
+    },
+    {
+     "text": "Walrus",
+     "start": 6.418,
+     "end": 6.789
+    },
+    {
+     "text": "Mainnet.",
+     "start": 6.789,
+     "end": 7.265
+    },
+    {
+     "text": "Paddock",
+     "start": 8.042,
+     "end": 8.466
+    },
+    {
+     "text": "just",
+     "start": 8.466,
+     "end": 8.731
+    },
+    {
+     "text": "recalled",
+     "start": 8.731,
+     "end": 9.207
+    },
+    {
+     "text": "sixty-five",
+     "start": 9.207,
+     "end": 9.79
+    },
+    {
+     "text": "memories",
+     "start": 9.79,
+     "end": 10.267
+    },
+    {
+     "text": "from",
+     "start": 10.267,
+     "end": 10.532
+    },
+    {
+     "text": "Walrus",
+     "start": 10.532,
+     "end": 10.902
+    },
+    {
+     "text": "and",
+     "start": 10.902,
+     "end": 11.114
+    },
+    {
+     "text": "re-checked",
+     "start": 11.114,
+     "end": 11.697
+    },
+    {
+     "text": "each",
+     "start": 11.697,
+     "end": 11.962
+    },
+    {
+     "text": "one",
+     "start": 11.962,
+     "end": 12.174
+    },
+    {
+     "text": "against",
+     "start": 12.174,
+     "end": 12.597
+    },
+    {
+     "text": "its",
+     "start": 12.597,
+     "end": 12.809
+    },
+    {
+     "text": "hash.",
+     "start": 12.809,
+     "end": 13.127
+    },
+    {
+     "text": "Whose",
+     "start": 13.904,
+     "end": 14.222
+    },
+    {
+     "text": "turn,",
+     "start": 14.222,
+     "end": 14.539
+    },
+    {
+     "text": "Coming",
+     "start": 14.804,
+     "end": 15.175
+    },
+    {
+     "text": "up,",
+     "start": 15.175,
+     "end": 15.387
+    },
+    {
+     "text": "and",
+     "start": 15.652,
+     "end": 15.864
+    },
+    {
+     "text": "Settle",
+     "start": 15.864,
+     "end": 16.234
+    },
+    {
+     "text": "speed",
+     "start": 16.234,
+     "end": 16.552
+    },
+    {
+     "text": "are",
+     "start": 16.552,
+     "end": 16.764
+    },
+    {
+     "text": "all",
+     "start": 16.764,
+     "end": 16.976
+    },
+    {
+     "text": "drawn",
+     "start": 16.976,
+     "end": 17.294
+    },
+    {
+     "text": "from",
+     "start": 17.294,
+     "end": 17.559
+    },
+    {
+     "text": "those",
+     "start": 17.559,
+     "end": 17.876
+    },
+    {
+     "text": "memories.",
+     "start": 17.876,
+     "end": 18.406
+    },
+    {
+     "text": "Switch",
+     "start": 19.183,
+     "end": 19.554
+    },
+    {
+     "text": "memory",
+     "start": 19.554,
+     "end": 19.924
+    },
+    {
+     "text": "off,",
+     "start": 19.924,
+     "end": 20.189
+    },
+    {
+     "text": "and",
+     "start": 20.454,
+     "end": 20.666
+    },
+    {
+     "text": "it's",
+     "start": 20.666,
+     "end": 20.931
+    },
+    {
+     "text": "a",
+     "start": 20.931,
+     "end": 21.037
+    },
+    {
+     "text": "plain",
+     "start": 21.037,
+     "end": 21.355
+    },
+    {
+     "text": "bill",
+     "start": 21.355,
+     "end": 21.62
+    },
+    {
+     "text": "splitter.",
+     "start": 21.62,
+     "end": 22.149
+    },
+    {
+     "text": "Same",
+     "start": 22.926,
+     "end": 23.191
+    },
+    {
+     "text": "balances.",
+     "start": 23.191,
+     "end": 23.72
+    },
+    {
+     "text": "No",
+     "start": 24.497,
+     "end": 24.656
+    },
+    {
+     "text": "idea",
+     "start": 24.656,
+     "end": 24.921
+    },
+    {
+     "text": "Tolu",
+     "start": 24.921,
+     "end": 25.186
+    },
+    {
+     "text": "keeps",
+     "start": 25.186,
+     "end": 25.504
+    },
+    {
+     "text": "buying",
+     "start": 25.504,
+     "end": 25.874
+    },
+    {
+     "text": "the",
+     "start": 25.874,
+     "end": 26.086
+    },
+    {
+     "text": "diesel.",
+     "start": 26.086,
+     "end": 26.51
+    }
+   ]
+  },
+  {
+   "id": "proof",
+   "key": "b4a8756ea2c535df",
+   "file": "voice/04-proof.wav",
+   "seconds": 18.582,
+   "words": [
+    {
+     "text": "Every",
+     "start": 0.15,
+     "end": 0.467
+    },
+    {
+     "text": "suggestion",
+     "start": 0.467,
+     "end": 1.049
+    },
+    {
+     "text": "shows",
+     "start": 1.049,
+     "end": 1.367
+    },
+    {
+     "text": "its",
+     "start": 1.367,
+     "end": 1.578
+    },
+    {
+     "text": "working.",
+     "start": 1.578,
+     "end": 2.054
+    },
+    {
+     "text": "Diesel:",
+     "start": 2.83,
+     "end": 3.253
+    },
+    {
+     "text": "Godspower,",
+     "start": 3.518,
+     "end": 4.1
+    },
+    {
+     "text": "because",
+     "start": 4.364,
+     "end": 4.787
+    },
+    {
+     "text": "Tolu",
+     "start": 4.787,
+     "end": 5.052
+    },
+    {
+     "text": "paid",
+     "start": 5.052,
+     "end": 5.316
+    },
+    {
+     "text": "nine",
+     "start": 5.316,
+     "end": 5.581
+    },
+    {
+     "text": "of",
+     "start": 5.581,
+     "end": 5.74
+    },
+    {
+     "text": "the",
+     "start": 5.74,
+     "end": 5.951
+    },
+    {
+     "text": "last",
+     "start": 5.951,
+     "end": 6.216
+    },
+    {
+     "text": "twelve.",
+     "start": 6.216,
+     "end": 6.639
+    },
+    {
+     "text": "Tap",
+     "start": 7.415,
+     "end": 7.626
+    },
+    {
+     "text": "it,",
+     "start": 7.626,
+     "end": 7.838
+    },
+    {
+     "text": "and",
+     "start": 8.102,
+     "end": 8.314
+    },
+    {
+     "text": "you",
+     "start": 8.314,
+     "end": 8.526
+    },
+    {
+     "text": "get",
+     "start": 8.526,
+     "end": 8.737
+    },
+    {
+     "text": "the",
+     "start": 8.737,
+     "end": 8.949
+    },
+    {
+     "text": "formula,",
+     "start": 8.949,
+     "end": 9.425
+    },
+    {
+     "text": "the",
+     "start": 9.689,
+     "end": 9.901
+    },
+    {
+     "text": "numbers,",
+     "start": 9.901,
+     "end": 10.377
+    },
+    {
+     "text": "and",
+     "start": 10.641,
+     "end": 10.853
+    },
+    {
+     "text": "the",
+     "start": 10.853,
+     "end": 11.065
+    },
+    {
+     "text": "exact",
+     "start": 11.065,
+     "end": 11.382
+    },
+    {
+     "text": "Walrus",
+     "start": 11.382,
+     "end": 11.752
+    },
+    {
+     "text": "blob",
+     "start": 11.752,
+     "end": 12.017
+    },
+    {
+     "text": "it",
+     "start": 12.017,
+     "end": 12.175
+    },
+    {
+     "text": "came",
+     "start": 12.175,
+     "end": 12.44
+    },
+    {
+     "text": "from.",
+     "start": 12.44,
+     "end": 12.757
+    },
+    {
+     "text": "No",
+     "start": 13.533,
+     "end": 13.692
+    },
+    {
+     "text": "AI",
+     "start": 13.692,
+     "end": 13.851
+    },
+    {
+     "text": "model",
+     "start": 13.851,
+     "end": 14.168
+    },
+    {
+     "text": "guessing.",
+     "start": 14.168,
+     "end": 14.697
+    },
+    {
+     "text": "Fixed,",
+     "start": 15.473,
+     "end": 15.843
+    },
+    {
+     "text": "versioned",
+     "start": 16.108,
+     "end": 16.637
+    },
+    {
+     "text": "rules",
+     "start": 16.637,
+     "end": 16.954
+    },
+    {
+     "text": "anyone",
+     "start": 16.954,
+     "end": 17.324
+    },
+    {
+     "text": "can",
+     "start": 17.324,
+     "end": 17.536
+    },
+    {
+     "text": "check.",
+     "start": 17.536,
+     "end": 17.906
+    }
+   ]
+  },
+  {
+   "id": "learning",
+   "key": "2d4941d2e0a66552",
+   "file": "voice/05-learning.wav",
+   "seconds": 27.417,
+   "words": [
+    {
+     "text": "And",
+     "start": 0.15,
+     "end": 0.357
+    },
+    {
+     "text": "it",
+     "start": 0.357,
+     "end": 0.512
+    },
+    {
+     "text": "learns",
+     "start": 0.512,
+     "end": 0.874
+    },
+    {
+     "text": "over",
+     "start": 0.874,
+     "end": 1.132
+    },
+    {
+     "text": "time.",
+     "start": 1.132,
+     "end": 1.442
+    },
+    {
+     "text": "Each",
+     "start": 2.208,
+     "end": 2.466
+    },
+    {
+     "text": "round,",
+     "start": 2.466,
+     "end": 2.828
+    },
+    {
+     "text": "Paddock",
+     "start": 3.086,
+     "end": 3.5
+    },
+    {
+     "text": "re-runs",
+     "start": 3.5,
+     "end": 3.913
+    },
+    {
+     "text": "its",
+     "start": 3.913,
+     "end": 4.12
+    },
+    {
+     "text": "rules",
+     "start": 4.12,
+     "end": 4.43
+    },
+    {
+     "text": "and",
+     "start": 4.43,
+     "end": 4.637
+    },
+    {
+     "text": "writes",
+     "start": 4.637,
+     "end": 4.999
+    },
+    {
+     "text": "only",
+     "start": 4.999,
+     "end": 5.257
+    },
+    {
+     "text": "what",
+     "start": 5.257,
+     "end": 5.516
+    },
+    {
+     "text": "changed.",
+     "start": 5.516,
+     "end": 5.981
+    },
+    {
+     "text": "Six",
+     "start": 6.746,
+     "end": 6.953
+    },
+    {
+     "text": "things",
+     "start": 6.953,
+     "end": 7.315
+    },
+    {
+     "text": "in",
+     "start": 7.315,
+     "end": 7.47
+    },
+    {
+     "text": "the",
+     "start": 7.47,
+     "end": 7.677
+    },
+    {
+     "text": "first",
+     "start": 7.677,
+     "end": 7.987
+    },
+    {
+     "text": "round.",
+     "start": 7.987,
+     "end": 8.349
+    },
+    {
+     "text": "Thirty-five",
+     "start": 9.114,
+     "end": 9.734
+    },
+    {
+     "text": "by",
+     "start": 9.734,
+     "end": 9.889
+    },
+    {
+     "text": "the",
+     "start": 9.889,
+     "end": 10.096
+    },
+    {
+     "text": "fifth.",
+     "start": 10.096,
+     "end": 10.458
+    },
+    {
+     "text": "Tolu's",
+     "start": 11.223,
+     "end": 11.585
+    },
+    {
+     "text": "diesel",
+     "start": 11.585,
+     "end": 11.947
+    },
+    {
+     "text": "run",
+     "start": 11.947,
+     "end": 12.154
+    },
+    {
+     "text": "went",
+     "start": 12.154,
+     "end": 12.412
+    },
+    {
+     "text": "from",
+     "start": 12.412,
+     "end": 12.671
+    },
+    {
+     "text": "five",
+     "start": 12.671,
+     "end": 12.929
+    },
+    {
+     "text": "of",
+     "start": 12.929,
+     "end": 13.084
+    },
+    {
+     "text": "five",
+     "start": 13.084,
+     "end": 13.343
+    },
+    {
+     "text": "to",
+     "start": 13.343,
+     "end": 13.498
+    },
+    {
+     "text": "nine",
+     "start": 13.498,
+     "end": 13.756
+    },
+    {
+     "text": "of",
+     "start": 13.756,
+     "end": 13.911
+    },
+    {
+     "text": "twelve,",
+     "start": 13.911,
+     "end": 14.325
+    },
+    {
+     "text": "so",
+     "start": 14.583,
+     "end": 14.738
+    },
+    {
+     "text": "the",
+     "start": 14.738,
+     "end": 14.945
+    },
+    {
+     "text": "next",
+     "start": 14.945,
+     "end": 15.204
+    },
+    {
+     "text": "turn",
+     "start": 15.204,
+     "end": 15.462
+    },
+    {
+     "text": "moved",
+     "start": 15.462,
+     "end": 15.772
+    },
+    {
+     "text": "to",
+     "start": 15.772,
+     "end": 15.927
+    },
+    {
+     "text": "Godspower.",
+     "start": 15.927,
+     "end": 16.496
+    },
+    {
+     "text": "Emeka",
+     "start": 17.261,
+     "end": 17.571
+    },
+    {
+     "text": "got",
+     "start": 17.571,
+     "end": 17.778
+    },
+    {
+     "text": "quicker,",
+     "start": 17.778,
+     "end": 18.243
+    },
+    {
+     "text": "from",
+     "start": 18.502,
+     "end": 18.76
+    },
+    {
+     "text": "ten",
+     "start": 18.76,
+     "end": 18.967
+    },
+    {
+     "text": "days",
+     "start": 18.967,
+     "end": 19.225
+    },
+    {
+     "text": "to",
+     "start": 19.225,
+     "end": 19.38
+    },
+    {
+     "text": "nine.",
+     "start": 19.38,
+     "end": 19.691
+    },
+    {
+     "text": "And",
+     "start": 20.456,
+     "end": 20.663
+    },
+    {
+     "text": "when",
+     "start": 20.663,
+     "end": 20.921
+    },
+    {
+     "text": "the",
+     "start": 20.921,
+     "end": 21.128
+    },
+    {
+     "text": "groceries",
+     "start": 21.128,
+     "end": 21.645
+    },
+    {
+     "text": "rotation",
+     "start": 21.645,
+     "end": 22.11
+    },
+    {
+     "text": "stopped",
+     "start": 22.11,
+     "end": 22.523
+    },
+    {
+     "text": "holding,",
+     "start": 22.523,
+     "end": 22.989
+    },
+    {
+     "text": "Paddock",
+     "start": 23.247,
+     "end": 23.661
+    },
+    {
+     "text": "wrote",
+     "start": 23.661,
+     "end": 23.971
+    },
+    {
+     "text": "that",
+     "start": 23.971,
+     "end": 24.229
+    },
+    {
+     "text": "down",
+     "start": 24.229,
+     "end": 24.488
+    },
+    {
+     "text": "too.",
+     "start": 24.488,
+     "end": 24.746
+    },
+    {
+     "text": "Forgetting",
+     "start": 25.511,
+     "end": 26.08
+    },
+    {
+     "text": "is",
+     "start": 26.08,
+     "end": 26.235
+    },
+    {
+     "text": "a",
+     "start": 26.235,
+     "end": 26.339
+    },
+    {
+     "text": "memory.",
+     "start": 26.339,
+     "end": 26.752
+    }
+   ]
+  },
+  {
+   "id": "verified",
+   "key": "5985158a46a6fdde",
+   "file": "voice/06-verified.wav",
+   "seconds": 14.335,
+   "words": [
+    {
+     "text": "The",
+     "start": 0.15,
+     "end": 0.359
+    },
+    {
+     "text": "ledger",
+     "start": 0.359,
+     "end": 0.725
+    },
+    {
+     "text": "is",
+     "start": 0.725,
+     "end": 0.882
+    },
+    {
+     "text": "checkpointed",
+     "start": 0.882,
+     "end": 1.562
+    },
+    {
+     "text": "to",
+     "start": 1.562,
+     "end": 1.719
+    },
+    {
+     "text": "Walrus",
+     "start": 1.719,
+     "end": 2.085
+    },
+    {
+     "text": "too.",
+     "start": 2.085,
+     "end": 2.346
+    },
+    {
+     "text": "Paddock",
+     "start": 3.117,
+     "end": 3.535
+    },
+    {
+     "text": "rebuilds",
+     "start": 3.535,
+     "end": 4.005
+    },
+    {
+     "text": "it",
+     "start": 4.005,
+     "end": 4.162
+    },
+    {
+     "text": "from",
+     "start": 4.162,
+     "end": 4.424
+    },
+    {
+     "text": "four",
+     "start": 4.424,
+     "end": 4.685
+    },
+    {
+     "text": "checkpoints",
+     "start": 4.685,
+     "end": 5.313
+    },
+    {
+     "text": "and",
+     "start": 5.313,
+     "end": 5.522
+    },
+    {
+     "text": "matches",
+     "start": 5.522,
+     "end": 5.94
+    },
+    {
+     "text": "all",
+     "start": 5.94,
+     "end": 6.149
+    },
+    {
+     "text": "thirty-seven",
+     "start": 6.149,
+     "end": 6.829
+    },
+    {
+     "text": "entries,",
+     "start": 6.829,
+     "end": 7.3
+    },
+    {
+     "text": "hash",
+     "start": 7.561,
+     "end": 7.822
+    },
+    {
+     "text": "for",
+     "start": 7.822,
+     "end": 8.032
+    },
+    {
+     "text": "hash.",
+     "start": 8.032,
+     "end": 8.345
+    },
+    {
+     "text": "Namespaces",
+     "start": 9.116,
+     "end": 9.691
+    },
+    {
+     "text": "are",
+     "start": 9.691,
+     "end": 9.9
+    },
+    {
+     "text": "hashed",
+     "start": 9.9,
+     "end": 10.266
+    },
+    {
+     "text": "and",
+     "start": 10.266,
+     "end": 10.475
+    },
+    {
+     "text": "memories",
+     "start": 10.475,
+     "end": 10.946
+    },
+    {
+     "text": "are",
+     "start": 10.946,
+     "end": 11.155
+    },
+    {
+     "text": "SEAL-encrypted,",
+     "start": 11.155,
+     "end": 11.992
+    },
+    {
+     "text": "so",
+     "start": 12.253,
+     "end": 12.41
+    },
+    {
+     "text": "no",
+     "start": 12.41,
+     "end": 12.567
+    },
+    {
+     "text": "names",
+     "start": 12.567,
+     "end": 12.88
+    },
+    {
+     "text": "leak",
+     "start": 12.88,
+     "end": 13.142
+    },
+    {
+     "text": "on-chain.",
+     "start": 13.142,
+     "end": 13.665
+    }
+   ]
+  },
+  {
+   "id": "settle",
+   "key": "854daee1abdf105e",
+   "file": "voice/07-settle.wav",
+   "seconds": 26.274,
+   "words": [
+    {
+     "text": "Settling",
+     "start": 0.15,
+     "end": 0.64
+    },
+    {
+     "text": "up",
+     "start": 0.64,
+     "end": 0.803
+    },
+    {
+     "text": "runs",
+     "start": 0.803,
+     "end": 1.075
+    },
+    {
+     "text": "through",
+     "start": 1.075,
+     "end": 1.51
+    },
+    {
+     "text": "Tatum's",
+     "start": 1.51,
+     "end": 2.054
+    },
+    {
+     "text": "Sui",
+     "start": 2.054,
+     "end": 2.326
+    },
+    {
+     "text": "Mainnet",
+     "start": 2.326,
+     "end": 2.761
+    },
+    {
+     "text": "gateway",
+     "start": 2.761,
+     "end": 3.196
+    },
+    {
+     "text": "at",
+     "start": 3.196,
+     "end": 3.359
+    },
+    {
+     "text": "every",
+     "start": 3.359,
+     "end": 3.686
+    },
+    {
+     "text": "step.",
+     "start": 3.686,
+     "end": 4.012
+    },
+    {
+     "text": "Paddock",
+     "start": 4.801,
+     "end": 5.237
+    },
+    {
+     "text": "builds",
+     "start": 5.237,
+     "end": 5.617
+    },
+    {
+     "text": "a",
+     "start": 5.617,
+     "end": 5.726
+    },
+    {
+     "text": "gasless",
+     "start": 5.726,
+     "end": 6.161
+    },
+    {
+     "text": "USDC",
+     "start": 6.161,
+     "end": 6.433
+    },
+    {
+     "text": "transfer,",
+     "start": 6.433,
+     "end": 6.977
+    },
+    {
+     "text": "simulates",
+     "start": 7.249,
+     "end": 7.793
+    },
+    {
+     "text": "it,",
+     "start": 7.793,
+     "end": 8.011
+    },
+    {
+     "text": "and",
+     "start": 8.283,
+     "end": 8.5
+    },
+    {
+     "text": "checks",
+     "start": 8.5,
+     "end": 8.881
+    },
+    {
+     "text": "the",
+     "start": 8.881,
+     "end": 9.098
+    },
+    {
+     "text": "payer",
+     "start": 9.098,
+     "end": 9.425
+    },
+    {
+     "text": "loses,",
+     "start": 9.425,
+     "end": 9.805
+    },
+    {
+     "text": "and",
+     "start": 10.077,
+     "end": 10.295
+    },
+    {
+     "text": "the",
+     "start": 10.295,
+     "end": 10.513
+    },
+    {
+     "text": "payee",
+     "start": 10.513,
+     "end": 10.839
+    },
+    {
+     "text": "gains,",
+     "start": 10.839,
+     "end": 11.22
+    },
+    {
+     "text": "exactly",
+     "start": 11.492,
+     "end": 11.927
+    },
+    {
+     "text": "the",
+     "start": 11.927,
+     "end": 12.144
+    },
+    {
+     "text": "agreed",
+     "start": 12.144,
+     "end": 12.525
+    },
+    {
+     "text": "amount.",
+     "start": 12.525,
+     "end": 12.96
+    },
+    {
+     "text": "The",
+     "start": 13.75,
+     "end": 13.967
+    },
+    {
+     "text": "wallet",
+     "start": 13.967,
+     "end": 14.348
+    },
+    {
+     "text": "signs.",
+     "start": 14.348,
+     "end": 14.729
+    },
+    {
+     "text": "Tatum",
+     "start": 15.518,
+     "end": 15.954
+    },
+    {
+     "text": "executes.",
+     "start": 15.954,
+     "end": 16.497
+    },
+    {
+     "text": "Tatum",
+     "start": 17.287,
+     "end": 17.722
+    },
+    {
+     "text": "confirms",
+     "start": 17.722,
+     "end": 18.212
+    },
+    {
+     "text": "the",
+     "start": 18.212,
+     "end": 18.429
+    },
+    {
+     "text": "balance",
+     "start": 18.429,
+     "end": 18.864
+    },
+    {
+     "text": "change.",
+     "start": 18.864,
+     "end": 19.299
+    },
+    {
+     "text": "Only",
+     "start": 20.089,
+     "end": 20.361
+    },
+    {
+     "text": "then",
+     "start": 20.361,
+     "end": 20.633
+    },
+    {
+     "text": "does",
+     "start": 20.633,
+     "end": 20.905
+    },
+    {
+     "text": "the",
+     "start": 20.905,
+     "end": 21.122
+    },
+    {
+     "text": "receipt",
+     "start": 21.122,
+     "end": 21.558
+    },
+    {
+     "text": "go",
+     "start": 21.558,
+     "end": 21.721
+    },
+    {
+     "text": "to",
+     "start": 21.721,
+     "end": 21.884
+    },
+    {
+     "text": "Walrus.",
+     "start": 21.884,
+     "end": 22.319
+    },
+    {
+     "text": "Three",
+     "start": 23.109,
+     "end": 23.435
+    },
+    {
+     "text": "real",
+     "start": 23.435,
+     "end": 23.707
+    },
+    {
+     "text": "payments.",
+     "start": 23.707,
+     "end": 24.251
+    },
+    {
+     "text": "Zero",
+     "start": 25.04,
+     "end": 25.312
+    },
+    {
+     "text": "gas.",
+     "start": 25.312,
+     "end": 25.584
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "key": "05c3249b9ec94081",
+   "file": "voice/08-check.wav",
+   "seconds": 18.276,
+   "words": [
+    {
+     "text": "You",
+     "start": 0.15,
+     "end": 0.38
+    },
+    {
+     "text": "can",
+     "start": 0.38,
+     "end": 0.61
+    },
+    {
+     "text": "check",
+     "start": 0.61,
+     "end": 0.956
+    },
+    {
+     "text": "it",
+     "start": 0.956,
+     "end": 1.129
+    },
+    {
+     "text": "live.",
+     "start": 1.129,
+     "end": 1.474
+    },
+    {
+     "text": "The",
+     "start": 2.292,
+     "end": 2.522
+    },
+    {
+     "text": "status",
+     "start": 2.522,
+     "end": 2.925
+    },
+    {
+     "text": "page",
+     "start": 2.925,
+     "end": 3.213
+    },
+    {
+     "text": "calls",
+     "start": 3.213,
+     "end": 3.558
+    },
+    {
+     "text": "Tatum",
+     "start": 3.558,
+     "end": 4.019
+    },
+    {
+     "text": "in",
+     "start": 4.019,
+     "end": 4.192
+    },
+    {
+     "text": "real",
+     "start": 4.192,
+     "end": 4.479
+    },
+    {
+     "text": "time:",
+     "start": 4.479,
+     "end": 4.825
+    },
+    {
+     "text": "chain,",
+     "start": 5.113,
+     "end": 5.515
+    },
+    {
+     "text": "latest",
+     "start": 5.803,
+     "end": 6.206
+    },
+    {
+     "text": "checkpoint,",
+     "start": 6.206,
+     "end": 6.897
+    },
+    {
+     "text": "a",
+     "start": 7.185,
+     "end": 7.3
+    },
+    {
+     "text": "known",
+     "start": 7.3,
+     "end": 7.645
+    },
+    {
+     "text": "transaction,",
+     "start": 7.645,
+     "end": 8.394
+    },
+    {
+     "text": "a",
+     "start": 8.681,
+     "end": 8.797
+    },
+    {
+     "text": "USDC",
+     "start": 8.797,
+     "end": 9.084
+    },
+    {
+     "text": "balance.",
+     "start": 9.084,
+     "end": 9.602
+    },
+    {
+     "text": "Behind",
+     "start": 10.42,
+     "end": 10.823
+    },
+    {
+     "text": "it:",
+     "start": 10.823,
+     "end": 11.054
+    },
+    {
+     "text": "strict",
+     "start": 11.341,
+     "end": 11.744
+    },
+    {
+     "text": "TypeScript,",
+     "start": 11.744,
+     "end": 12.435
+    },
+    {
+     "text": "eighty-eight",
+     "start": 12.723,
+     "end": 13.471
+    },
+    {
+     "text": "unit",
+     "start": 13.471,
+     "end": 13.759
+    },
+    {
+     "text": "tests,",
+     "start": 13.759,
+     "end": 14.162
+    },
+    {
+     "text": "live",
+     "start": 14.45,
+     "end": 14.738
+    },
+    {
+     "text": "Tatum",
+     "start": 14.738,
+     "end": 15.198
+    },
+    {
+     "text": "tests,",
+     "start": 15.198,
+     "end": 15.601
+    },
+    {
+     "text": "and",
+     "start": 15.889,
+     "end": 16.119
+    },
+    {
+     "text": "twelve",
+     "start": 16.119,
+     "end": 16.522
+    },
+    {
+     "text": "decision",
+     "start": 16.522,
+     "end": 17.04
+    },
+    {
+     "text": "records.",
+     "start": 17.04,
+     "end": 17.558
+    }
+   ]
+  },
+  {
+   "id": "close",
+   "key": "b24258ef1e4e7dad",
+   "file": "voice/09-close.wav",
+   "seconds": 12.76,
+   "words": [
+    {
+     "text": "Sixty-nine",
+     "start": 0.15,
+     "end": 0.693
+    },
+    {
+     "text": "memories",
+     "start": 0.693,
+     "end": 1.137
+    },
+    {
+     "text": "on",
+     "start": 1.137,
+     "end": 1.285
+    },
+    {
+     "text": "Mainnet.",
+     "start": 1.285,
+     "end": 1.73
+    },
+    {
+     "text": "Three",
+     "start": 2.474,
+     "end": 2.77
+    },
+    {
+     "text": "gasless",
+     "start": 2.77,
+     "end": 3.165
+    },
+    {
+     "text": "payments.",
+     "start": 3.165,
+     "end": 3.659
+    },
+    {
+     "text": "One",
+     "start": 4.403,
+     "end": 4.601
+    },
+    {
+     "text": "flat",
+     "start": 4.601,
+     "end": 4.847
+    },
+    {
+     "text": "that",
+     "start": 4.847,
+     "end": 5.094
+    },
+    {
+     "text": "remembers.",
+     "start": 5.094,
+     "end": 5.637
+    },
+    {
+     "text": "Paddock.",
+     "start": 6.382,
+     "end": 6.826
+    },
+    {
+     "text": "Try",
+     "start": 7.57,
+     "end": 7.768
+    },
+    {
+     "text": "it",
+     "start": 7.768,
+     "end": 7.916
+    },
+    {
+     "text": "at",
+     "start": 7.916,
+     "end": 8.064
+    },
+    {
+     "text": "usepaddock.online.",
+     "start": 8.064,
+     "end": 9.249
+    },
+    {
+     "text": "The",
+     "start": 9.993,
+     "end": 10.19
+    },
+    {
+     "text": "proof",
+     "start": 10.19,
+     "end": 10.486
+    },
+    {
+     "text": "for",
+     "start": 10.486,
+     "end": 10.684
+    },
+    {
+     "text": "every",
+     "start": 10.684,
+     "end": 10.98
+    },
+    {
+     "text": "number",
+     "start": 10.98,
+     "end": 11.326
+    },
+    {
+     "text": "is",
+     "start": 11.326,
+     "end": 11.474
+    },
+    {
+     "text": "in",
+     "start": 11.474,
+     "end": 11.622
+    },
+    {
+     "text": "the",
+     "start": 11.622,
+     "end": 11.819
+    },
+    {
+     "text": "repo.",
+     "start": 11.819,
+     "end": 12.116
+    }
+   ]
+  }
+ ]
+}

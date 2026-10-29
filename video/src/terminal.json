@@ -1,0 +1,33 @@
+{
+  "ranAt": "2026-10-29T12:02:13.080Z",
+  "sessions": [
+    {
+      "command": "pnpm video:data",
+      "lines": [
+        "Walrus Memory: recalling ss_g_fd36f984879028d5 from Mainnet",
+        "  recalled 65, verified 65, rejected 0, ledger 37/37",
+        "  group rate 1500 per USDC, from group_profile blob 2lcNCvteAEI8s_9bEA6VqR9ljCd5lcXsH2mbGnIXs80",
+        "Walrus Mainnet aggregator: fetching 66 blobs",
+        "  66/66 available on Walrus Mainnet",
+        "Tatum (Sui Mainnet GraphQL): re-reading the settlements",
+        "  FHS5aw5nn9X4DKRevpoTKs4yMGhUnHEsgT725THiuAU2  SUCCESS  0.01 USDC  gas 0 SUI  checkpoint 339135513",
+        "  Eu7yRGabs6aHsM7pERoULg3HnfM9zZuYRnUNmaNSiXwc  SUCCESS  0.01 USDC  gas 0 SUI  checkpoint 339143353",
+        "  9V57Dbu95yuikVhYysxreSg7vFL3PxFqzNJMgQkV5QUV  SUCCESS  0.05 USDC  gas 0 SUI  checkpoint 339178369",
+        "Walrus Memory relayer: 69 memories on Mainnet across 4 namespaces",
+        "wrote video/data/mainnet.json"
+      ],
+      "seconds": 27.8
+    },
+    {
+      "command": "pnpm test",
+      "lines": [
+        "packages/engine test: Tests 36 passed (36)",
+        "packages/chain test: Tests 22 passed | 3 skipped (25)",
+        "packages/memory test: Tests 30 passed (30)",
+        "88 passed"
+      ],
+      "seconds": 5.9
+    }
+  ],
+  "unitTests": 88
+}

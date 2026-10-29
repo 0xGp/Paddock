@@ -21,6 +21,7 @@
     "groups:e2e": "node --env-file=.env.local --no-warnings scripts/groups-e2e.mjs",
     "wallets:link": "node --env-file=.env.local --no-warnings scripts/link-wallets.mjs",
     "proof": "node --env-file=.env.local --no-warnings scripts/proof.mjs",
+    "video:data": "node --env-file=.env.local --no-warnings scripts/video-data.mjs",
     "tatum:smoke": "node --env-file=.env.local scripts/tatum-smoke.mjs",
     "memory:health": "node --env-file=.env.local scripts/memory-health.mjs",
     "memory:roundtrip": "node --env-file=.env.local --no-warnings scripts/memory-roundtrip.mjs",
